@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 415px) {
+    .videoThumbnail{            
+      margin-top: 20px;
+      margin-bottom: 20px; 
+      margin-right: 0;
+      margin-left: 0; 
+      height: 150px;                                          
+      width: 250px;                                          
+    }
+    
+    #dropdown-item-button:hover{
+      background-color:rgba(0,0,0,.05) !important;
+    }
+    .dropdown .btn-primary .dropdown-toggle:hover{
+      background-color: #fff !important;      
+    }
+    .nav-link:hover{
+      background-color: rgba(0,0,0,.05) !important;
+      color:rgba(0,0,0,.5) !important;
+    }
+    
+    
+    .ril-close,
+    .ril-zoom-in,
+    .ril-zoom-out{  
+      width:45px !important;
+    }    
+    .navbar {
+      padding: 0.9rem 5% !important;      
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }
+    .navbar-nav .dropdown-menu{
+      border-left: none !important;
+      border-right: none !important;
+      border-radius: 0 !important;
+      margin:0 !important;
+    }
+
+    .videoContainer{    
+      margin: 0 auto;
+      height: 150px;                                          
+      width: 250px;                                          
+      margin-bottom: 40px;
+    } 
+    
+    .barLinks{
+      display: none !important;
+    }
+
+    .homeDescription h2{
+      font-size:1.5rem;
+    }
+
+    .homeDescription h4{
+      font-size:1.2rem;
+    }
+    .documentaryRow .description,
+    .documentaryRow .col{
+      text-align: left;
+      padding: 0 3%;
+      margin: 0 0;      
+      display: inline-block;
+      width: 100%;      
+    }
+    
+    .documentaryGrid{
+      width: 100%;
+    }
+    
+    .musicCol{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .musicRow h2,.musicRow .lyrics,  .documentaryRow h2,.documentaryRow h3{
+      width: 100%;
+      text-align: center;
+    }
+    .documentaryRow object,.musicRow object{
+      height:200px;      
+      margin-top: 20px;
+      margin-bottom: 20px;  
+      
+    }
+    .pageHeader{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .pageHeader
+    {
+      display: inline;
+    }
+    .documentaryRow h2,
+    .documentaryRow h3,
+    .songDetail h2,
+    .documentaryHeadContainer h1,
+     .pageHeader h1{
+      margin-top: 10px;
+      font-size:1.7rem;
+    }
+    .main{
+      width: 100%;      
+    }      
+  }
+
+  /* Tablet Styles */
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    .navbar {
+      padding: 0.9rem 5% !important;      
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }  
+    #dropdown-item-button:hover{
+      background-color: rgba(0,0,0,.05) !important;
+    }   
+    .dropdown .btn-primary .dropdown-toggle:hover{
+      background-color: #fff !important;          
+    }
+    .nav-link:hover{
+      background-color:rgba(0,0,0,.05) !important;
+      color:rgba(0,0,0,.5) !important;
+    }
+   
+    .ril-close,
+    .ril-zoom-in,
+    .ril-zoom-out{  
+      width:45px !important;
+    }    
+    .videoContainer{    
+      
+      margin-bottom: 40px;
+    } 
+
+    .navbar-nav .dropdown-menu{
+      border-left: none !important;
+      border-right: none !important;
+      border-radius: 0 !important;
+      margin:0 !important;
+    }
+
+    .videoThumbnail{      
+      margin-top: 20px;
+      display: flex;                 
+      height: 250px;      
+    }
+
+    .barLinks{
+      display: none !important;
+    }
+
+    .documentaryGrid,.musicGrid{
+      display: inline-block;
+      width: 100%;
+      padding: 0 7%;  
+    }
+    
+    .documentaryRow,.musicRow{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .musicRow .col h2,.musicRow .col h3
+    .documentaryRow .col h2,.documentaryRow .col h3{
+      width: 100%;
+      display: inline-flexbox;
+      text-align: center;
+    }
+
+    .documentaryRow .col,.musicRow .col{
+      width: 100%;
+      display: contents;
+    }
+
+    .documentaryRow object,.musicRow object{
+      width: 500px;
+      height:315px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .documentaryRow,.musicRow{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .musicRow .lyrics{
+      text-align: center;
+    }
+
+    .homeDescription h2{
+      font-size:1.7rem;
+    }
+
+    .homeDescription h4{
+      font-size:1.3rem;
+    }
+    .MuiIconButton-root{
+      display: block;
+    }
+    header{
+      padding-right: 0;
+      padding-left: 0;
+    }
+    header.MuiAppBar-root::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }    
+    .documentaryRow .description{
+      text-align: left;
+      padding: 0 2%;
+    }
+    .pageHeader{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .pageHeader
+    {
+      display: inline;
+    }
+    .documentaryRow h2,
+    .documentaryRow h3,
+    .songDetail h2,
+    .documentaryHeadContainer h1,
+     .pageHeader h1{
+      margin-top: 10px;
+      font-size:1.7rem;
+    }
+    
+    .main{
+      width: 100%;
+    }
+  }
+
+  /* Desktop Styles */
+  @media only screen and (min-width: 1024px) {
+    .documentaryRow object,.musicRow object{
+      width: 500px;
+      height:315px;
+      margin-top: 70px;
+      padding:0 0;      
+    }
+    #dropdown-item-button:hover{
+      background-color: rgba(0,0,0,.05) !important;
+    }
+    .dropdown .btn-primary .dropdown-toggle:hover{
+      background-color: #DBDBDB !important;       
+    }
+    .nav-link:hover{      
+      background-color: rgba(0,0,0,.05) !important;
+      color:rgba(0,0,0,.5) !important;
+    }
+
+    .navbar {     
+      padding: 0.5rem  5% !important;
+      outline: 0;
+    } 
+
+    .navbar::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 90%;
+      left: 5%;
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }
+
+    .videoThumbnail{
+      height: 315px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      float: right;
+    }
+
+    .main{
+      width: 100%;
+    }
+
+    .MuiIconButton-root{
+      display: none !important;
+    }  
+    .documentaryRow h2,
+    .documentaryRow h3,
+    .songDetail h2,
+    .documentaryHeadContainer h1,
+     .pageHeader h1{
+      font-size:2.1rem;
+    }
+    .pageHeader{
+      display: inline;
+    }
+
+    .documentaryCol object{
+      float: right;
+    }
+    .musicCol object{
+      float: right;
+    }
+  }
