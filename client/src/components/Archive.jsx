@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
+import ImageGallery from './ImageGallery';
 
 class Archive extends Component {
   constructor(props) {
@@ -11,44 +12,48 @@ class Archive extends Component {
   }
   componentDidMount() { 
     commonScript.enableScroll();   
-    // this.fetchArchivePhotos(); 
+    this.getImages(); 
 }    
 componentWillUnmount() {}
 
-fetchArchivePhotos = () => {
-  // axios({
-  //   url: '/api/searchImage',
-  //   method: 'POST', 
-  //   data: {
-  //     category : 'Nephilim' 
-  //   }
-  // })
-  // .then((response) => {            
-  //   const { images } = response.data;
-  //   console.log(images);                
-  // })
-  // .catch((error) => console.log(error))      
+getImages = ( ) => {
+  axios({
+    url: '/api/getImages',
+    method: 'POST', 
+    data: {
+      category : ['CylinderSeal','Nephilim'] 
+    }
+  })
+  .then((response) => {            
+    const { images } = response.data;    
+    this.setState({ photos: images })  
+  })
+  .catch((error) => console.log(error))      
+}
 
-  axios.get('/api/archivePhotos')
-    .then((response) => {
-      const { photos } = response.data;            
-      this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos)) })
-    })
-    .catch(() => alert('Error fetching photos'));
-}     
     render() {
       const { photos } = this.state; 
+      let elongatedSkullsPhotos = [];
+      let cylinderSealsPhotos = [];
+
+      elongatedSkullsPhotos =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.category === "Nephilim";})))      
+      cylinderSealsPhotos =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.category === "CylinderSeal";})))      
+
       return (     
         <div className="siteContainer">            
         <main>
             <div className="section-content">                                               
                 <section id="elongatedSkulls">
                     <h2>גולגלות מאורכות</h2>
-                    <p>…</p>
+                    <p>                    
+                      <ImageGallery photos={elongatedSkullsPhotos}></ImageGallery>                      
+                    </p>
                 </section>            
                 <section id="cylinderSeals">
                     <h2>חותמות גליל</h2>
-                    <p>…</p>
+                    <p>
+                        <ImageGallery photos={cylinderSealsPhotos}></ImageGallery>                      
+                    </p>
                 </section>                            
             </div>
             <nav class="section-nav">

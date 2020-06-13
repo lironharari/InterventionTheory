@@ -156,10 +156,14 @@ addImage = (  ) => {
     url: '/api/addImage',
     method: 'POST', 
     data: {
-      path : '1392371408_paracas.jpg',       
+      src : 'biggest-elongated-skull.jpg',       
       category : 'Nephilim',
       subCategory : 'ElongatedSkulls',
-      rank : 1
+      rank : 1,
+      title: '',
+      description: '',          
+      width: 1,
+      height: 1            
     }
   })
   .then((response) => {        

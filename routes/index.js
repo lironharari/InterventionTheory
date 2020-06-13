@@ -24,7 +24,7 @@ router.post('/api/do', async (req, res) => {
 });
 
 
-router.post('/api/searchImage', async (req, res) => {
+router.post('/api/getImages', async (req, res) => {
     
     if (isEmpty(req.body)) {
         return res.status(403).json({
@@ -305,8 +305,8 @@ router.post('/api/addImage', async (req, res) => {
         });
     } 
             
-    const { id, path, category, subCategory, rank } = req.body;  
-    const newImage = new Image({id, path, category, subCategory, rank});
+    const { id, src, category, subCategory, rank, title, description, width, height } = req.body;  
+    const newImage = new Image({id, src, category, subCategory, rank, title, description, width, height});
         
     try {
         await newImage.save();

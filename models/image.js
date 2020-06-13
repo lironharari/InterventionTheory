@@ -4,10 +4,14 @@ const Schema = mongoose.Schema;
 const ImageSchema = new Schema(
     { 
       id: Number,   
-      path: String,          
+      src: String,    
+      title: String,
+      description: String,
       category: String,
-      subCategory: String,
-      rank: Number
+      subcategory: String,      
+      rank: Number,
+      width: Number,
+      height: Number      
     },
     { timestamps: true }
   );
