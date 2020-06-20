@@ -156,14 +156,14 @@ addImage = (  ) => {
     url: '/api/addImage',
     method: 'POST', 
     data: {
-      src : 'biggest-elongated-skull.jpg',       
-      category : 'Nephilim',
-      subCategory : 'ElongatedSkulls',
+      src : 'tree2.jpg',       
+      category : 'CylinderSeal',
+      subcategory : 'TreeOfLife',
       rank : 1,
       title: '',
       description: '',          
-      width: 1,
-      height: 1            
+      width: 914,
+      height: 555            
     }
   })
   .then((response) => {        
@@ -179,7 +179,8 @@ addAsset = (  ) => {
     method: 'POST', 
     data: {
       name : 'liron',       
-      content : 'harari'   
+      content : 'harari',
+      category : 'Home'   
     }
   })
   .then((response) => {        

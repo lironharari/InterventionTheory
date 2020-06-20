@@ -24,6 +24,31 @@ router.post('/api/do', async (req, res) => {
 });
 
 
+
+router.post('/api/getAssets', async (req, res) => {
+    
+    if (isEmpty(req.body)) {
+        return res.status(403).json({
+            message: 'Body should not be empty',
+            statusCode: 403
+        });
+    }
+    
+    const { category } = req.body;  
+        
+    try {
+        const assets = await Asset.find({ category: category });
+        return res.json({
+            assets
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+});
+
+
 router.post('/api/getImages', async (req, res) => {
     
     if (isEmpty(req.body)) {
@@ -305,8 +330,8 @@ router.post('/api/addImage', async (req, res) => {
         });
     } 
             
-    const { id, src, category, subCategory, rank, title, description, width, height } = req.body;  
-    const newImage = new Image({id, src, category, subCategory, rank, title, description, width, height});
+    const { id, src, category, subcategory, rank, title, description, width, height } = req.body;  
+    const newImage = new Image({id, src, category, subcategory, rank, title, description, width, height});
         
     try {
         await newImage.save();
@@ -333,8 +358,8 @@ router.post('/api/addAsset', async (req, res) => {
         });
     } 
             
-    const { content, name, id } = req.body;  
-    const newAsset = new Asset({id, name, content});
+    const { id, name, content, category } = req.body;  
+    const newAsset = new Asset({id, name, content, category});
         
     try {
         await newAsset.save();

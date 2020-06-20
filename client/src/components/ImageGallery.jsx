@@ -23,7 +23,7 @@ export default function ImageGallery({ photos }) {
                   <img                    
                     alt={photo.title}
                     className="galleryImage"
-                    {...photo}
+                    {...photo}                    
                     onClick={handleOnClick}
                   />                            
         </div>

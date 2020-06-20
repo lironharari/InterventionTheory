@@ -5,7 +5,8 @@ const AssetSchema = new Schema(
     { 
       id: Number,   
       name: String,          
-      content: String
+      content: String,
+      category: String
     },
     { timestamps: true }
   );

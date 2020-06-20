@@ -7,6 +7,13 @@
   
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {
+
+    .siteContainer{
+      margin-top: 30px;
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+    
     .videoThumbnail{            
       margin-top: 20px;
       margin-bottom: 20px; 
@@ -34,7 +41,7 @@
       width:45px !important;
     }    
     .navbar {
-      padding: 0.9rem 5% !important;      
+      padding: 0.9rem 2% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
     }
     .navbar-nav .dropdown-menu{
@@ -114,8 +121,14 @@
 
   /* Tablet Styles */
   @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    .siteContainer{
+      margin-top: 30px;
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+
     .navbar {
-      padding: 0.9rem 5% !important;      
+      padding: 0.9rem 2% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
     }  
     #dropdown-item-button:hover{
@@ -248,6 +261,12 @@
 
   /* Desktop Styles */
   @media only screen and (min-width: 1024px) {
+    .siteContainer{
+      margin-top: 30px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    
     .documentaryRow object,.musicRow object{
       width: 500px;
       height:315px;
