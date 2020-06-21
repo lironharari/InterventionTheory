@@ -24,10 +24,11 @@ function shouldCompress(req, res) {
   }
 
 // Step 2
-mongoose.connect( process.env.MONGODB_URI || 'mongodb+srv://admin:q29sIrl4w5Iz@cluster0-cyztl.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect( process.env.MONGODB_URI || 'mongodb+srv://heroku:ExCoXuGWQ3DP4gg2@cluster0-cyztl.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+ 
 
 // Configuration
 app.use(bodyParser.json());

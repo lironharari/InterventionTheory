@@ -1,31 +1,31 @@
 const express = require('express');
 const { isEmpty } = require('lodash');
 //const Asset = require('../models/Asset');
-//const Image = require('../models/Image');
+const Image = require('../models/Image');
 const router = express.Router();
 
-// router.post('/api/getImages', async (req, res) => {
+router.post('/api/getImages', async (req, res) => {
     
-//     if (isEmpty(req.body)) {
-//         return res.status(403).json({
-//             message: 'Body should not be empty',
-//             statusCode: 403
-//         });
-//     }
+    if (isEmpty(req.body)) {
+        return res.status(403).json({
+            message: 'Body should not be empty',
+            statusCode: 403
+        });
+    }
     
-//     const { category } = req.body;  
+    const { category } = req.body;  
         
-//     try {
-//         const images = await Image.find({ category: category });
-//         return res.json({
-//             images
-//         });
-//     } catch (error) {
-//         return res.status(500).json({
-//             message: 'Internal Server error'
-//         });
-//     }
-// });
+    try {
+        const images = await Image.find({ category: category });
+        return res.json({
+            images
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+});
 
 // router.post('/api/do', async (req, res) => {
 //     console.log("at server");
