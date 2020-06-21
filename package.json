@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"    
   },
   "keywords": [],
   "author": "",
@@ -21,7 +24,8 @@
     "mongoose": "^5.4.13",
     "prop-types": "^15.7.2",
     "react-photo-gallery": "^8.0.0",
-    "react-scroll-up-button": "^1.6.4"
+    "react-scroll-up-button": "^1.6.4",
+    "serve": "^11.3.2"
   },
   "engines": {
     "node": "11.3.0"
