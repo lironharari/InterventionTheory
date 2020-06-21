@@ -48,19 +48,19 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                               
                 <h1>חותמות גליל</h1>
-                <section id="Tree.Of.Life">
+                <section id="tree-of-life">
                     <h2>עץ החיים</h2>
                     <p>
                         <ImageGallery photos={csTreeOfLife}></ImageGallery>                      
                     </p>
                 </section>               
-                <section id="Misc">
+                <section id="misc">
                     <h2>שונות</h2>
                     <p>
                         <ImageGallery photos={csMisc}></ImageGallery>                      
                     </p>
                 </section>  
-                <section id="Nibiru.Pull">
+                <section id="nibiru-pull">
                     <h2>משיכת ניבירו</h2>
                     <p>
                         <ImageGallery photos={csNibiruPull}></ImageGallery>                      
@@ -69,9 +69,9 @@ getImages = ( ) => {
             </div>
             <nav class="section-nav">
                 <ol>                                                              
-                    <li><a href="#Tree.Of.Life">עץ החיים</a></li>               
-                    <li><a href="#Misc">שונות</a></li>
-                    <li><a href="#Nibiru.Pull">משיכת ניבירו</a></li>                    
+                    <li><a href="#tree-of-life">עץ החיים</a></li>               
+                    <li><a href="#misc">שונות</a></li>
+                    <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                    
                 </ol>
             </nav>
         </main>

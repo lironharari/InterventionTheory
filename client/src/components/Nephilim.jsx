@@ -48,19 +48,19 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                               
                 <h1>נפילים</h1>
-                <section id="Elongated.Skulls">
+                <section id="elongated-skulls">
                     <h2>גולגולות מאורכות</h2>
                     <p>
                         <ImageGallery photos={csElongatedSkulls}></ImageGallery>                      
                     </p>
                 </section>               
-                <section id="Egypt">
+                <section id="egypt">
                     <h2>מצרים</h2>
                     <p>
                         <ImageGallery photos={csEgypt}></ImageGallery>                      
                     </p>
                 </section>  
-                <section id="Cylinder.Seals">
+                <section id="cylinder-seals">
                     <h2>חותמות גליל</h2>
                     <p>
                         <ImageGallery photos={csCylinderSeals}></ImageGallery>                      
@@ -69,9 +69,9 @@ getImages = ( ) => {
             </div>
             <nav class="section-nav">
                 <ol>                                                              
-                    <li><a href="#Elongated.Skulls">גולגולות מאורכות</a></li>               
-                    <li><a href="#Egypt">מצרים</a></li>
-                    <li><a href="#Cylinder.Seals">חותמות גליל</a></li>                    
+                    <li><a href="#elongated-skulls">גולגולות מאורכות</a></li>               
+                    <li><a href="#egypt">מצרים</a></li>
+                    <li><a href="#cylinder-seals">חותמות גליל</a></li>                    
                 </ol>
             </nav>
         </main>

@@ -48,19 +48,19 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                               
                 <h1>מגלית</h1>                
-                <section id="Sacsayhuaman">
+                <section id="sacsayhuaman">
                     <h2>סאסקיואמן</h2>
                     <p>
                         <ImageGallery photos={csSacsayhuaman}></ImageGallery>                      
                     </p>
                 </section>               
-                <section id="Egypt">
+                <section id="egypt">
                     <h2>מצרים</h2>
                     <p>
                         <ImageGallery photos={csEgypt}></ImageGallery>                      
                     </p>
                 </section>
-                <section id="Baalbek">
+                <section id="baalbek">
                     <h2>בעלבק</h2>
                     <p>
                         <ImageGallery photos={csBaalbek}></ImageGallery>                      
@@ -69,9 +69,9 @@ getImages = ( ) => {
             </div>
             <nav class="section-nav">
                 <ol>                                                              
-                    <li><a href="#Sacsayhuaman">סאסקיואמן</a></li>               
-                    <li><a href="#Egypt">מצרים</a></li>               
-                    <li><a href="#Baalbek">בעלבק</a></li>                                   
+                    <li><a href="#sacsayhuaman">סאסקיואמן</a></li>               
+                    <li><a href="#egypt">מצרים</a></li>               
+                    <li><a href="#baalbek">בעלבק</a></li>                                   
                 </ol>
             </nav>
         </main>
