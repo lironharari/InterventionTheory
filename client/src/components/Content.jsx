@@ -5,7 +5,7 @@ import Notfound from './Notfound';
 import Home from './Home';
 import CylinderSeals from './CylinderSeals';
 import Megalith from './Megalith';
-import ElongatedSkulls from './ElongatedSkulls';
+import Nephilim from './Nephilim';
 // import Essentials from './Essentials';
 // import Technology from './Technology';
 // import Sumer from './Sumer';
@@ -32,9 +32,9 @@ class Content extends Component {
             <Route exact path="/knowledge" component={Knowledge} /> */}
             <Route exact path="/manager" component={Manager} />
             
-            <Route exact path="/cylinderSeals" component={CylinderSeals} />
-            <Route exact path="/megalith" component={Megalith} />
-            <Route exact path="/elongatedSkulls" component={ElongatedSkulls} />
+            <Route exact path="/Cylinder.Seals" component={CylinderSeals} />
+            <Route exact path="/Megalith" component={Megalith} />
+            <Route exact path="/Nephilim" component={Nephilim} />
             <Route  component={Notfound} />
             </Switch> 
         </Router> 

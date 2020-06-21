@@ -13,10 +13,10 @@ class NavBar extends React.Component {
                     <Nav>                        
                         {/* <Nav.Link href="/archive">ארכיון</Nav.Link>                         */}
                         <NavDropdown title="ארכיון" id="collasible-nav-dropdown">                        
-                            <NavDropdown.Item href="/cylinderSeals">חותמות גליל</NavDropdown.Item>
+                            <NavDropdown.Item href="/Cylinder.Seals">חותמות גליל</NavDropdown.Item>
                             {/* <NavDropdown.Divider /> */}
-                            <NavDropdown.Item href="/megalith">מגלית</NavDropdown.Item>                            
-                            <NavDropdown.Item href="/elongatedSkulls">גולגלות מאורכות</NavDropdown.Item>                            
+                            <NavDropdown.Item href="/Megalith">מגלית</NavDropdown.Item>                            
+                            <NavDropdown.Item href="/Nephilim">נפילים</NavDropdown.Item>                            
                         </NavDropdown>                         
                         {/* <Nav.Link href="/essentials">עקרונות</Nav.Link> */}
                     </Nav>

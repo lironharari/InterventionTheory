@@ -42,7 +42,7 @@ class Home extends Component {
         <ScrollUpButton />                    
         <main className="home">
             <div className="section-content"> 
-                <section id="intro">
+                <section id="Intro">
                     {/* {Parser(this.getAsset("intro"))} */}
                     <h1>מבוא</h1>
                     <p>                        
@@ -69,7 +69,7 @@ class Home extends Component {
                     </p>
                     <p>...</p>
                 </section>                        
-                <section id="sumer">
+                <section id="Sumer">
                     {/* {Parser(this.getAsset("sumer"))} */}
                     <h1>שומר</h1>
                     <p>
@@ -85,7 +85,7 @@ class Home extends Component {
                         חותמת גליל הוא גליל עגול קטן, בדרך כלל עד 3 ס"מ אורך, עם תמונות, מילים, או שניהם, חרוטים על הגליל. חותמות גליל משומר היו מגולגלות על טיט רטוב כדי להשאיר טביעת חותם. כשהחומר התייבש, נוצרה חותמת. חותמות אלו שימשו למספר מטרות בשומר, לרבות לעסקים והתכתבות. הם שימשו כלי מינהלי, סוג של חתימה. הם שימשו כחתימה על מסמכים שנכתבו על לוחות חימר. באמצעות חותמת על פני השטח של לוח חימר טרי, אדם יכול היה לאשר כי המסמך הוא אותנטי. חותמות גליל אלו היו עשויות בדרך כלל מאבן (הן אבנים נפוצות והן אבנים יקרות למחצה), כגון אמטיסט, אובסידיאן, המטיט, ולפיס לזולי. החותמות היו מגולפות באינטגליו, כמו נגטיב צילומי. מה שמרשים ביותר בחותמות גליל הוא קנה המידה שלהן, את התמונות, ואת הכתב על אבנים אלו ניתן למדוד במילימטרים ובוא בזמן הם מפורטות ומדויקות.                        
                     </p>
                 </section>               
-                <section id="human">
+                <section id="Human.Creation">
                     {/* {Parser(this.getAsset("human"))} */}
                     <h1>יצירת האדם</h1>
                     <h4>בראשית</h4>
@@ -244,7 +244,7 @@ class Home extends Component {
                         </li>
                     </p>                    
                 </section>                                              
-                <section id="manApe">
+                <section id="Man.Ape">
                     {/* {Parser(this.getAsset("manApe"))} */}
                     <h1>אדם/קוף</h1>
                     <h4>גנטיקה</h4>
@@ -269,9 +269,10 @@ class Home extends Component {
                     </p>
                     <h4>השוואה פיזית</h4>
                 </section>                                                              
-                <section id="elongatedSkulls">
+                <section id="Nephilim">
                     {/* {Parser(this.getAsset("elongatedSkulls"))} */}
-                    <h1>גולגלות מאורכות</h1>
+                    <h1>נפילים</h1>
+                    <h4>גולגלות מאורכות</h4>
                     <p>
                         <img src="images/paracas-skulls.jpg" alt="" className="dialogImage" width={250} />                                                                  
                         הומו סאפיינס הוא המין האנושי היחיד הקיים. בלטינית הומו סאפיינס פירושו "אדם חכם". כל גולגולות האדם נראים די דומים עם הבדלים קטנים בגודל ובצורה בהתאם למין ולמורשת הגזעית.
@@ -292,12 +293,12 @@ class Home extends Component {
                     <h4>אל למחצה</h4>
                     <h4>נפילים</h4>                    
                 </section>
-                <section id="anunnaki">
+                <section id="Anunnaki">
                     {/* {Parser(this.getAsset("anunnaki"))}               */}
                     <h1>ענונקי</h1>
                     <h4>מושב האלים</h4>
                 </section>   
-                <section id="knowledge">                    
+                <section id="Advanced.Knowledge">                    
                     {/* {Parser(this.getAsset("knowledge"))}               */}
                     <h1>ידע מתקדם</h1>
                     <h4>אסטרולוגיה</h4>
@@ -305,7 +306,7 @@ class Home extends Component {
                     <h4>גלגל המזלות</h4>
                     <h4>גאומטריה קדושה</h4>
                 </section>   
-                <section id="technology">
+                <section id="Advanced.Technology">
                     {/* {Parser(this.getAsset("technology"))} */}
                     <h1>טכנולוגיה מתקדמת</h1>
                     <h4>עץ החיים</h4>
@@ -316,14 +317,14 @@ class Home extends Component {
             </div>
             <nav className="section-nav">
                 <ol>
-                    <li><a href="#intro">מבוא</a></li>                    
-                    <li><a href="#sumer">שומר</a></li>                                     
-                    <li><a href="#human">יצירת האדם</a></li>                                          
-                    <li><a href="#manApe">אדם/קוף</a></li>                                          
-                    <li><a href="#elongatedSkulls">גולגלות מאורכות</a></li>
-                    <li><a href="#anunnaki">ענונקי</a></li>
-                    <li><a href="#knowledge">ידע מתקדם</a></li>
-                    <li><a href="#technology">טכנולוגיה מתקדמת</a></li>
+                    <li><a href="#Intro">מבוא</a></li>                    
+                    <li><a href="#Sumer">שומר</a></li>                                     
+                    <li><a href="#Human.Creation">יצירת האדם</a></li>                                          
+                    <li><a href="#Man.Ape">אדם/קוף</a></li>                                          
+                    <li><a href="#Nephilim">נפילים</a></li>
+                    <li><a href="#Anunnaki">ענונקי</a></li>
+                    <li><a href="#Advanced.Knowledge">ידע מתקדם</a></li>
+                    <li><a href="#Advanced.Technology">טכנולוגיה מתקדמת</a></li>
                 </ol>
             </nav>
         </main>
