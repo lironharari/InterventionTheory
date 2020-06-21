@@ -5,7 +5,6 @@ const express = require('express');
 const compression = require("compression");
 const bodyParser = require('body-parser');
 const path = require('path');
-var serveStatic = require('serve-static')
 
 //possible EventEmitter memory leak detected
 require('events').EventEmitter.prototype._maxListeners = 100;
@@ -31,7 +30,6 @@ mongoose.connect( process.env.MONGODB_URI || 'mongodb+srv://admin:q29sIrl4w5Iz@c
 });
 
 // Configuration
-app.use(serveStatic(path.join(__dirname, 'dist')))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
