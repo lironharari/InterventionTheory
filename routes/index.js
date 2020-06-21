@@ -1,7 +1,7 @@
 const express = require('express');
 const { isEmpty } = require('lodash');
 //const Asset = require('../models/Asset');
-const Image = require('../models/Image');
+const Image = require('../models/image.js');
 const router = express.Router();
 
 router.post('/api/getImages', async (req, res) => {
