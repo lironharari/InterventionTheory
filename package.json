@@ -28,7 +28,7 @@
     "serve": "^11.3.2"
   },
   "engines": {
-    "node": "11.3.0"
+    "node": "12.16.1"
   },
   "devDependencies": {
     "react-social-icons": "^4.1.0"
