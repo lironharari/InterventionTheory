@@ -1,52 +1,47 @@
 const express = require('express');
 const { isEmpty } = require('lodash');
-// const HomeLink = require('../models/homeLink');
-// const Song = require('../models/song');
-// const Photo = require('../models/photo');
-// const Documentary = require('../models/documentary');
-const Asset = require('../models/Asset');
+//const Asset = require('../models/Asset');
 const Image = require('../models/Image');
-//const Category = require('../models/Category');
 const router = express.Router();
 
-router.post('/api/do', async (req, res) => {
-    console.log("at server");
-    const data = {}
-    try {
-        return res.json({
-            data
-        });
-    } catch (error) {
-        return res.status(500).json({
-            message: 'Internal Server error'
-        });
-    }    
-});
+// router.post('/api/do', async (req, res) => {
+//     console.log("at server");
+//     const data = {}
+//     try {
+//         return res.json({
+//             data
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             message: 'Internal Server error'
+//         });
+//     }    
+// });
 
 
 
-router.post('/api/getAssets', async (req, res) => {
+// router.post('/api/getAssets', async (req, res) => {
     
-    if (isEmpty(req.body)) {
-        return res.status(403).json({
-            message: 'Body should not be empty',
-            statusCode: 403
-        });
-    }
+//     if (isEmpty(req.body)) {
+//         return res.status(403).json({
+//             message: 'Body should not be empty',
+//             statusCode: 403
+//         });
+//     }
     
-    const { category } = req.body;  
+//     const { category } = req.body;  
         
-    try {
-        const assets = await Asset.find({ category: category });
-        return res.json({
-            assets
-        });
-    } catch (error) {
-        return res.status(500).json({
-            message: 'Internal Server error'
-        });
-    }
-});
+//     try {
+//         const assets = await Asset.find({ category: category });
+//         return res.json({
+//             assets
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             message: 'Internal Server error'
+//         });
+//     }
+// });
 
 
 router.post('/api/getImages', async (req, res) => {
@@ -73,28 +68,28 @@ router.post('/api/getImages', async (req, res) => {
 });
 
 
-router.post('/api/searchAsset', async (req, res) => {
+// router.post('/api/searchAsset', async (req, res) => {
     
-    if (isEmpty(req.body)) {
-        return res.status(403).json({
-            message: 'Body should not be empty',
-            statusCode: 403
-        });
-    }
+//     if (isEmpty(req.body)) {
+//         return res.status(403).json({
+//             message: 'Body should not be empty',
+//             statusCode: 403
+//         });
+//     }
     
-    const { name } = req.body;  
+//     const { name } = req.body;  
         
-    try {
-        const asset = await Asset.findOne({ name: name });
-        return res.json({
-            asset
-        });
-    } catch (error) {
-        return res.status(500).json({
-            message: 'Internal Server error'
-        });
-    }
-});
+//     try {
+//         const asset = await Asset.findOne({ name: name });
+//         return res.json({
+//             asset
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             message: 'Internal Server error'
+//         });
+//     }
+// });
 
 // router.post('/api/documentaryPhotography', async (req, res) => {
 //     if (isEmpty(req.body)) {
@@ -350,32 +345,32 @@ router.post('/api/addImage', async (req, res) => {
 });
 
 
-router.post('/api/addAsset', async (req, res) => {
-    if (isEmpty(req.body)) {
-        return res.status(403).json({
-            message: 'Body should not be empty',
-            statusCode: 403
-        });
-    } 
+// router.post('/api/addAsset', async (req, res) => {
+//     if (isEmpty(req.body)) {
+//         return res.status(403).json({
+//             message: 'Body should not be empty',
+//             statusCode: 403
+//         });
+//     } 
             
-    const { id, name, content, category } = req.body;  
-    const newAsset = new Asset({id, name, content, category});
+//     const { id, name, content, category } = req.body;  
+//     const newAsset = new Asset({id, name, content, category});
         
-    try {
-        await newAsset.save();
-        // res.json({
-        //     message: 'Data successfully saved',
-        //     statusCode: 200,
-        //     src, category, subcategory, width, height, description, rank
-        // });
-    } catch (error) {
-        console.log('Error: ', error);
-        res.status(500).json({
-            message: 'Internal Server error',
-            statusCode: 500
-        });
-    }
-});
+//     try {
+//         await newAsset.save();
+//         // res.json({
+//         //     message: 'Data successfully saved',
+//         //     statusCode: 200,
+//         //     src, category, subcategory, width, height, description, rank
+//         // });
+//     } catch (error) {
+//         console.log('Error: ', error);
+//         res.status(500).json({
+//             message: 'Internal Server error',
+//             statusCode: 500
+//         });
+//     }
+// });
 
 
 // router.post('/api/updatePhoto', async (req, res) => {
