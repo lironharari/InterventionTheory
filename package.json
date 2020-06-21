@@ -21,7 +21,7 @@
     "express": "^4.16.4",
     "html-react-parser": "^0.13.0",
     "lodash": "^4.17.15",
-    "mongoose": "^5.4.13",
+    "mongoose": "^5.7.5",
     "prop-types": "^15.7.2",
     "react-photo-gallery": "^8.0.0",
     "react-scroll-up-button": "^1.6.4",
