@@ -644,7 +644,8 @@ main > nav {
 
 .section-content{
   text-align: right;
-  padding: 0 5%;
+  direction: rtl;  
+  margin: 0 3%;
 }
 
 /* Sidebar Navigation */
@@ -728,7 +729,6 @@ img.dialogImageRight{
   float:right;
   margin-left:20px;
 }
-
 section span::before {
   content: "\A";
   white-space: pre;
@@ -742,7 +742,7 @@ section li{
   margin-bottom: 10px;
 }
 .quotation{
-  font-size: 25px;
+  font-size: 20px;
   margin: 0 auto;
   quotes: "\201C""\201D""\2018""\2019";
   padding: 10px 20px;
@@ -755,7 +755,7 @@ section li{
   line-height: 0;
   left: 5px;
   position: relative;
-  top: 30px;
+  top: 25px;
   color: #ccc;
   font-size: 3em;
 }
@@ -765,13 +765,13 @@ section li{
   line-height: 0;
   left: 0;
   position: relative;
-  top: 30px;
+  top: 20px;
   color: #ccc;
   font-size: 3em;
 }
 footer{
   margin:0;
   text-align: left;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-style: italic;
 }

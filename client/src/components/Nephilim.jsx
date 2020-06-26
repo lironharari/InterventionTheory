@@ -34,13 +34,6 @@ getImages = ( ) => {
 
     render() {
       const { photos } = this.state;       
-      let csCylinderSeals = [];      
-      let csEgypt = [];
-      let csElongatedSkulls = [];
-      
-      csCylinderSeals =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "CylinderSeals";})))      
-      csEgypt =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "Egypt";})))      
-      csElongatedSkulls =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "ElongatedSkulls";})))      
 
       return (     
         <div className="siteContainer">            
@@ -51,19 +44,19 @@ getImages = ( ) => {
                 <section id="elongated-skulls">
                     <h2>גולגולות מאורכות</h2>
                     <p>
-                        <ImageGallery photos={csElongatedSkulls}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery>                      
                     </p>
                 </section>               
                 <section id="egypt">
                     <h2>מצרים</h2>
                     <p>
-                        <ImageGallery photos={csEgypt}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
                     </p>
                 </section>  
                 <section id="cylinder-seals">
                     <h2>חותמות גליל</h2>
                     <p>
-                        <ImageGallery photos={csCylinderSeals}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"CylinderSeals")}></ImageGallery>
                     </p>
                 </section>                                                   
             </div>

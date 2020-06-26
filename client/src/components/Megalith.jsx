@@ -34,13 +34,6 @@ getImages = ( ) => {
 
     render() {
       const { photos } = this.state;       
-      let csSacsayhuaman = [];      
-      let csEgypt = [];      
-      let csBaalbek = [];      
-      
-        csBaalbek =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "Baalbek";})))      
-        csSacsayhuaman =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "Sacsayhuaman";})))      
-        csEgypt =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "Egypt";})))      
 
       return (     
         <div className="siteContainer">            
@@ -51,19 +44,19 @@ getImages = ( ) => {
                 <section id="sacsayhuaman">
                     <h2>סאסקיואמן</h2>
                     <p>
-                        <ImageGallery photos={csSacsayhuaman}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"Sacsayhuaman")}></ImageGallery>
                     </p>
                 </section>               
                 <section id="egypt">
                     <h2>מצרים</h2>
                     <p>
-                        <ImageGallery photos={csEgypt}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
                     </p>
                 </section>
                 <section id="baalbek">
                     <h2>בעלבק</h2>
                     <p>
-                        <ImageGallery photos={csBaalbek}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"Baalbek")}></ImageGallery>
                     </p>
                 </section>                                                               
             </div>

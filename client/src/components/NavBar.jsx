@@ -17,6 +17,7 @@ class NavBar extends React.Component {
                             {/* <NavDropdown.Divider /> */}
                             <NavDropdown.Item href="/megalith/">מגלית</NavDropdown.Item>                            
                             <NavDropdown.Item href="/nephilim/">נפילים</NavDropdown.Item>                            
+                            <NavDropdown.Item href="/anunnaki/">ענונקי</NavDropdown.Item>                            
                         </NavDropdown>                         
                         {/* <Nav.Link href="/essentials">עקרונות</Nav.Link> */}
                     </Nav>

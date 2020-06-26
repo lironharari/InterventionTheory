@@ -34,13 +34,6 @@ getImages = ( ) => {
 
     render() {
       const { photos } = this.state;       
-      let csTreeOfLife = [];      
-      let csMisc = [];
-      let csNibiruPull = [];
-      
-      csTreeOfLife =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "TreeOfLife";})))      
-      csMisc =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "Misc";})))      
-      csNibiruPull =  commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos.filter(function (photo) { return photo.subcategory === "NibiruPull";})))      
 
       return (     
         <div className="siteContainer">            
@@ -51,27 +44,27 @@ getImages = ( ) => {
                 <section id="tree-of-life">
                     <h2>עץ החיים</h2>
                     <p>
-                        <ImageGallery photos={csTreeOfLife}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
+                    </p>
+                </section>               
+                <section id="nibiru-pull">
+                    <h2>משיכת ניבירו</h2>
+                    <p>
+                        <ImageGallery photos={commonScript.filter(photos,"NibiruPull")}></ImageGallery>
                     </p>
                 </section>               
                 <section id="misc">
                     <h2>שונות</h2>
                     <p>
-                        <ImageGallery photos={csMisc}></ImageGallery>                      
+                        <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
                     </p>
-                </section>  
-                <section id="nibiru-pull">
-                    <h2>משיכת ניבירו</h2>
-                    <p>
-                        <ImageGallery photos={csNibiruPull}></ImageGallery>                      
-                    </p>
-                </section>                                                   
+                </section>                                                      
             </div>
             <nav class="section-nav">
                 <ol>                                                              
-                    <li><a href="#tree-of-life">עץ החיים</a></li>               
-                    <li><a href="#misc">שונות</a></li>
+                    <li><a href="#tree-of-life">עץ החיים</a></li>                                   
                     <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                    
+                    <li><a href="#misc">שונות</a></li>
                 </ol>
             </nav>
         </main>

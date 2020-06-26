@@ -11,7 +11,7 @@ import Nephilim from './Nephilim';
 // import Sumer from './Sumer';
 // import Creation from './Creation';
 // import Nephilim from './Nephilim';
-// import Anunnaki from './Anunnaki';
+import Anunnaki from './Anunnaki';
 // import Knowledge from './Knowledge';
 // import Archive from './Archive';
 
@@ -35,6 +35,7 @@ class Content extends Component {
             <Route exact path="/cylinder-seals/" component={CylinderSeals} />
             <Route exact path="/megalith/" component={Megalith} />
             <Route exact path="/nephilim/" component={Nephilim} />
+            <Route exact path="/anunnaki/" component={Anunnaki} />
             <Route  component={Notfound} />
             </Switch> 
         </Router> 

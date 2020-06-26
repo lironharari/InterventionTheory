@@ -6,6 +6,10 @@ export function inPageLink(id) {
   return id.replace( ' ', '-');      
 }
 
+export function filter(photos,subcategory) {
+  return this.adjustGalleryPhotos(this.sortByRank(photos.filter(function (photo) { return photo.subcategory === subcategory;})))
+}
+
 export function enableScroll() {
   window.addEventListener('DOMContentLoaded', () => {
 
