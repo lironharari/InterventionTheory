@@ -7,7 +7,7 @@ export function inPageLink(id) {
 }
 
 export function filter(photos,subcategory) {
-  return this.adjustGalleryPhotos(this.sortByRank(photos.filter(function (photo) { return photo.subcategory === subcategory;})))
+  return adjustGalleryPhotos(sortByRank(photos.filter(function (photo) { return photo.subcategory === subcategory;})))
 }
 
 export function enableScroll() {
