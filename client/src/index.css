@@ -608,8 +608,8 @@ margin-bottom: 25px;
 .copyright a{
   color:rgba(0,0,0,.6);
   }
-
-footer{
+  
+  .section-footer{
   margin-top: 40px;
   text-align: center;
   color:rgba(0,0,0,.6);
@@ -646,6 +646,7 @@ main > nav {
   text-align: right;
   direction: rtl;  
   margin: 0 3%;
+  padding-bottom: 50px;  
 }
 
 /* Sidebar Navigation */
@@ -711,7 +712,7 @@ main.archive{
 }
 
 section{
-  margin-bottom:20px;
+  margin-bottom:40px;
   padding-top:20px;
 }
 /** enlarge the sections for this demo, so that we have a long scrollable page **/
@@ -775,4 +776,15 @@ footer{
   text-align: left;
   font-size: 1.2em;
   font-style: italic;
+}
+h1{
+  margin-bottom: 10px !important;
+}
+.siteContainer
+{
+  margin-top: 0;  
+}
+.section-nav{
+  /* border-top:1px solid red; */
+  margin-top: 30px;  
 }

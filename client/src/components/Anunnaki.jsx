@@ -39,9 +39,9 @@ getImages = ( ) => {
         <div className="siteContainer">            
         <ScrollUpButton />
         <main className="archive">
-            <div className="section-content">                                               
-                <h1>ענונקי</h1>                
+            <div className="section-content">                                                               
                 <section id="abgal">
+                    <h1>ענונקי</h1>                
                     <h2>אבגל</h2>
                     <p>                        
                         <ImageGallery photos={commonScript.filter(photos,"Abgal")}></ImageGallery>

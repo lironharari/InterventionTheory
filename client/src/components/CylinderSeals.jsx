@@ -36,12 +36,11 @@ getImages = ( ) => {
       const { photos } = this.state;       
 
       return (     
-        <div className="siteContainer">            
-        <ScrollUpButton />
+        <div className="siteContainer">                    
         <main className="archive">
-            <div className="section-content">                                               
-                <h1>חותמות גליל</h1>
+            <div className="section-content">                                                               
                 <section id="tree-of-life">
+                  <h1>חותמות גליל</h1>
                     <h2>עץ החיים</h2>
                     <p>
                         <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
@@ -67,6 +66,7 @@ getImages = ( ) => {
                     <li><a href="#misc">שונות</a></li>
                 </ol>
             </nav>
+            <ScrollUpButton />
         </main>
       </div>   
       );
