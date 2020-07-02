@@ -734,7 +734,7 @@ section span::before {
   content: "\A";
   white-space: pre;
 }
-section h1, .section-content h1{
+section h2, .section-content h2{
   text-decoration: underline;
   text-align: center;
 }
@@ -777,7 +777,7 @@ footer{
   font-size: 1.2em;
   font-style: italic;
 }
-h1{
+h2{
   margin-bottom: 10px !important;
 }
 .siteContainer
@@ -787,4 +787,7 @@ h1{
 .section-nav{
   /* border-top:1px solid red; */
   margin-top: 30px;  
+}
+#bibliography li{
+  list-style-type: decimal;
 }

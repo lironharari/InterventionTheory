@@ -41,7 +41,6 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                                               
                 <section id="elongated-skulls">
-                    <h1>נפילים</h1>
                     <h2>גולגולות מאורכות</h2>
                     <p>
                         <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery>                      

@@ -40,27 +40,20 @@ getImages = ( ) => {
         <ScrollUpButton />
         <main className="archive">
             <div className="section-content">                                                               
-                <section id="abgal">
-                    <h1>ענונקי</h1>                
+                <section id="abgal">                    
                     <h2>אבגל</h2>
-                    <p>                        
-                        <ImageGallery photos={commonScript.filter(photos,"Abgal")}></ImageGallery>
-                    </p>
+                    <ImageGallery photos={commonScript.filter(photos,"Abgal")}></ImageGallery>
                 </section>                
                 <section id="tree-of-life">
                     <h2>עץ החיים</h2>
-                    <p>                        
-                        <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
-                    </p>
+                    <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
                 </section>        
                 <section id="misc">
                     <h2>שונות</h2>
-                    <p>
-                        <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
-                    </p>
+                    <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
                 </section>                                                                                    
             </div>
-            <nav class="section-nav">
+            <nav className="section-nav">
                 <ol>                                                              
                     <li><a href="#abgal">אבגל</a></li>
                     <li><a href="#tree-of-life">עץ החיים</a></li>                                   

@@ -40,18 +40,17 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                                               
                 <section id="tree-of-life">
-                  <h1>חותמות גליל</h1>
                     <h2>עץ החיים</h2>
                     <p>
                         <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
                     </p>
                 </section>               
-                <section id="nibiru-pull">
+                {/* <section id="nibiru-pull">
                     <h2>משיכת ניבירו</h2>
                     <p>
                         <ImageGallery photos={commonScript.filter(photos,"NibiruPull")}></ImageGallery>
                     </p>
-                </section>               
+                </section>                */}
                 <section id="misc">
                     <h2>שונות</h2>
                     <p>
@@ -62,7 +61,7 @@ getImages = ( ) => {
             <nav class="section-nav">
                 <ol>                                                              
                     <li><a href="#tree-of-life">עץ החיים</a></li>                                   
-                    <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                    
+                    {/* <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                     */}
                     <li><a href="#misc">שונות</a></li>
                 </ol>
             </nav>
