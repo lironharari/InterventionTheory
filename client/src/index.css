@@ -783,3 +783,12 @@ h2{
 #bibliography li{
   list-style-type: decimal;
 }
+.cite_note{
+  padding: 0 5px;
+}
+cite a:hover{
+  text-decoration: underline;  
+}
+cite a{
+  color:#0645ad;
+}

@@ -60,12 +60,14 @@ class Home extends Component {
                         בריאתנות היא מערכת אמונות שלפיהן היקום, כדור הארץ, החיים והאדם בפרט נבראו על ידי אלוהים,
                          אשר ביהדות, בנצרות ובאסלאם מזוהה עם האל המונותאיסטי.                                                
                         לפי הספרות המסופוטמית של השומרים, האכדים, הבבלים והאשורים, האמונה בבריאתנות מזוהה עם אלים רבים. 
+                        <sup id="cite_ref-1" className="reference"><a href="#cite_note-1">[1]</a></sup>
                     </p>
                     <p>
                         אבולוציה ביולוגית הינה תיאוריה שפיתח צ'ארלס דארווין המתארת את יצירת העולם, החיים והאדם באופן טבעי,
                          תוך כדי שינויים גנטיים באוכלוסיה של אורגניזמים לאורך דורות. 
                         התאוריה גורסת כי המינים השונים התפתחו במשך מיליוני שנים מאב קדמון משותף אחד. 
                         כשהופיעה תורת האבולוציה של דרווין, היא זכתה להתנגדות תקיפה על רקע נימוקים מדעיים ודתיים גם יחד.
+                        <sup id="cite_ref-2" className="reference"><a href="#cite_note-2">[2]</a></sup>
                     </p>
                     <p>
                         עד ימינו, נותרה מחלוקת בין הזרמים המקבלים את האבולוציה כדברי המדע,
@@ -1514,15 +1516,29 @@ class Home extends Component {
                         אתגר נוסף הוא החריטה של יצירות אומנות מינייטוריות על גבי אבן בגודל 3 סנטימרים.                        
                     </p>
                 </section>                                                
-                <section>
+                <section id="bibliography">
                     <h2>ביבליוגרפיה</h2>
-                    <ol id="bibliography">
-                        <li id='#bib01'>                            
-                            <cite>עוד לא מוכן</cite>.
+                    <ol>
+                        <li id="cite_note-1">          
+                            <a className="cite_note" href="#cite_ref-1">^</a>
+                            <cite>
+                                הדת המסופוטמית (
+                                    <a rel="nofollow" target="_blank" href="https://www.britannica.com/topic/Mesopotamian-religion">אנגלית</a>
+                                    , <a rel="nofollow" target="_blank" href="https://www.hamichlol.org.il/%D7%9E%D7%99%D7%AA%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94_%D7%9E%D7%A1%D7%95%D7%A4%D7%98%D7%95%D7%9E%D7%99%D7%AA">עברית</a>                                                                   
+                            )
+                            </cite>
                         </li>
-                        <li id='#bib02'>                            
-                            <cite>עוד לא מוכן</cite>.                               
+                        <li id="cite_note-2">          
+                            <a className="cite_note" href="#cite_ref-2">^</a>
+                            <cite>
+                                אבולוציה (
+                                    <a rel="nofollow" target="_blank" href="https://plato.stanford.edu/entries/evolution/">אנגלית</a>
+                                    , <a rel="nofollow" target="_blank" href="https://he.wikipedia.org/wiki/%D7%90%D7%91%D7%95%D7%9C%D7%95%D7%A6%D7%99%D7%94">עברית</a>                                                                   
+                            )
+                            </cite>
                         </li>                        
+                        
+                        
                     </ol>                    
                 </section>
             </div>
@@ -1536,6 +1552,7 @@ class Home extends Component {
                     <li><a href="#anunnaki">אנונקי</a></li>
                     <li><a href="#advanced-knowledge">ידע מתקדם</a></li>
                     <li><a href="#advanced-technology">טכנולוגיה</a></li>                    
+                    <li><a href="#bibliography">ביבליוגרפיה</a></li>
                 </ol>
             </nav>
             <ScrollUpButton />
