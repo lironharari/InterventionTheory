@@ -283,7 +283,7 @@
   /* Desktop Styles */
   @media only screen and (min-width: 1024px) {
     img.dialogImage{
-      width:40%;
+      width:35%;
       margin-right:20px;
     }    
     #imgHaplogroup, #imgSaturn{
