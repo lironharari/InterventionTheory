@@ -65,9 +65,10 @@ class Home extends Component {
                     <p>
                         אבולוציה ביולוגית הינה תיאוריה שפיתח צ'ארלס דארווין המתארת את יצירת העולם, החיים והאדם באופן טבעי,
                          תוך כדי שינויים גנטיים באוכלוסיה של אורגניזמים לאורך דורות. 
+                         <sup id="cite_ref-2" className="reference"><a href="#cite_note-2">[2]</a></sup>
+                         &nbsp;
                         התאוריה גורסת כי המינים השונים התפתחו במשך מיליוני שנים מאב קדמון משותף אחד. 
-                        כשהופיעה תורת האבולוציה של דרווין, היא זכתה להתנגדות תקיפה על רקע נימוקים מדעיים ודתיים גם יחד.
-                        <sup id="cite_ref-2" className="reference"><a href="#cite_note-2">[2]</a></sup>
+                        כשהופיעה תורת האבולוציה של דרווין, היא זכתה להתנגדות תקיפה על רקע נימוקים מדעיים ודתיים גם יחד.                        
                     </p>
                     <p>
                         עד ימינו, נותרה מחלוקת בין הזרמים המקבלים את האבולוציה כדברי המדע,
@@ -94,11 +95,12 @@ class Home extends Component {
                 <section id="sumer">
                     <h2>שומר</h2>
                     <p>                    
-                                                
+                        <img src="images/sumer.jpg" alt="" className="dialogImage"  />                  
                         ארץ שומר השתרעה על אזור הנמצא בדרום מסופוטמיה ("הארץ בין הנהרות") אשר בדרום עיראק המודרנית.
                         התרבות השומרית היא הציוויליזציה הראשונה בתולדות האנושות.                         
-                        <span>
-                        <img src="images/sumer.jpg" alt="" className="dialogImage"  />                            
+                        <sup id="cite_ref-3" className="reference"><a href="#cite_note-3">[3]</a></sup>
+                        <sup id="cite_ref-4" className="reference"><a href="#cite_note-4">[4]</a></sup>
+                        <span>                                                    
                          לפי ההנחה המקובלת, ראשיתה של תרבות זו בסביבות שנת 3,500 לפנה"ס.
                         לתרבות זו מיוחסות כל ההתחלות של ציוויליזציה מתקדמת שעתידות היו לשמש כבסיס לתרבות המערב: ערים, בתי ספר, חקלאות, כתב, דפוס, מתמטיקה, אסטרונומיה, חוקים, בתי משפט ועוד.                                                 
                         </span>                                                
@@ -186,7 +188,7 @@ class Home extends Component {
                     </p>
                     <h5>ספרות מסופוטמית</h5>
                     <div>                        
-                        <img src="images/TheAtrahasis.png" alt="" className="dialogImage"  />
+                        <img src="images/thumbnails/TheAtrahasis.jpg" alt="" className="dialogImage"  />
                         אתרחסיס הוא אפוס מסופוטמי על בריאת האדם והמבול אשר נכתב על שלושה לוחות בתקופה הבבלית העתיקה (במאה 18-17 לפנה"ס).                     
                             <span>
                             באתרחסיס, הסיבות ליצירת האנושות מתוארות כדלקמן:
@@ -261,7 +263,7 @@ class Home extends Component {
                         </blockquote>                                                        
                     </div>
                     <div>
-                        <img src="images/TheEnumaElish.png" alt="" className="dialogImage"  />
+                        <img src="images/thumbnails/TheEnumaElish.jpg" alt="" className="dialogImage"  />
                         האנומה אליש, שהוא סיפור הבריאה הבבלי,
                          מתוארך לאלף השניה לפני הספירה.
                           הקטע הבא מתאר כיצד נוצר האדם הראשון, הלולו,
@@ -1525,7 +1527,7 @@ class Home extends Component {
                                 הדת המסופוטמית (
                                     <a rel="nofollow" target="_blank" href="https://www.britannica.com/topic/Mesopotamian-religion">אנגלית</a>
                                     , <a rel="nofollow" target="_blank" href="https://www.hamichlol.org.il/%D7%9E%D7%99%D7%AA%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94_%D7%9E%D7%A1%D7%95%D7%A4%D7%98%D7%95%D7%9E%D7%99%D7%AA">עברית</a>                                                                   
-                            )
+                            ).
                             </cite>
                         </li>
                         <li id="cite_note-2">          
@@ -1534,11 +1536,27 @@ class Home extends Component {
                                 אבולוציה (
                                     <a rel="nofollow" target="_blank" href="https://plato.stanford.edu/entries/evolution/">אנגלית</a>
                                     , <a rel="nofollow" target="_blank" href="https://he.wikipedia.org/wiki/%D7%90%D7%91%D7%95%D7%9C%D7%95%D7%A6%D7%99%D7%94">עברית</a>                                                                   
-                            )
+                            ).
                             </cite>
                         </li>                        
-                        
-                        
+                        <li id="cite_note-3">          
+                            <a className="cite_note" href="#cite_ref-3">^</a>
+                            <cite>
+                            ההיסטוריה מתחילה בשומר / מאת שמואל נח קרמר, ספרית פועלים, 1960 (
+                                    <a rel="nofollow" target="_blank" href="https://www.amazon.com/History-Begins-Sumer-Thirty-Nine-Recorded/dp/0812212762">אנגלית</a>
+                                    , <a rel="nofollow" target="_blank" href="https://www.nli.org.il/he/books/NNL_ALEPH000876526/NLI">עברית</a>                                                                   
+                            ).
+                            </cite>
+                        </li>
+                        <li id="cite_note-4">          
+                            <a className="cite_note" href="#cite_ref-4">^</a>
+                            <cite>
+                            ערש הציוויליזציה / מאת שמואל נח קרמר אמיר, ספרית מעריב, 1980 (
+                                    <a rel="nofollow" target="_blank" href="https://www.amazon.com/Cradle-Civilization-Great-Ages-Man/dp/0672952807/ref=sr_1_14?dchild=1&qid=1593720681&refinements=p_27%3ASamuel+Noah+Kramer&s=books&sr=1-14&text=Samuel+Noah+Kramer">אנגלית</a>
+                                    , <a rel="nofollow" target="_blank" href="https://www.nli.org.il/en/books/NNL_ALEPH990008275510205171/NLI">עברית</a>                                                                   
+                            ).
+                            </cite>
+                        </li>                                                                                                                    
                     </ol>                    
                 </section>
             </div>

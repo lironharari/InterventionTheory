@@ -8,7 +8,7 @@
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {
     img.dialogImage{
-      width:200px;
+      width:70%;
       margin-right:10px;
     }  
     #imgHaplogroup,#imgSaturn{
@@ -129,7 +129,7 @@
   /* Tablet Styles */
   @media only screen and (min-width: 415px) and (max-width: 1024px) {
     img.dialogImage{
-      width:230px;
+      width:50%;
       margin-right:15px;
     }  
     #imgHaplogroup,#imgSaturn{
@@ -275,7 +275,6 @@
       margin-top: 10px;
       font-size:1.7rem;
     }
-    
     .main{
       width: 100%;
     }
@@ -284,11 +283,11 @@
   /* Desktop Styles */
   @media only screen and (min-width: 1024px) {
     img.dialogImage{
-      width:300px;
+      width:40%;
       margin-right:20px;
     }    
     #imgHaplogroup, #imgSaturn{
-      width:500px;
+      width:50%;
     }
     main.home {  
       grid-template-columns: 1fr 8em;
