@@ -7,11 +7,20 @@
   
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {
-
+    img.dialogImage{
+      width:200px;
+      margin-right:10px;
+    }  
+    #imgHaplogroup,#imgSaturn{
+      width:100%;
+    } 
+    .section-nav{
+      display: none;
+    }
     .siteContainer{
       margin-top: 30px;
-      margin-left: 2%;
-      margin-right: 2%;
+      margin-left: 0;
+      margin-right: 0;            
     }
     
     .videoThumbnail{            
@@ -41,8 +50,7 @@
       width:45px !important;
     }    
     .navbar {
-      padding: 0.9rem 2% !important;      
-      border-bottom:1px solid rgba(0,0,0,.1);
+      padding: 0.9rem 2% !important;            
     }
     .navbar-nav .dropdown-menu{
       border-left: none !important;
@@ -121,10 +129,23 @@
 
   /* Tablet Styles */
   @media only screen and (min-width: 415px) and (max-width: 1024px) {
+    img.dialogImage{
+      width:230px;
+      margin-right:15px;
+    }  
+    #imgHaplogroup,#imgSaturn{
+      width:100%;
+    }    
+    main.home {  
+      grid-template-columns: 1fr 8em;
+    }
+    main.archive{
+      grid-template-columns: 1fr 9.5em;
+    }
     .siteContainer{
       margin-top: 30px;
       margin-left: 2%;
-      margin-right: 2%;
+      margin-right: 2%;            
     }
     .navbar-brand{     
       margin-right:1rem !important;
@@ -263,10 +284,24 @@
 
   /* Desktop Styles */
   @media only screen and (min-width: 1024px) {
+    img.dialogImage{
+      width:300px;
+      margin-right:20px;
+    }    
+    #imgHaplogroup, #imgSaturn{
+      width:500px;
+    }
+    main.home {  
+      grid-template-columns: 1fr 8em;
+    }
+    
+    main.archive{
+      grid-template-columns: 1fr 9.5em;
+    }    
     .siteContainer{
       margin-top: 30px;
       margin-left: 5%;
-      margin-right: 5%;
+      margin-right: 5%;      
     }
     .navbar-brand{     
       margin-right:0px !important;

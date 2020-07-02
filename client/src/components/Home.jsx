@@ -71,7 +71,7 @@ class Home extends Component {
                         עד ימינו, נותרה מחלוקת בין הזרמים המקבלים את האבולוציה כדברי המדע,
                          ובין אלו השוללים אותה ונצמדים לפשטי המקראות. 
                     </p>
-                    <img src="images/intervention.png" alt="" className="dialogImage" width={300} />
+                    <img src="images/intervention.png" alt="" className="dialogImage"  />
                     <h5>התערבות</h5>
                     <p>                                                
                         תיאוריית ההתערבות מציבה קץ לסכסוך בין בריאתנות לאבולוציה על ידי יצירת הרמוניה בין שתי נקודות מבט כביכול מנוגדות.
@@ -92,11 +92,14 @@ class Home extends Component {
                 <section id="sumer">
                     <h2>שומר</h2>
                     <p>                    
-                        <img src="images/sumer.jpg" alt="" className="dialogImage" width={300} />                        
+                                                
                         ארץ שומר השתרעה על אזור הנמצא בדרום מסופוטמיה ("הארץ בין הנהרות") אשר בדרום עיראק המודרנית.
-                        התרבות השומרית היא הציוויליזציה הראשונה בתולדות האנושות.                        
-                        לפי ההנחה המקובלת, ראשיתה של תרבות זו בסביבות שנת 3,500 לפנה"ס.
+                        התרבות השומרית היא הציוויליזציה הראשונה בתולדות האנושות.                         
+                        <span>
+                        <img src="images/sumer.jpg" alt="" className="dialogImage"  />                            
+                         לפי ההנחה המקובלת, ראשיתה של תרבות זו בסביבות שנת 3,500 לפנה"ס.
                         לתרבות זו מיוחסות כל ההתחלות של ציוויליזציה מתקדמת שעתידות היו לשמש כבסיס לתרבות המערב: ערים, בתי ספר, חקלאות, כתב, דפוס, מתמטיקה, אסטרונומיה, חוקים, בתי משפט ועוד.                                                 
+                        </span>                                                
                     </p>
                     <h5>שפה</h5>
                     <p>
@@ -107,7 +110,7 @@ class Home extends Component {
                     </p>
                     <h5>כתב</h5>
                     <p>                                        
-                        <img src="images/cuneiform1.jpg" alt="" className="dialogImage" width={300} />                                                
+                        <img src="images/cuneiform1.jpg" alt="" className="dialogImage"  />                                                
                         כתב קוניפורמי (יתדות) היא מערכת כתיבה אשר השומרים השתמשו בה לראשונה בסביבות 3,500 שנים לפנה"ס.
                         כל התרבויות המסופוטמיות שבאו אחרי שומר השתמשו בכתב קוניפורמי עד אשר היא ננטשה לטובת הכתב האלפבתי קרוב למאה שנים לפנה"ס ביניהם אכדים, בבלים, עילמים, חיתים ואשורים.
                         סימני הכתב מורכבים מטביעות יתד (מכאן שמו) העשוי ממקל שנלחץ על לוחות חומר (טיט רטוב) ויצרו סימנים שונים המורכבים משילובים שונים של סימני יתדות.
@@ -123,7 +126,7 @@ class Home extends Component {
                     </p>
                     <h5>דפוס</h5>
                     <p>
-                        <img src="images/clay.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/clay.jpg" alt="" className="dialogImage"  />                        
                         חותם גליל הוא חותם המעוצב בצורת גליל קטן, בדרך כלל עד 3 ס"מ אורך, עם תמונות, מילים, או שניהם, חרוטים על הגליל.                        
                         חותמות גליל מסופוטמיות היו מגולגלות על טיט רטוב כדי להשאיר טביעת חותם.
                         כשהחומר התייבש, נוצרה חותמת.
@@ -181,7 +184,7 @@ class Home extends Component {
                     </p>
                     <h5>ספרות מסופוטמית</h5>
                     <div>                        
-                        <img src="images/TheAtrahasis.png" alt="" className="dialogImage" width={300} />
+                        <img src="images/TheAtrahasis.png" alt="" className="dialogImage"  />
                         אתרחסיס הוא אפוס מסופוטמי על בריאת האדם והמבול אשר נכתב על שלושה לוחות בתקופה הבבלית העתיקה (במאה 18-17 לפנה"ס).                     
                             <span>
                             באתרחסיס, הסיבות ליצירת האנושות מתוארות כדלקמן:
@@ -256,7 +259,7 @@ class Home extends Component {
                         </blockquote>                                                        
                     </div>
                     <div>
-                        <img src="images/TheEnumaElish.png" alt="" className="dialogImage" width={300} />
+                        <img src="images/TheEnumaElish.png" alt="" className="dialogImage"  />
                         האנומה אליש, שהוא סיפור הבריאה הבבלי,
                          מתוארך לאלף השניה לפני הספירה.
                           הקטע הבא מתאר כיצד נוצר האדם הראשון, הלולו,
@@ -425,7 +428,7 @@ class Home extends Component {
                     </p>
                     <h5>מיזוג כרומוזומים</h5>                    
                     <p>
-                        <img src="images/chromosome.png" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/chromosome.png" alt="" className="dialogImage"  />                        
                         לבני אדם 23 זוגות כרומוזומים ולשאר קופי האדם 24 זוגות כרומוזומים.
                           כאשר הם מוצגים זה לצד זה, הדבר הבולט ביותר בגנום של בני האדם ושימפנזים הוא עד כמה הם דומים.
                            ההבדל העיקרי נעוץ בכרומוזום האנושי מספר 2, המציג מיזוג מקצה לקצה של שני כרומוזומים קדומים.                         
@@ -450,7 +453,7 @@ class Home extends Component {
                     </p>
                     <h5>היפוך גנטי</h5>                   
                     <p>                        
-                        <img src="images/inversion.jpg" alt="" className="dialogImage" width={300} />
+                        <img src="images/inversion.jpg" alt="" className="dialogImage"  />
                         היפוך גנטי הוא ארגון מחדש של כרומוזום בו נפרס קטע של כרומוזום,
                          ואז מוחזר למקומו המקורי, אך בכיוון הפוך.
                           כל היפוך הוא ייחודי,
@@ -514,7 +517,7 @@ class Home extends Component {
                               ובגודל ארבעה גיליונות נייר בבני אדם.
                          </li>
                          <li>                            
-                            <img src="images/foramenmagnum.jpg" alt="" className="dialogImage" width={300} />
+                            <img src="images/foramenmagnum.jpg" alt="" className="dialogImage"  />
                             נקב העורף ("פורמן מגנום") הוא החור בחלק התחתון של הגולגולת ממנה יוצא חוט השדרה ועוקב אחר עמוד השדרה.
                              אצל בני אדם, נקב העורף ממוקם במרכז, ופונה ישירות כלפי מטה.
                               נקב העורף אצל שימפנזים וקופים אדם אחרים ממוקם בחלק האחורי של הגולגולת כאשר חוט השדרה יוצא בזווית קלה.
@@ -532,7 +535,7 @@ class Home extends Component {
                                 הטון או גובה הקול שלהם, ולכן הם אינם יכולים לדבר.                    
                         </li> 
                         <li>
-                        <img src="images/chin.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/chin.jpg" alt="" className="dialogImage"  />                        
                             בני אדם הם החיה היחידה עם סנטר בולט,
                              אפילו לקרובי משפחתנו הקרובים ביותר שנכחדו כמו הניאנדרטלים אין סנטר.
                               למעשה, אחת הדרכים בהן מדענים מבדילים בין אדם מודרני אנטומי לבין גולגולת ניאנדרטלית היא לחפש אם יש לו סנטר.                    
@@ -553,7 +556,7 @@ class Home extends Component {
                              ארובות העיניים של שימפנזים עגולות ואילו ארובות העיניים של בני האדם מלבניות.
                         </li>
                         <li>                                                                                                                          
-                            <img src="images/eye.jpg" alt="" className="dialogImage" width={300} />
+                            <img src="images/eye.jpg" alt="" className="dialogImage"  />
                             עיניים אנושיות נראות שונות לחלוטין מעיני השימפנזה.
                              אצל בני אדם, הסקלרה היא לבנה, מנוגדת לצבע הקשתית,
                               אך ברוב השימפנזים החלק הגלוי של הסקלרה תואם את צבע הקשתית.
@@ -582,7 +585,7 @@ class Home extends Component {
                              ונתמכות על ידי רצועות וגידים, נעדרות לחלוטין בכפות רגלי השימפנזה.     
                         </li>
                         <li>
-                            <img src="images/walking.jpg" alt="" className="dialogImage" width={300} />
+                            <img src="images/walking.jpg" alt="" className="dialogImage"  />
                             כשבני אדם הולכים, המומנטום מכה לראשונה בעקב (1),
                              שנוטע אותנו ודוחף את המשקל שלנו קדימה,
                               מעביר אותו לאורך הקצה החיצוני של סוליית כף הרגל,
@@ -606,7 +609,7 @@ class Home extends Component {
                               אלא מאפשרת לבני אדם לעשות אגרוף קמוץ, קופי האדם לא מסוגלים לכך.
                         </li>
                         <li>
-                            <img src="images/knee.png" alt="" className="dialogImage" width={300} />
+                            <img src="images/knee.png" alt="" className="dialogImage"  />
                             בני אדם יכולים לעמוד ישר בגלל היכולת לנעול את שתי הברכיים,
                              ואילו ברכיהם של השימפנזים וקופי אדם אחרים תמיד נשארים כפופים מעט.                    
                         </li>                                                                                                                                                                                   
@@ -633,7 +636,7 @@ class Home extends Component {
                                כולל כוויות שמש וסיכון מוגבר לסרטן העור, כמו כן תפקוד מערכת חיסון מדוכאת והזדקנות עור מואצת.                            
                         </li>
                         <li>
-                            <img src="images/reversepattern.jpg" alt="" className="dialogImage" width={300} />                                                                                                                 
+                            <img src="images/reversepattern.jpg" alt="" className="dialogImage"  />                                                                                                                 
                             בני אדם מציגים דפוס שיער הפוך לזה של השימפנזים.
                              לשימפנזים פרווה עבה על גבם ופרווה דקה מקדימה.
                               לזכרים אנושיים שיער סמיך בחזית ושיער דליל או העדר שיער בגבם.                                                 
@@ -671,7 +674,7 @@ class Home extends Component {
                     <h2>נפילים</h2>
                     <h4>גולגלות מאורכות</h4>
                     <p>
-                        <img src="images/thumbnails/paracas-skulls.jpg" alt="" className="dialogImage" width={300} />                                                                                      
+                        <img src="images/thumbnails/paracas-skulls.jpg" alt="" className="dialogImage"  />                                                                                      
                           גולגלות בני האדם נראים זהים עם הבדלים קטנים בגודל ובצורה בהתאם למין ולמורשת הגזעית.
                         גולגלות מאורכות אינן מתאימות לקריטריון של גולגולת אנושית.                    
                          גולגלות מאורכות נבדלות בצורה, בגודל ובמבנה שלהן, אך כולן שייכות לאותו מין.
@@ -701,7 +704,7 @@ class Home extends Component {
                          הפלוגרופ U2e1 אינו משויך לילידים ביבשת אמריקה אלא לקבוצות גרמניות או בלטי-סלאביות אשר מעיד על כך שאבות הפאראקאס הגיעו מאירופה.                        
                     </p>
                     <p>
-                        <img src="images/haplogroup.gif" alt="" className="dialogImage" width={500} />                                                
+                        <img src="images/haplogroup.gif" alt="" className="dialogImage" id="imgHaplogroup" />                                                
                         הגולגולת השנייה שנבדקה באה מאזור שנקרא לה-אורויה, מזרחית ללימה, פרו.
                         כפי שמראה המפה, לכל ילידי יבשת אמריקה היו אבות מקבוצות הפלוגרופ A, B, C, D ואולי X ואילו הגולגולת מלה-אורויה שייכת לקבוצת הפלוגרופ T2b, שהוא אירופאי. קבוצת הפלוגרופ T2 נמצאת רק 
                         באיזורים אירופאיים וכמה אזורים במזרח התיכון, T2b נמצא רק באזור האיים  הבריטיים, באזור הבלטי ובחלקים של סקנדינביה.                        
@@ -724,7 +727,7 @@ class Home extends Component {
                     </p>
                     <h5>נקב העורף</h5>
                     <p>
-                        <img src="images/elongatedforamen.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/elongatedforamen.jpg" alt="" className="dialogImage"  />                        
                         נקב העורף ("פורמן מגנום") הוא פתח אליפטי גדול בעצם העורף,
                         אשר חוט השדרה עובר דרכו כאשר הוא יוצא מן הגולגולת.
                         נקב העורף של גולגלות פאראקס
@@ -748,7 +751,7 @@ class Home extends Component {
                     </p>
                     <h5>תפר החץ</h5>
                     <p>
-                        <img src="images/sagital.jpg" alt="" className="dialogImage" width={300} />                    
+                        <img src="images/sagital.jpg" alt="" className="dialogImage"  />                    
                         עצמות הקודקוד הן שתי עצמות  בגולגולת האדם אשר מחוברות יחד במפרק סיבי. עצמות אלו יוצרות את הצדדים ואת הגג של הגולגולת.
                         עצמות הקודקוד מחוברות זו לזו בתפר החץ אשר מפריד בין עצם הקודקוד הימנית ועצם הקודקוד השמאלית.
                     </p>
@@ -772,7 +775,7 @@ class Home extends Component {
                     </p>
                     <h4>מלכות מצרים</h4>
                     <p>                    
-                        <img src="images/amarna.jpg" alt="" className="dialogImage" width={300} />
+                        <img src="images/amarna.jpg" alt="" className="dialogImage"  />
                         תקופת אמארנה הייתה עידן בהיסטוריה של מצרים העתיקה במחצית המאוחרת של השושלת השמונה עשרה,
                          כאשר משכנו המלכותי של פרעה ומלכתו הועבר לאקטתן במה שהוא כיום אמארנה.
                            אמנוטפ הרביעי, שינה את שמו לאחנתן (1353–1336 לפני הספירה) כדי לשקף את השינוי הדרמטי של הדת הפוליתאיסטית במצרים.
@@ -815,7 +818,7 @@ class Home extends Component {
                          </span>
                          
                         <li>
-                            <img src="images/gilgamesh.jpg" alt="" className="dialogImage" width={300} /> 
+                            <img src="images/gilgamesh.jpg" alt="" className="dialogImage"  /> 
                             גילגמש (שומר) – בן של נינסון ואב אנושי
                         </li>                        
                         <li>סמירמיס (אשור) – בת של אטרגטיס ואב אנושי</li>
@@ -925,7 +928,7 @@ class Home extends Component {
                     <h4>מושב האלים</h4>
                     <h5>רשימת המלכים השומרית</h5>
                     <p>
-                        <img src="images/sumeriankinglist.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/sumeriankinglist.jpg" alt="" className="dialogImage"  />                        
                         רשימת המלכים השומרית היא לוח אבן עתיק בשפה השומרית,
                          ובו מתועדים מלכי שומר, אורך שלטונם, ומיקומי המלכות.
                           המלוכה נתפסה כמתנת האלים ויכולה היתה להיות מועברת מעיר לעיר, המשקפת הגמוניה  אזורית.
@@ -966,7 +969,7 @@ class Home extends Component {
                     </p>
                     <h5>כוכב הלכת התשיעי</h5>
                     <p>
-                        <img src="images/Caltech.jpg" alt="" className="dialogImage" width={300} />
+                        <img src="images/Caltech.jpg" alt="" className="dialogImage"  />
                         מייק בראון וקונסטנטין בטיגין
                         הם שני אסטרונומים מהמכון הטכנולוגי של קליפורניה.
                         בחודש ינואר 2016,
@@ -1000,7 +1003,7 @@ class Home extends Component {
                         שבתוכו כוכבי הלכת במסלול השמש.                        
                     </p>
                     <p>
-                        <img src="images/planet-nine.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/planet-nine.jpg" alt="" className="dialogImage"  />                        
                         סימולציות מחשב של מערכת השמש
                         עם כוכב הלכת התשיעי
                         הראה שצריכים להיות יותר אובייקטים מוטים
@@ -1054,7 +1057,7 @@ class Home extends Component {
                     </p>
                     <h5>ניבירו</h5>
                     <p>
-                        <img src="images/wingeddisk.jpg" alt="" className="dialogImage" width={300} />                                                                                            
+                        <img src="images/wingeddisk.jpg" alt="" className="dialogImage"  />                                                                                            
                         קיום כוכב לכת תשיעי, מחזיר אותנו לשומר העתיקה.
                          לשומרים ניתנו סיפורים על ידי האנונקי, סיפורים שהוגדרו קדושים במשך אלפי שנים.
                           בסיפורים אלו משכן האלים נקרא ניבירו, כוכב לכת בתוך מערכת השמש שלנו.
@@ -1084,7 +1087,7 @@ class Home extends Component {
                     </p>
                     <h5>המודל ההליוצנטרי</h5>
                     <p>
-                        <img src="images/va243.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/va243.jpg" alt="" className="dialogImage"  />                        
                         חותם גליל VA-243,
                         שנוצר לפני 4,500 שנים,
                           מתאר אל אנונקי מעניק את המחרשה, את הידע החקלאי, לאנושות.
@@ -1113,7 +1116,7 @@ class Home extends Component {
                         אינן נראות מכדור הארץ בעין בלתי מזוינת.
                     </p>
                     <p>
-                        <img src="images/saturn.jpg" alt="" className="dialogImage" width={450} />
+                        <img src="images/saturn.jpg" alt="" className="dialogImage" id="imgSaturn" />
                         מבט קרוב יותר מגלה
                         כי הקש הוא בדיוק במיקום של חגורת האסטרואידים.
                         אם נשווה את כוכבי הלכת המתוארים בחותם
@@ -1140,7 +1143,7 @@ class Home extends Component {
                     </p>                                           
                     <h5>כוכב הלכת השביעי</h5>
                     <p>                        
-                        <img src="images/seventhplanet.jpg" alt="" className="dialogImage" width={300} />
+                        <img src="images/seventhplanet.jpg" alt="" className="dialogImage"  />
                         במסופוטמיה, סמלו של מאדים היה כוכב בעל שישה קודקודים
                          וסמלו של נוגה היה כוכב בעל שמונה קודקודים.
                         כדור הארץ, המקיף את השמש בין נוגה למאדים, צריך להיות על פי הסמליות הזו כוכב הלכת השביעי.
@@ -1211,7 +1214,7 @@ class Home extends Component {
                         בעברית, פירושו המילולי של המילה חג הוא להסתובב.                        
                     </p>
                     <p>
-                        <img src="images/equinox.jpg" alt="" className="dialogImage" width={300} />                                                
+                        <img src="images/equinox.jpg" alt="" className="dialogImage"  />                                                
                         האקוונקס הם שני הרגעים בשנה
                         בהם השמש נמצאת בדיוק מעל קו המשווה
                         בהן אורך היום והלילה שווים.
@@ -1264,7 +1267,7 @@ class Home extends Component {
                         מעידים כי הם בנויים על מסורת שומרית עתיקה יותר.                        
                     </p>
                     <p>
-                        <img src="images/zodiac.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/zodiac.jpg" alt="" className="dialogImage"  />                        
                         גלגל המזלות הוא אזור בשמיים
                         שמקיף את הספירה בו כוכבי השמיים מקיפים את השמש.
                         השומרים קראו לו UL.HE ("העדר הנוצץ"),
@@ -1301,7 +1304,7 @@ class Home extends Component {
                     </p>
                     <h4>גאומטריה קדושה</h4>
                     <p>
-                        <img src="images/drawing-geometry-fruit-3.png" alt="" className="dialogImage" width={300} />
+                        <img src="images/drawing-geometry-fruit-3.png" alt="" className="dialogImage"  />
                         פרח החיים הוא רשת מעגלים חופפים המוכרים כמבנה היסודי של המרחב.
                         בפרח החיים ניתן למצוא את כל הצורות הגיאומטריות הקיימות.
                         אלמנטים רבים בתוך פרח החיים
@@ -1345,7 +1348,7 @@ class Home extends Component {
                       מטטרון מופיע במסורת היהודית, במסורת הנוצרית ובחלק מהיבטי האיסלאם.
                        מטטרון אחראי על כל הבריאה ונחשב לבכיר המלאכים.
                     </li>
-                    <img src="images/lion.jpg" alt="" className="dialogImage" width={300} />
+                    <img src="images/lion.jpg" alt="" className="dialogImage"  />
                     <h5>האריות המגינים</h5>                    
                     <p>                                                
                         המושג האריות המגינים,
@@ -1367,7 +1370,7 @@ class Home extends Component {
                 </section>   
                 <section id="advanced-technology">
                     {/* {Parser(this.getAsset("technology"))} */}
-                    <h2>טכנולוגיה מתקדמת</h2>
+                    <h2>טכנולוגיה</h2>
                     <h4>מבנים מגליתים</h4>
                     <p>                        
                         המילה מגלית, מקורה ביוונית
@@ -1398,7 +1401,7 @@ class Home extends Component {
                     </p>
                     <h5>פירמידות</h5>
                     <p>
-                        <img src="images/giza.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/giza.jpg" alt="" className="dialogImage"  />                        
                         מתחם גיזה במצרים
                         כולל את הפירמידה של חופו,
                         את הפירמידה של חעפרע ואת הפירמידה של מנכאורע,
@@ -1431,7 +1434,7 @@ class Home extends Component {
                     </p>                    
                     <h5>בעלבק</h5>
                     <p>
-                        <img src="images/baalbek.jpg" alt="" className="dialogImage" width={300} />
+                        <img src="images/baalbek.jpg" alt="" className="dialogImage"  />
                         בעלבק היא עיר עתיקה השוכנת בלבנון.
                         העיר היתה מיושבת כבר בשנת 9,000 לפני הספירה.
                         במתחם המקדש עבור יופיטר,
@@ -1469,7 +1472,7 @@ class Home extends Component {
                     </p>                                        
                     <h5>סאקסאיוואמן</h5>
                     <p>
-                        <img src="images/saska.jpg" alt="" className="dialogImage" width={300} />
+                        <img src="images/saska.jpg" alt="" className="dialogImage"  />
                         סאקסאיוואמן היא מצודה בפאתי קוסקו, פרו.
                         שלושת קירות המתחם הם פלא הנדסי
                         עשויים מהבלוקים הגדולים ביותר שנמצאו אי פעם
@@ -1500,7 +1503,7 @@ class Home extends Component {
                     </p>
                     <h4>חותמות גליל</h4>
                     <p>                        
-                        <img src="images/cylinder.jpg" alt="" className="dialogImage" width={300} />                        
+                        <img src="images/cylinder.jpg" alt="" className="dialogImage"  />                        
                         קיומן של חותמות גליל מהוה אתגר טכנולוגי.
                          תהליך יצירת חותמת בודדת מצריך שיוף אבן קשה,
                           קידוח וחריטה מיניטורית.                        
@@ -1532,7 +1535,7 @@ class Home extends Component {
                     <li><a href="#nephilim">נפילים</a></li>
                     <li><a href="#anunnaki">אנונקי</a></li>
                     <li><a href="#advanced-knowledge">ידע מתקדם</a></li>
-                    <li><a href="#advanced-technology">טכנולוגיה מתקדמת</a></li>                    
+                    <li><a href="#advanced-technology">טכנולוגיה</a></li>                    
                 </ol>
             </nav>
             <ScrollUpButton />
