@@ -17,9 +17,9 @@ function Note(props) {
                         props.links.map(function(link,index,arr){
                             let lastIndex = arr.length - 1;
                             if (index === lastIndex)
-                                return <a rel="nofollow" target="_blank" href={link}>{++index}</a>;
+                                return <a rel="noopener noreferrer" target="_blank" href={link}>{++index}</a>;
                             else
-                                return <span className="spacer"><a rel="nofollow" target="_blank" href={link}>{++index}</a></span>;
+                                return <span className="spacer"><a rel="noopener noreferrer" target="_blank" href={link}>{++index}</a></span>;
                         })
                     }
                 ).
