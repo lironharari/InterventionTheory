@@ -6,20 +6,20 @@ import ScrollUpButton from "react-scroll-up-button";
 import notes from './data/notes.json';
 
 function Reference(props) {      
-    return <sup id={`cite_ref-${props.id}`} className="reference"><a href={`#cite_note-${props.id}`}>[{props.id}]</a></sup>;    
+    return <sup key={props.id} id={`cite_ref-${props.id}`} className="reference"><a href={`#cite_note-${props.id}`}>[{props.id}]</a></sup>;    
 }
 
 function Note(props) {           
-    return <li id={`cite_note-${props.id}`}>          
+    return <li id={`cite_note-${props.id}`} key={props.id}>          
                 <a className="cite_note" href={`#cite_ref-${props.id}`}>^</a>
                 <cite>{props.text} (
                     {
                         props.links.map(function(link,index,arr){
                             let lastIndex = arr.length - 1;
                             if (index === lastIndex)
-                                return <a rel="noopener noreferrer" target="_blank" href={link}>{++index}</a>;
+                                return <a key={index} rel="noopener noreferrer" target="_blank" href={link}>{++index}</a>;
                             else
-                                return <span className="spacer"><a rel="noopener noreferrer" target="_blank" href={link}>{++index}</a></span>;
+                                return <span key={index} className="spacer"><a rel="noopener noreferrer" target="_blank" href={link}>{++index}</a></span>;
                         })
                     }
                 ).
@@ -29,7 +29,7 @@ function Note(props) {
 
 function Notes() {          
     return notes.map( ( {id, text, links} ) => {
-        return <Note id={id} text={text} links={links}></Note>
+        return <Note key={id} id={id} text={text} links={links}></Note>
     });
 }
 
