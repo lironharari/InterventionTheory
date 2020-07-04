@@ -1,0 +1,198 @@
+[
+    {
+        "id":1,
+        "text":"הדת המסופוטמית",                
+        "links":[
+            "https://www.britannica.com/topic/Mesopotamian-religion",
+            "https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%AA%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94_%D7%9E%D7%A1%D7%95%D7%A4%D7%95%D7%98%D7%9E%D7%99%D7%AA"
+        ]            
+    },
+    {
+        "id":2,
+        "text":"אבולוציה",                
+        "links":[
+            "https://plato.stanford.edu/entries/evolution/",
+            "https://he.wikipedia.org/wiki/%D7%90%D7%91%D7%95%D7%9C%D7%95%D7%A6%D7%99%D7%94"
+        ]            
+    },        
+    {
+        "id":3,
+        "text":"ערש הציוויליזציה / מאת שמואל נח קרמר אמיר, ספרית מעריב, 1980",                
+        "links":[
+            "https://www.amazon.com/Cradle-Civilization-Great-Ages-Man/dp/0672952807",
+            "https://www.nli.org.il/he/books/NNL_ALEPH990008275510205171/NLI"
+        ]            
+    },        
+    {
+        "id":4,
+        "text":"ההיסטוריה מתחילה בשומר / מאת שמואל נח קרמר, ספרית פועלים, 1960",                
+        "links":[
+            "https://www.amazon.com/History-Begins-Sumer-Thirty-Nine-Recorded/dp/0812212762",
+            "https://www.nli.org.il/he/books/NNL_ALEPH000876526/NLI"
+        ]            
+    },                            
+    {
+        "id":5,
+        "text":"השפה השומרית",                
+        "links":[
+            "https://www.ancient.eu/Sumerian_Language/",
+            "https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%9E%D7%A8%D7%99%D7%AA"
+        ]            
+    },                        
+    {
+        "id":6,
+        "text":"כתב יתדות",                
+        "links":[
+            "https://www.ancient.eu/cuneiform/",
+            "https://he.wikipedia.org/wiki/%D7%9B%D7%AA%D7%91_%D7%99%D7%AA%D7%93%D7%95%D7%AA"
+        ]            
+    },                
+    {
+        "id":7,
+        "text":"בסיס סקסגסימלי",                
+        "links":[
+            "https://en.wikipedia.org/wiki/Sexagesimal",
+            "https://he.wikipedia.org/wiki/%D7%91%D7%A1%D7%99%D7%A1_%D7%A1%D7%A7%D7%A1%D7%92%D7%A1%D7%99%D7%9E%D7%9C%D7%99"
+        ]            
+    },        
+    {
+        "id":8,
+        "text":"חותם גליל",                
+        "links":[
+            "https://en.wikipedia.org/wiki/Cylinder_seal",
+            "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%AA%D7%9D_%D7%92%D7%9C%D7%99%D7%9C"
+        ]            
+    },           
+    {
+        "id":9,
+        "text":"אתרחסיס",                
+        "links":[
+            "https://geha.paginas.ufsc.br/files/2017/04/Atrahasis.pdf",
+            "https://eprints.soas.ac.uk/29625/1/10752597.pdf"
+        ]            
+    },              
+    {
+        "id":10,
+        "text":"אנומה אליש",                
+        "links":[
+            "http://www.etana.org/sites/default/files/coretexts/14907.pdf",
+            "https://www.ancient.eu/article/225/enuma-elish---the-babylonian-epic-of-creation---fu/"
+        ]            
+    },        
+    {          
+        "id":11,  
+        "text":"קדשתו",                
+        "links":[
+            "https://www.jstor.org/stable/1510077?seq=1",
+            "https://books.google.com.mx/books?id=isvD-OsZzgkC&pg=PA275&lpg=PA275&dq=qadistu+priestess&source=bl&ots=avDhodVsWv&sig=ACfU3U30nP2tojp-LKUgudK3RjPJ0GGgJA&hl=en&sa=X&redir_esc=y#v=onepage&q=qadistu%20priestess&f=false",
+            "https://he.wikipedia.org/wiki/%D7%90%D7%A9%D7%A8%D7%94_(%D7%90%D7%9C%D7%94)"
+        ]            
+    },                
+    {
+        "id":12,
+        "text":"טיט",                
+        "links":[
+            "https://en.wikipedia.org/wiki/TI_(cuneiform)",
+            "https://books.google.com.mx/books?id=rt6mDwAAQBAJ&pg=PA57&lpg=PA57&dq=clay+akkadian+tit&source=bl&ots=HI6MstPZv5&sig=ACfU3U3BrAAHSEo7_B3Vtj71srhRBRpUKw&hl=en&sa=X&redir_esc=y#v=onepage&q=clay%20akkadian%20tit&f=false",
+            "https://books.google.com.mx/books?id=ZVooDwAAQBAJ&pg=PT316&dq=zecharia+sitchin+ti.it+clay&hl=en&sa=X&ved=2ahUKEwir3uX73rHqAhWPVs0KHTTUCpwQ6AEwAXoECAUQAg#v=onepage&q=zecharia%20sitchin%20ti.it%20clay&f=false"
+        ]            
+    },        
+    {
+        "id":13,
+        "text":"נפישתו",                
+        "links":[
+            "https://books.google.com.mx/books?id=dLRADwAAQBAJ&pg=PA147&lpg=PA147&dq=napishtu+akkadian&source=bl&ots=hJu9f7MFM7&sig=ACfU3U1g40cbYRCPcF0R5iE_DAWxcTn7ow&hl=en&sa=X&redir_esc=y#v=onepage&q=napishtu%20akkadian&f=false",
+            "https://books.google.com.mx/books?id=n4j1CAAAQBAJ&pg=PA204&lpg=PA204&dq=napishtu+nephesh&source=bl&ots=8l8CEN7KWa&sig=ACfU3U1xCKMDWVGWnCEsQlzomRSp7qAbzg&hl=en&sa=X&redir_esc=y#v=onepage&q=napishtu%20nephesh&f=false",
+            "https://books.google.com.mx/books?id=ZVooDwAAQBAJ&pg=PT308&lpg=PT308&dq=napishtu+nephesh&source=bl&ots=_NUV81kbeU&sig=ACfU3U1FFLRQFMcGIdghkocPAVR5MiADgw&hl=en&sa=X&redir_esc=y#v=onepage&q=napishtu%20nephesh&f=false"
+        ]            
+    },
+    {
+        "id":14,
+        "text":"שימתי",
+        "links":[
+            "https://books.google.com.mx/books?id=tyPhOVdLhakC&pg=PA258&lpg=PA258&dq=sumerian+shi-im-ti&source=bl&ots=4ttkEpyjMg&sig=ACfU3U0vkuR6J_ATVjgqU_NeGmEClGf7rg&hl=en&sa=X&redir_esc=y#v=onepage&q=sumerian%20shi-im-ti&f=false",
+            "https://www.bulgari-istoria-2010.com/Rechnici/Sumerian_Dictionary.pdf",
+            "https://books.google.com.mx/books?id=M1ooDwAAQBAJ&pg=PT168&dq=sumerian+shi-im-ti&hl=en&sa=X&ved=2ahUKEwiy6pqM4rHqAhWOPM0KHYWnBGsQ6wEwAHoECAEQAQ#v=onepage&q=sumerian%20shi-im-ti&f=false"
+        ]
+    },
+    {
+        "id":15,
+        "text":"מיזוג כרומוזומים",
+        "links":[
+            "https://www.pbs.org/wgbh/evolution/library/07/3/l_073_47.html",
+            "https://en.wikipedia.org/wiki/Chromosome_2"
+        ]
+    },
+    {
+        "id":16,
+        "text":"היפוך גנטי",
+        "links":[
+            "https://en.wikipedia.org/wiki/Chimpanzee_genome_project"
+        ]
+    },
+    {
+        "id":17,
+        "text":"223 גנים זרים",
+        "links":[
+            "http://www.genomenewsnetwork.org/articles/05_01/Gene_transfer.shtml",
+            "https://www.sciencemag.org/site/feature/data/scope/keystone1/index.html",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5422933/"
+        ]
+    },
+    {
+        "id":18,
+        "text":"פגמים גנטים",
+        "links":[
+            "http://www.geneticdiseasefoundation.org/"                        
+        ]
+    },
+    {
+        "id":19,
+        "text":"חוה המיטוכונדרית",
+        "links":[
+            "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%94_%D7%94%D7%9E%D7%99%D7%98%D7%95%D7%9B%D7%95%D7%A0%D7%93%D7%A8%D7%99%D7%AA",
+            "https://www.sciencedaily.com/releases/2010/08/100817122405.htm",
+            "https://www.livescience.com/mitochondrial-eve-first-human-homeland.html"                        
+        ]
+    },
+    {
+        "id":20,
+        "text":"לויד פאי",
+        "links":[
+            "https://www.amazon.com/Intervention-Theory-Essentials-Everything-Wrong-ebook/dp/B00IWBELQI",
+            "https://www.lloydpye.com/"            
+        ]
+    },
+    {
+        "id":21,
+        "text":"בריאן פורסטר",
+        "links":[
+            "https://www.amazon.com/Elongated-Skulls-Peru-Bolivia-Viracocha/dp/1507892810",
+            "https://hiddenincatours.com/"            
+        ]
+    },
+    {
+        "id":22,
+        "text":"תקופת אמרנה",
+        "links":[
+            "https://en.wikipedia.org/wiki/Amarna_art",
+            "https://www.britannica.com/art/Amarna-style"            
+        ]
+    },
+    {
+        "id":23,
+        "text":"מנתון",
+        "links":[
+            "https://en.wikipedia.org/wiki/Manetho",
+            "https://ancientegyptonline.co.uk/manetho/"            
+        ]
+    },
+    {
+        "id":24,
+        "text":"אל למחצה",
+        "links":[
+            "https://en.wikipedia.org/wiki/List_of_demigods",
+            "https://www.amazon.com/There-Were-Giants-Upon-Earth/dp/1591431948"
+        ]
+    }
+]

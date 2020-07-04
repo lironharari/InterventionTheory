@@ -15,7 +15,7 @@ class Footer extends Component {
               <SocialIcon network="youtube" url="https://www.youtube.com/watch?v=zoFTK9Mo0JM&list=PLbd-yCGYHip0TDXxb4NmKelBUQJ-odshp&index=2&t=0s" target="_blank" title="my youtube" />
           </div>
           <div className="copyright">
-               <a href="mailto:lironharari@gmail.com" >liron harari</a> &#169;
+               <a href="mailto:lironharari@gmail.com" >לירון הררי</a> &#169;
           </div>             
         </footer>
       );

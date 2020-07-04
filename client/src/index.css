@@ -721,6 +721,14 @@ img.dialogImageRight{
   float:right;
   margin-left:20px;
 }
+section .spacer::before{
+  content: none;
+  white-space: unset;
+}
+section .spacer::after{
+  content: ", ";
+  white-space: pre;
+}
 section span::before {
   content: "\A";
   white-space: pre;

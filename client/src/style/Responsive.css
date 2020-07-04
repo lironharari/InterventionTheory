@@ -6,14 +6,17 @@
 
   
   /* Mobile Styles */
-  @media only screen and (max-width: 415px) {
+  @media only screen and (max-width: 415px) {  
     img.dialogImage{
       width:70%;
-      margin-right:10px;
+      margin-right:2%;
     }  
-    #imgHaplogroup,#imgSaturn{
+    img.imgEnlarge{
       width:100%;
-    } 
+    }
+    img.imgReduce{
+      width:50%;
+    }     
     .section-nav{
       display: none;
     }
@@ -127,14 +130,17 @@
   }
 
   /* Tablet Styles */
-  @media only screen and (min-width: 415px) and (max-width: 1024px) {
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {    
     img.dialogImage{
       width:50%;
       margin-right:15px;
     }  
-    #imgHaplogroup,#imgSaturn{
+    img.imgEnlarge{
       width:100%;
-    }    
+    }
+    img.imgReduce{
+      width:40%;
+    }     
     main.home {  
       grid-template-columns: 1fr 8em;
     }
@@ -281,14 +287,17 @@
   }
 
   /* Desktop Styles */
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {    
     img.dialogImage{
       width:35%;
       margin-right:20px;
     }    
-    #imgHaplogroup, #imgSaturn{
+    img.imgEnlarge{
       width:50%;
     }
+    img.imgReduce{
+      width:25%;
+    }    
     main.home {  
       grid-template-columns: 1fr 8em;
     }

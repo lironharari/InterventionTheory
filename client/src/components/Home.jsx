@@ -3,6 +3,35 @@ import * as commonScript from '../script/common';
 import ScrollUpButton from "react-scroll-up-button";
 //import Parser from 'html-react-parser';
 //import axios from 'axios';
+import notes from './data/notes.json';
+
+function Reference(props) {      
+    return <sup id={`cite_ref-${props.id}`} className="reference"><a href={`#cite_note-${props.id}`}>[{props.id}]</a></sup>;    
+}
+
+function Note(props) {           
+    return <li id={`cite_note-${props.id}`}>          
+                <a className="cite_note" href={`#cite_ref-${props.id}`}>^</a>
+                <cite>{props.text} (
+                    {
+                        props.links.map(function(link,index,arr){
+                            let lastIndex = arr.length - 1;
+                            if (index === lastIndex)
+                                return <a rel="nofollow" target="_blank" href={link}>{++index}</a>;
+                            else
+                                return <span className="spacer"><a rel="nofollow" target="_blank" href={link}>{++index}</a></span>;
+                        })
+                    }
+                ).
+                </cite>
+            </li>;
+}
+
+function Notes() {          
+    return notes.map( ( {id, text, links} ) => {
+        return <Note id={id} text={text} links={links}></Note>
+    });
+}
 
 class Home extends Component {
     // constructor(props) {
@@ -39,7 +68,7 @@ class Home extends Component {
         
       return (     
         <div className="siteContainer">                                         
-        <main className="home">
+        <main className="home">        
             <div className="section-content"> 
                 <section id="intro">
                     <h2>מבוא</h2>
@@ -60,21 +89,22 @@ class Home extends Component {
                         בריאתנות היא מערכת אמונות שלפיהן היקום, כדור הארץ, החיים והאדם בפרט נבראו על ידי אלוהים,
                          אשר ביהדות, בנצרות ובאסלאם מזוהה עם האל המונותאיסטי.                                                
                         לפי הספרות המסופוטמית של השומרים, האכדים, הבבלים והאשורים, האמונה בבריאתנות מזוהה עם אלים רבים. 
-                        <sup id="cite_ref-1" className="reference"><a href="#cite_note-1">[1]</a></sup>
+                        <Reference id={1} />
                     </p>
                     <p>
                         אבולוציה ביולוגית הינה תיאוריה שפיתח צ'ארלס דארווין המתארת את יצירת העולם, החיים והאדם באופן טבעי,
                          תוך כדי שינויים גנטיים באוכלוסיה של אורגניזמים לאורך דורות. 
-                         <sup id="cite_ref-2" className="reference"><a href="#cite_note-2">[2]</a></sup>
+                         <Reference id={2} />
                          &nbsp;
                         התאוריה גורסת כי המינים השונים התפתחו במשך מיליוני שנים מאב קדמון משותף אחד. 
                         כשהופיעה תורת האבולוציה של דרווין, היא זכתה להתנגדות תקיפה על רקע נימוקים מדעיים ודתיים גם יחד.                        
                     </p>
                     <p>
+                        <img src="images/intervention.png" alt="" className="dialogImage"  />
                         עד ימינו, נותרה מחלוקת בין הזרמים המקבלים את האבולוציה כדברי המדע,
                          ובין אלו השוללים אותה ונצמדים לפשטי המקראות. 
                     </p>
-                    <img src="images/intervention.png" alt="" className="dialogImage"  />
+                    
                     <h5>התערבות</h5>
                     <p>                                                
                         תיאוריית ההתערבות מציבה קץ לסכסוך בין בריאתנות לאבולוציה על ידי יצירת הרמוניה בין שתי נקודות מבט כביכול מנוגדות.
@@ -82,7 +112,7 @@ class Home extends Component {
                         כגון ארכיאולוגיה, אנתרופולוגיה, אסטרונומיה, מדע הדתות, ביולוגיה ועוד.                        
                     </p>                    
                     <p>
-                        אז מהי תיאוריית ההתערבות?
+                        מהי תיאוריית ההתערבות?
                         <span>
                              בקצרה, זאת התיאוריה כי חייזרים "התערבו" בהתפתחות החיים על כדור הארץ.
                          </span>
@@ -95,14 +125,14 @@ class Home extends Component {
                 <section id="sumer">
                     <h2>שומר</h2>
                     <p>                    
-                        <img src="images/sumer.jpg" alt="" className="dialogImage"  />                  
+                        <img src="images/sumer.jpg" alt="" className="dialogImage"  />
                         ארץ שומר השתרעה על אזור הנמצא בדרום מסופוטמיה ("הארץ בין הנהרות") אשר בדרום עיראק המודרנית.
-                        התרבות השומרית היא הציוויליזציה הראשונה בתולדות האנושות.                         
-                        <sup id="cite_ref-3" className="reference"><a href="#cite_note-3">[3]</a></sup>
-                        <sup id="cite_ref-4" className="reference"><a href="#cite_note-4">[4]</a></sup>
+                        התרבות השומרית היא הציוויליזציה הראשונה בתולדות האנושות.                                                 
+                        <Reference id={3} />
                         <span>                                                    
                          לפי ההנחה המקובלת, ראשיתה של תרבות זו בסביבות שנת 3,500 לפנה"ס.
                         לתרבות זו מיוחסות כל ההתחלות של ציוויליזציה מתקדמת שעתידות היו לשמש כבסיס לתרבות המערב: ערים, בתי ספר, חקלאות, כתב, דפוס, מתמטיקה, אסטרונומיה, חוקים, בתי משפט ועוד.                                                 
+                        <Reference id={4} />
                         </span>                                                
                     </p>
                     <h5>שפה</h5>
@@ -111,6 +141,7 @@ class Home extends Component {
                         שומרית דוברה במסופוטמיה לפחות מהאלף הרביעית לפנה"ס עד אשר היא הוחלפה באכדית כשפה מדוברת בסביבות 2,000 לפנה"ס
                         אך עדיין שימשה כשפת קודש, שפה טקסית ושפה מדעית עד לשנת 1 לספירה, לאחר מכן היא נשכחה לחלוטין עד המאה ה-19.                        
                         בשומרית נכתבו החשובים באפוסים השומריים, כמו "עלילות גילגמש", "אנכי ונינמח", "אדפה", "אתרחסיס", ו"עלילות לוגלבנדה". 
+                        <Reference id={5} />
                     </p>
                     <h5>כתב</h5>
                     <p>                                        
@@ -119,10 +150,12 @@ class Home extends Component {
                         כל התרבויות המסופוטמיות שבאו אחרי שומר השתמשו בכתב קוניפורמי עד אשר היא ננטשה לטובת הכתב האלפבתי קרוב למאה שנים לפנה"ס ביניהם אכדים, בבלים, עילמים, חיתים ואשורים.
                         סימני הכתב מורכבים מטביעות יתד (מכאן שמו) העשוי ממקל שנלחץ על לוחות חומר (טיט רטוב) ויצרו סימנים שונים המורכבים משילובים שונים של סימני יתדות.
                          הלוחות נשרפו והוקשו ויצרו לוחות חרס.
+                         <Reference id={6} />
                     </p>
                     <p>
                         כתב יתדות כולל גם שיטת ספירה וסימנים לציון מספרים.                         
                           היא התבססה על בסיס 60, והיא העתיקה ביותר הידועה שמשתמשת בערכי מיקום (בדומה לשיטה העשרונית המקובלת כיום), כלומר שיטה שבה ערכה של ספרה נקבע לא רק לפי צורתה, אלא גם לפי מיקומה במספר.
+                          <Reference id={7} />
                     </p>
                     <p>
                         לשיטת הספירה יש הדים גם כיום: אנו מחלקים כל שעה ל-60 דקות, וכל דקה ל-60 שניות.
@@ -146,6 +179,7 @@ class Home extends Component {
                         החותמות היו חרוטות באינטגליו, כמו נגטיב צילומי.
                         מה שמרשים ביותר בחותמות גליל הוא קנה המידה שלהן,
                         את התמונות, ואת הכתב על אבנים אלו ניתן למדוד במילימטרים ובוא בזמן הם מפורטות ומדויקות.                                                
+                        <Reference id={8} />
                     </p>
                 </section>               
                 <section id="human-creation">                    
@@ -188,8 +222,9 @@ class Home extends Component {
                     </p>
                     <h5>ספרות מסופוטמית</h5>
                     <div>                        
-                        <img src="images/thumbnails/TheAtrahasis.jpg" alt="" className="dialogImage"  />
+                        <img src="images/thumbnails/TheAtrahasis.jpg" alt="" className="dialogImage imgReduce" />
                         אתרחסיס הוא אפוס מסופוטמי על בריאת האדם והמבול אשר נכתב על שלושה לוחות בתקופה הבבלית העתיקה (במאה 18-17 לפנה"ס).                     
+                        <Reference id={9} />
                             <span>
                             באתרחסיס, הסיבות ליצירת האנושות מתוארות כדלקמן:
                         </span>
@@ -263,11 +298,12 @@ class Home extends Component {
                         </blockquote>                                                        
                     </div>
                     <div>
-                        <img src="images/thumbnails/TheEnumaElish.jpg" alt="" className="dialogImage"  />
+                        <img src="images/thumbnails/TheEnumaElish.jpg" alt="" className="dialogImage imgReduce" />
                         האנומה אליש, שהוא סיפור הבריאה הבבלי,
                          מתוארך לאלף השניה לפני הספירה.
                           הקטע הבא מתאר כיצד נוצר האדם הראשון, הלולו,
                             מדמו של אל אנונקי.
+                            <Reference id={10} />
                         <blockquote>
                             <p className="quotation"> 
                                 כשמרדוק שמע את נאום האלים,
@@ -382,6 +418,7 @@ class Home extends Component {
                             האיש הראשון היה למעשה עקר,
                              לכן האנונקי נאלצו להשתמש באמהות פונדקאיות ובהפריה חוץ גופית כדי ליצור שיבוטים.
                               האנונקי יצרו שיבוטים זכריים ונקביים בעזרת אלות לידה קדשות.
+                              <Reference id={11} />
                             </span>
                         </li>
                         <li>
@@ -393,6 +430,7 @@ class Home extends Component {
                                 לאחר מכן הושק תהליך יצירת שיבוטים,
                                  בני אדם מהונדסים גנטית משני המינים, שבעה זכרים ושבע נקבות,
                                   כאשר הושתלו הביציות המופרות ברחם של אלות לידה אנונקי.
+                                  <Reference id={12} />
                             </span>
                         </li>
                         <li>
@@ -401,7 +439,9 @@ class Home extends Component {
                              לאחר שאנקי ונינטו ערבבו טיט עם בשר ודם, שניהם נכנסו ל"בית הגורלות",
                               המונח האכדי הוא "בית שימתי" שמקורו במילה השומרית "שי.אימ.טי" שפירושו המילולי "נשימה-רוח-חיים"
                                לכן אנקי ונינטו נכנסו "לבית בו נשמת רוח החיים".
-                                במקרא, נשמת החיים הפכה את האדם לנפש חיה אך המילה העברית "נפש" מקורה במילה האכדית "נפישתו" שפירושה "נשמת החיים".
+                                במקרא, נשמת החיים הפכה את האדם לנפש חיה אך המילה העברית "נפש" מקורה במילה האכדית "נפישתו" שפירושה "נשמת החיים".                                
+                                <Reference id={13} />
+                                <Reference id={14} />
                             </span>
                         </li>
                     </p>                    
@@ -432,7 +472,7 @@ class Home extends Component {
                     </p>
                     <h5>מיזוג כרומוזומים</h5>                    
                     <p>
-                        <img src="images/chromosome.png" alt="" className="dialogImage"  />                        
+                        <img src="images/chromosome2.jpg" alt="" className="dialogImage imgEnlarge" />                                                
                         לבני אדם 23 זוגות כרומוזומים ולשאר קופי האדם 24 זוגות כרומוזומים.
                           כאשר הם מוצגים זה לצד זה, הדבר הבולט ביותר בגנום של בני האדם ושימפנזים הוא עד כמה הם דומים.
                            ההבדל העיקרי נעוץ בכרומוזום האנושי מספר 2, המציג מיזוג מקצה לקצה של שני כרומוזומים קדומים.                         
@@ -440,6 +480,7 @@ class Home extends Component {
                          אנו שמים לב כי כרומוזום מספר 2 של בני האדם הוא כרומוזום יחיד,
                           ואילו לקופים האחרים יש שני כרומוזומים נפרדים,
                           מה שמרמז על כך ששני כרומוזומים קדומים מוזגו זה בזה.
+                          <Reference id={15} />
                     </p>
                     <p>
                           שלושה מדדים גנטיים מספקים עדות חזקה, אם לא חותכת, למיזוג כרומוזומים:
@@ -457,7 +498,7 @@ class Home extends Component {
                     </p>
                     <h5>היפוך גנטי</h5>                   
                     <p>                        
-                        <img src="images/inversion.jpg" alt="" className="dialogImage"  />
+                        <img src="images/inversion.jpg" alt="" className="dialogImage imgReduce" />
                         היפוך גנטי הוא ארגון מחדש של כרומוזום בו נפרס קטע של כרומוזום,
                          ואז מוחזר למקומו המקורי, אך בכיוון הפוך.
                           כל היפוך הוא ייחודי,
@@ -468,6 +509,7 @@ class Home extends Component {
                                התרחש הראשון מבין 9 ההיפוכים,
                                 שבסופו של דבר הגיעו אחריהם 8 נוספים.
                                 בהכרח שכל היפוך היה צריך לקרות ברצף.                         
+                                <Reference id={16} />
                     </p>
                     <h5>223 גנים זרים</h5>
                     <p>                        
@@ -475,6 +517,7 @@ class Home extends Component {
                          מכיל 223 גנים שאין להם מקבילים בעץ האבולוציה.
                            גנים אלה חסרים בכל שלב החוליות של האבולוציה.
                            223 גנים אלו כוללים תפקודים פיזיולוגיים ומוחניים אצל בני אדם.                        
+                           <Reference id={17} />
                     </p>
                     <h5>פגמים גנטים</h5>
                     <p>                        
@@ -482,13 +525,14 @@ class Home extends Component {
                          יש יחסית מעט הפרעות גנטיות המפוזרות בכל מאגרי הגנים שלהם (מכמה עשרות בודדות ועד כמה מאות).
                           רבים מאלה גורמים לפגמים לא קטלניים, כמו לבקנות,
                            המועברים לצאצאים ללא נזק.
-                            הפרעות גנטיות חמורות נוטות להעלם ממאגר הגנים של כל המינים.
+                            הפרעות גנטיות חמורות נוטות להעלם ממאגר הגנים של כל המינים.                            
                     </p>
                     <p>
-                        בני אדם נושאים מעל 4,000 הפרעות גנטיות, קלות וחמורות, לדוגמה:
+                        בני אדם נושאים מעל 6,000 הפרעות גנטיות, קלות וחמורות, לדוגמה:
                         סיסטיק פיברוזיס, מחלת הנטינגטון, תסמונת מרפן,
                         טריזומיה, המופיליה, מחלת אלצהיימר,
                         תסמונת דאון, תסמונת פראדר-ווילי, ולוקמיה כרונית מיאלואידית.                        
+                        <Reference id={18} />
                     </p>
                     <p>
                         מספר רב כל כך של פגמים גנטים חמורים מעיד על כך שתהליך המניפולציה הגנטית כלל טעויות רבות או תופעות לוואי מתחילת קיום המין האנושית. 
@@ -503,12 +547,14 @@ class Home extends Component {
                              מה שהופך אותו למועדף על גנטיקאי אוכלוסייה.
                               הגנום המיטוכונדריאלי מעיד שאם קדמונית משותפת לכל בני האדם החיים
                                המכונה "חוה המיטוכונדרית" אשר חיה לפני כ-200,000 שנים.                        
+                               <Reference id={19} />
                     </p>
                     <h4>השוואה פיזית</h4>
                     <p>
                         בדיקה פיזית של בני אדם ושימפנזים מאששת את הטענה שבני האדם הונדסו גנטית מיצור הומיניד
                         בניגוד לדעה הרווחת שבני האדם התפתחו טבעית מאב משותף עם השימפנזה.
                         ההבדלים בין בני אדם ושימפנזה גדולים מאוד ומעידים לרוב על שינוי צורה והיפוך תכונות. 
+                        <Reference id={20} />
                     </p>
                     <h5>ראש</h5>
                     <p>       
@@ -678,7 +724,7 @@ class Home extends Component {
                     <h2>נפילים</h2>
                     <h4>גולגלות מאורכות</h4>
                     <p>
-                        <img src="images/thumbnails/paracas-skulls.jpg" alt="" className="dialogImage"  />                                                                                      
+                        <img src="images/thumbnails/paracas-skulls.jpg" alt="" className="dialogImage imgReduce" />                                                                                      
                           גולגלות בני האדם נראים זהים עם הבדלים קטנים בגודל ובצורה בהתאם למין ולמורשת הגזעית.
                         גולגלות מאורכות אינן מתאימות לקריטריון של גולגולת אנושית.                    
                          גולגלות מאורכות נבדלות בצורה, בגודל ובמבנה שלהן, אך כולן שייכות לאותו מין.
@@ -687,6 +733,7 @@ class Home extends Component {
                         גולגלות מאורכות נמצאו במיקומים רבים ברחבי העולם,
                          אך הגולגלות שנחשפו בפארקאס, עיר בחוף המערבי של פרו,
                           הן הגולגלות המאורכות הגדולות ביותר שנמצאו בעולם.                        
+                          <Reference id={21} />
                     </p>
                     <p>
                         גולגלות הפאראקס שוקלות כ-60% יותר מאשר גולגלות אדם בממוצע.
@@ -699,7 +746,7 @@ class Home extends Component {
                     <p>
                         בשנת 2013, החלו החוקרים אל.איי מרזולי והביולוג בריאן פורסטר לעבוד על הסבר מדעי לגולגלות הקדומות שנמצאו בפאראקס.
                         דגימות דנ"א נלקחו ממספר גולגולות,
-                        ובדיקות דנ"א בוצעו במעבדה של אוניברסיטת לייק-הד בקנדה ובמעבדות אחרות בארה"ב. 
+                        ובדיקות דנ"א בוצעו במעבדה של אוניברסיטת לייק-הד בקנדה ובמעבדות אחרות בארה"ב.                         
                     </p>
                     <p>                                            
                         הגולגולת הראשונה שנבדקה היא של גולגולת התינוק מפאראקס והתוצאות שהופיעו בבדיקה גנטית הראו רק נוכחות אחת של הפלוגרופ U2e1. 
@@ -708,7 +755,7 @@ class Home extends Component {
                          הפלוגרופ U2e1 אינו משויך לילידים ביבשת אמריקה אלא לקבוצות גרמניות או בלטי-סלאביות אשר מעיד על כך שאבות הפאראקאס הגיעו מאירופה.                        
                     </p>
                     <p>
-                        <img src="images/haplogroup.gif" alt="" className="dialogImage" id="imgHaplogroup" />                                                
+                        <img src="images/haplogroup.gif" alt="" className="dialogImage imgEnlarge" />                                                
                         הגולגולת השנייה שנבדקה באה מאזור שנקרא לה-אורויה, מזרחית ללימה, פרו.
                         כפי שמראה המפה, לכל ילידי יבשת אמריקה היו אבות מקבוצות הפלוגרופ A, B, C, D ואולי X ואילו הגולגולת מלה-אורויה שייכת לקבוצת הפלוגרופ T2b, שהוא אירופאי. קבוצת הפלוגרופ T2 נמצאת רק 
                         באיזורים אירופאיים וכמה אזורים במזרח התיכון, T2b נמצא רק באזור האיים  הבריטיים, באזור הבלטי ובחלקים של סקנדינביה.                        
@@ -782,11 +829,12 @@ class Home extends Component {
                         <img src="images/amarna.jpg" alt="" className="dialogImage"  />
                         תקופת אמארנה הייתה עידן בהיסטוריה של מצרים העתיקה במחצית המאוחרת של השושלת השמונה עשרה,
                          כאשר משכנו המלכותי של פרעה ומלכתו הועבר לאקטתן במה שהוא כיום אמארנה.
-                           אמנוטפ הרביעי, שינה את שמו לאחנתן (1353–1336 לפני הספירה) כדי לשקף את השינוי הדרמטי של הדת הפוליתאיסטית במצרים.
+                           אמנוטפ הרביעי, שינה את שמו לאחנתן (1353–1336 לפני הספירה) כדי לשקף את השינוי הדרמטי של הדת הפוליתאיסטית במצרים.                           
                     </p>
                     <p>
                         בתקופת שלטונו של אחנתן, דיוקנאות המלוכה עברו שינוי אומנותי דרמטי.                        
                          אחנאתן ומשפחתו מתוארים באופן אנדרוגיני, עם גולגלות מאורכות, ירכיים גדולות, פלג גוף עליון דק, בטן שמוטה, שפתיים מלאות וצוואר ארוך.                          
+                         <Reference id={22} />
                     </p>
                     <h5>מנתון</h5>
                     <p>
@@ -795,6 +843,7 @@ class Home extends Component {
                         איגיפטיאקה הוא המקור הכרונולוגי העיקרי לשלטון הפרעונים הקדומים.
                         מה שמייחד את רשימת הפרעונים של מנתון ואת השושלות שלהם הוא שהרשימה שלו מתחילה עם אלים ולא עם פרעונים.
                          אלים ודמויי-אלים, כתב מנתון, מלכו על מצרים לפני כל פרעה אנושי.
+                         <Reference id={23} />
                     </p>
                     <p>
                         <li>
@@ -817,6 +866,7 @@ class Home extends Component {
                     <h4>אל למחצה</h4>
                     <p>                        
                          אל למחצה הוא צאצא של אל ואדם, בדרך כלל מתואר כאדם שביצע מעשי גבורה וזכה לכבוד רב.
+                         <Reference id={24} />
                          <span>
                             להן דוגמאות קלאסיות לאלים למחצה:
                          </span>
@@ -973,7 +1023,7 @@ class Home extends Component {
                     </p>
                     <h5>כוכב הלכת התשיעי</h5>
                     <p>
-                        <img src="images/Caltech.jpg" alt="" className="dialogImage"  />
+                        <img src="images/Caltech.jpg" alt="" className="dialogImage" />
                         מייק בראון וקונסטנטין בטיגין
                         הם שני אסטרונומים מהמכון הטכנולוגי של קליפורניה.
                         בחודש ינואר 2016,
@@ -1007,7 +1057,7 @@ class Home extends Component {
                         שבתוכו כוכבי הלכת במסלול השמש.                        
                     </p>
                     <p>
-                        <img src="images/planet-nine.jpg" alt="" className="dialogImage"  />                        
+                        <img src="images/planet-nine.jpg" alt="" className="dialogImage imgEnlarge" />                        
                         סימולציות מחשב של מערכת השמש
                         עם כוכב הלכת התשיעי
                         הראה שצריכים להיות יותר אובייקטים מוטים
@@ -1120,7 +1170,7 @@ class Home extends Component {
                         אינן נראות מכדור הארץ בעין בלתי מזוינת.
                     </p>
                     <p>
-                        <img src="images/saturn.jpg" alt="" className="dialogImage" id="imgSaturn" />
+                        <img src="images/saturn.jpg" alt="" className="dialogImage imgEnlarge" />
                         מבט קרוב יותר מגלה
                         כי הקש הוא בדיוק במיקום של חגורת האסטרואידים.
                         אם נשווה את כוכבי הלכת המתוארים בחותם
@@ -1520,43 +1570,8 @@ class Home extends Component {
                 </section>                                                
                 <section id="bibliography">
                     <h2>ביבליוגרפיה</h2>
-                    <ol>
-                        <li id="cite_note-1">          
-                            <a className="cite_note" href="#cite_ref-1">^</a>
-                            <cite>
-                                הדת המסופוטמית (
-                                    <a rel="nofollow" target="_blank" href="https://www.britannica.com/topic/Mesopotamian-religion">אנגלית</a>
-                                    , <a rel="nofollow" target="_blank" href="https://www.hamichlol.org.il/%D7%9E%D7%99%D7%AA%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94_%D7%9E%D7%A1%D7%95%D7%A4%D7%98%D7%95%D7%9E%D7%99%D7%AA">עברית</a>                                                                   
-                            ).
-                            </cite>
-                        </li>
-                        <li id="cite_note-2">          
-                            <a className="cite_note" href="#cite_ref-2">^</a>
-                            <cite>
-                                אבולוציה (
-                                    <a rel="nofollow" target="_blank" href="https://plato.stanford.edu/entries/evolution/">אנגלית</a>
-                                    , <a rel="nofollow" target="_blank" href="https://he.wikipedia.org/wiki/%D7%90%D7%91%D7%95%D7%9C%D7%95%D7%A6%D7%99%D7%94">עברית</a>                                                                   
-                            ).
-                            </cite>
-                        </li>                        
-                        <li id="cite_note-3">          
-                            <a className="cite_note" href="#cite_ref-3">^</a>
-                            <cite>
-                            ההיסטוריה מתחילה בשומר / מאת שמואל נח קרמר, ספרית פועלים, 1960 (
-                                    <a rel="nofollow" target="_blank" href="https://www.amazon.com/History-Begins-Sumer-Thirty-Nine-Recorded/dp/0812212762">אנגלית</a>
-                                    , <a rel="nofollow" target="_blank" href="https://www.nli.org.il/he/books/NNL_ALEPH000876526/NLI">עברית</a>                                                                   
-                            ).
-                            </cite>
-                        </li>
-                        <li id="cite_note-4">          
-                            <a className="cite_note" href="#cite_ref-4">^</a>
-                            <cite>
-                            ערש הציוויליזציה / מאת שמואל נח קרמר אמיר, ספרית מעריב, 1980 (
-                                    <a rel="nofollow" target="_blank" href="https://www.amazon.com/Cradle-Civilization-Great-Ages-Man/dp/0672952807/ref=sr_1_14?dchild=1&qid=1593720681&refinements=p_27%3ASamuel+Noah+Kramer&s=books&sr=1-14&text=Samuel+Noah+Kramer">אנגלית</a>
-                                    , <a rel="nofollow" target="_blank" href="https://www.nli.org.il/en/books/NNL_ALEPH990008275510205171/NLI">עברית</a>                                                                   
-                            ).
-                            </cite>
-                        </li>                                                                                                                    
+                    <ol>                                              
+                        <Notes />
                     </ol>                    
                 </section>
             </div>
