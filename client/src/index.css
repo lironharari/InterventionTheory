@@ -721,11 +721,19 @@ img.dialogImageRight{
   float:right;
   margin-left:20px;
 }
-section .spacer::before{
+section .space::before{
   content: none;
   white-space: unset;
 }
-section .spacer::after{
+section .space::after{
+  content: " ";
+  white-space: pre;
+}
+section .comma::before{
+  content: none;
+  white-space: unset;
+}
+section .comma::after{
   content: ", ";
   white-space: pre;
 }

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import ScrollUpButton from "react-scroll-up-button";
-//import Parser from 'html-react-parser';
-//import axios from 'axios';
 import notes from './data/notes.json';
 
 function Reference(props) {      
@@ -12,14 +10,16 @@ function Reference(props) {
 function Note(props) {           
     return <li id={`cite_note-${props.id}`} key={props.id}>          
                 <a className="cite_note" href={`#cite_ref-${props.id}`}>^</a>
-                <cite>{props.text} (
+                <cite>
+                    {props.text}
+                    <span className="space"></span>(
                     {
                         props.links.map(function(link,index,arr){
                             let lastIndex = arr.length - 1;
                             if (index === lastIndex)
-                                return <a key={index} rel="noopener noreferrer" target="_blank" href={link}>{++index}</a>;
+                                return <a key={index} rel="noopener noreferrer" target="_blank" href={link.href}>{link.text}</a>;
                             else
-                                return <span key={index} className="spacer"><a rel="noopener noreferrer" target="_blank" href={link}>{++index}</a></span>;
+                                return <span key={index} className="comma"><a rel="noopener noreferrer" target="_blank" href={link.href}>{link.text}</a></span>;
                         })
                     }
                 ).
@@ -34,36 +34,10 @@ function Notes() {
 }
 
 class Home extends Component {
-    // constructor(props) {
-    //     super(props);        
-    //     this.state = {
-    //       assets: []
-    //     };   
-    //   }
     componentDidMount() { 
         commonScript.enableScroll();   
-        //this.getAssets(); 
     }  
-    componentWillUnmount() {}
-    // getAssets = ( ) => {        
-    //     axios({
-    //         url: '/api/getAssets',
-    //         method: 'POST', 
-    //         data: {
-    //           category : 'Home' 
-    //         }
-    //       })
-    //       .then((response) => {            
-    //         const { assets } = response.data;    
-    //         this.setState({ assets: assets })  
-    //       })
-    //       .catch((error) => console.log(error))      
-    //   }    
-    // getAsset = ( name ) => {
-    //     const { assets } = this.state;         
-    //     let asset = assets.find(asset => asset.name === name);        
-    //     return (typeof asset === 'undefined') ? '' : asset.content;
-    // }
+    componentWillUnmount() {}    
     render() {                
         
       return (     
@@ -911,7 +885,7 @@ class Home extends Component {
                     <p>
                         הנפילים במקרא מתוארים כגדולי קומה (ענקים) אשר ישבו בעיר חברון,
                          ששמה המקורי היה קריית ארבע,
-                         על שמו של בעל המקום, ארבע, שהיה "האדם הגדול בענקים"  
+                         על שמו של בעל המקום, ארבע, שהיה "האדם הגדול בענקים".
                     </p>
                     <p>                        
                         <li>במדבר יג כב – וַיַּעֲלוּ בַנֶּגֶב וַיָּבֹא עַד חֶבְרֹון וְשָׁם אֲחִימַן שֵׁשַׁי וְתַלְמַי יְלִידֵי הָעֲנָק.</li>
@@ -941,6 +915,7 @@ class Home extends Component {
                         אנו הוא מלך האנונקי אשר נמצא במושב האלים, ניבירו.
                         פירוש המילה אנו בשומרית הוא שמיים, רקיע או שחקים,
                         לכן פירוש המילה אנונקי הוא "אלו שבאו מהשמיים לארץ".
+                        <Reference id={25} />
                     </p>                    
                     <h5>שילוש מקודש</h5>                    
                     <p>
@@ -987,6 +962,7 @@ class Home extends Component {
                          ובו מתועדים מלכי שומר, אורך שלטונם, ומיקומי המלכות.
                           המלוכה נתפסה כמתנת האלים ויכולה היתה להיות מועברת מעיר לעיר, המשקפת הגמוניה  אזורית.
                          שלטון המלכים לפני המבול נמדדו ביחידות מספר שומריות המכונות שר (יחידות של 3,600), נר (יחידות של 600), וסוסא (יחידות של 60).
+                         <Reference id={26} />
                     </p>
                     <p>
                         רשימת המלכים השומרית מתחילה בעצם מקור המלכות:
@@ -1034,6 +1010,7 @@ class Home extends Component {
                         באוקטובר 2017, נאס"א אישרה את מחקרם,
                         כאשר היא פירסמה מאמר הסבר על כוכב הלכת התשיעי
                         שנקרא "סופר כדור-הארץ שהגיע הביתה לארוחת ערב".
+                        <Reference id={27} />
                     </p>
                     <p>
                         בראון ובטיגין שיערו כי, באשר לאנומליות של מערכת השמש,
@@ -1138,6 +1115,7 @@ class Home extends Component {
                         כינו את כוכבי הלכת LU.BAD שמשמעו "כבשים נודדים",
                         בשומרית LU "אלה שנרעים" ו-BAD "עתיק" או "בסיס".
                         השומרים התכוונו לומר שכוכבי הלכת, כמו כבשים, נרעים על ידי השמש.
+                        <Reference id={28} />
                     </p>
                     <h5>המודל ההליוצנטרי</h5>
                     <p>
@@ -1148,13 +1126,14 @@ class Home extends Component {
                         מבחינה היסטורית, השומרים היו הראשונים שהשתמשו במחרשה,
                          אך כפי שחותם זה מראה,
                           הם לא המציאו או פיתחו את המחרשה,
-                           אלא היא ניתנה להם, כמוצר מוגמר, על ידי האלים.
+                           אלא היא ניתנה להם, כמוצר מוגמר, על ידי האלים.                           
                     </p>
                     <p>
                         חותמת זאת גם מראה מספר כוכבי לכת סביב כוכב קורן גדול,
                          תיאור של מערכת השמש כפי שהיה ידוע לשומרים,
                         מערכת המורכבת מגופים שמימיים המקיפים את השמש,
                         אלפי שנים לפני קופרניקוס והמודל הליוצנטרי.
+                        <Reference id={29} />
                     </p>
                     <h5>טבעות שבתאי</h5>
                     <p>                        
@@ -1168,6 +1147,7 @@ class Home extends Component {
                          ונוגה שמתואר ככוכב בעל שמונה קרניים.
                         עובדה ידועה היא כי הטבעות של שבתאי
                         אינן נראות מכדור הארץ בעין בלתי מזוינת.
+                        <Reference id={30} />
                     </p>
                     <p>
                         <img src="images/saturn.jpg" alt="" className="dialogImage imgEnlarge" />
@@ -1227,15 +1207,9 @@ class Home extends Component {
                         בטקסטים שומריים, כדור הארץ נקרא "השביעי",
                         והכינוי של האנונקי
                         שהיה מפקד כדור הארץ, היה "מלך השבע".
+                        <Reference id={31} />
                     </p>
-                    <h5>לוח שנה</h5>
-                    <p>
-                        המערכת הנוכחית של מדידת זמן (בסיס סקסגסימלי)
-                        מתוארכת ל-2,000 שנה לפני הספירה מהשומרים.
-                        במערכת על בסיס סקסגסימלי,
-                        60 שניות שוות לדקה, 60 דקות שוות לשעה
-                        ויום שלם הוא שני תריסר שעות.                        
-                    </p>
+                    <h5>לוח שנה</h5>                    
                     <p>
                         יום הוא פרק הזמן בו כדור הארץ משלים סיבוב אחד
                         ביחס לשמש.
@@ -1306,6 +1280,7 @@ class Home extends Component {
                         (הכנסת יום, שבוע או חודש
                         למספר שנים קלנדריות
                         כדי להתאים את לוח שנה לעונות).
+                        <Reference id={32} />
                     </p>
                     <h5>גלגל המזלות</h5>
                     <p>
@@ -1355,6 +1330,7 @@ class Home extends Component {
                         בו "יום גדול" הוא מעלה אחת (72 שנים),
                         "חודש גדול" הוא 30 מעלות או מזל אחד (2,160 שנים)
                         ו-"שנה גדולה" היא מעגל שלם של 360 מעלות או 12 מזלות (25,920 שנים).
+                        <Reference id={33} />
                     </p>
                     <h4>גאומטריה קדושה</h4>
                     <p>
@@ -1363,6 +1339,7 @@ class Home extends Component {
                         בפרח החיים ניתן למצוא את כל הצורות הגיאומטריות הקיימות.
                         אלמנטים רבים בתוך פרח החיים
                         נחשבו לקדושים בתרבויות קדומות.
+                        <Reference id={34} />
                     </p>
                     <li>
                         הווסאיקה פייסיס היא צורה מתמטית
@@ -1413,6 +1390,7 @@ class Home extends Component {
                         ואנשים מזיקים שעלולים להוות איום.
                         כמעט בכל המקרים, האריה הזכר מגן
                         על גרסאות שונות של דפוס פרח החיים.
+                        <Reference id={35} />
                     </p>
                     <p>
                         האריות המגינים
@@ -1423,7 +1401,6 @@ class Home extends Component {
                     </p>
                 </section>   
                 <section id="advanced-technology">
-                    {/* {Parser(this.getAsset("technology"))} */}
                     <h2>טכנולוגיה</h2>
                     <h4>מבנים מגליתים</h4>
                     <p>                        
@@ -1451,7 +1428,7 @@ class Home extends Component {
                         הסולם מוגדר על ידי עשר דרגות,
                         מינרל עם מדד גבוה יותר מגרד את אלה שמתחתיו.
                         קנה המידה נע בין טלק, המינרל הרך ביותר,
-                        ליהלום, החומר הטבעי הקשה ביותר.
+                        ליהלום, החומר הטבעי הקשה ביותר.                        
                     </p>
                     <h5>פירמידות</h5>
                     <p>
@@ -1464,6 +1441,7 @@ class Home extends Component {
                         מורכבת מ-2.3 מיליון גושי אבן גיר.
                         כל גוש אבן שוקל כ-2.5 טון,
                         ולכן המשקל הכולל של הפירמידה הוא 5.7 מיליון טון.
+                        <Reference id={36} />
                     </p>
                     <p>
                         רצפת הבזלת, בצדו המזרחי של הפירמידה של חופו,
@@ -1471,6 +1449,7 @@ class Home extends Component {
                         בזלת מדורגת 6 בסולם מוס,
                         לכן המצרים הקדמונים לא יכלו לחתוך או להחליק בזלת
                         באמצעות הכלים שהיו זמינים להם.
+                        <Reference id={37} />
                     </p>
                     <p>
                         במצרים ובפרו נמצאים מבנים מגליתים המציגים טכנולוגיה זהה,
@@ -1507,6 +1486,7 @@ class Home extends Component {
                         המשקל של המונולית, שעדיין קבור בחלקו,
                         נאמד ב-1,650 טון,
                         מה שהופך אותו לגוש האבן הגדול ביותר מימי קדם.                        
+                        <Reference id={38} />
                     </p>
                     <h5>האובליסק הלא גמור</h5>
                     <p>
@@ -1523,6 +1503,7 @@ class Home extends Component {
                         סימני הגריפה המסתוריים הללו מרמזים
                         כי לבונים הייתה טכנולוגיית יהלומים
                         או טכנולוגיה שאפשרה להם לרכך אבנים קשות.                        
+                        <Reference id={39} />
                     </p>                                        
                     <h5>סאקסאיוואמן</h5>
                     <p>
@@ -1554,6 +1535,7 @@ class Home extends Component {
                         המדורגת 3 בסולם המוס.
                         במילים אחרות, הטכנולוגיה היחידה שאנו מכירים
                         שיכולה לחתוך את אנדזיט ביעילות היא טכנולוגיית יהלומים.                                                
+                        <Reference id={40} />
                     </p>
                     <h4>חותמות גליל</h4>
                     <p>                        
@@ -1563,6 +1545,7 @@ class Home extends Component {
                           קידוח וחריטה מיניטורית.                        
                           נשאלת השאלה כיצד השומרים שייפו או קדחו באבנים המדורגות בין 6-7 בסולם מוס
                           בעזרת כלי ברונזה המדורגת 3 בסולם מוס.                          
+                          <Reference id={41} />
                     </p>
                     <p>
                         אתגר נוסף הוא החריטה של יצירות אומנות מינייטוריות על גבי אבן בגודל 3 סנטימרים.                        
