@@ -51,6 +51,18 @@ getImages = ( ) => {
                         <ImageGallery photos={commonScript.filter(photos,"NibiruPull")}></ImageGallery>
                     </p>
                 </section>                */}
+                <section id="winged-chamber">
+                    <h2>תא מכונף</h2>
+                    <p>
+                        <ImageGallery photos={commonScript.filter(photos,"WingedChamber")}></ImageGallery>
+                    </p>
+                </section> 
+                <section id="flying-ring">
+                    <h2>טבעת מעופפת</h2>
+                    <p>
+                        <ImageGallery photos={commonScript.filter(photos,"FlyingRing")}></ImageGallery>
+                    </p>
+                </section>                                                      
                 <section id="misc">
                     <h2>שונות</h2>
                     <p>
@@ -61,7 +73,9 @@ getImages = ( ) => {
             <nav class="section-nav">
                 <ol>                                                              
                     <li><a href="#tree-of-life">עץ החיים</a></li>                                   
-                    {/* <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                     */}
+                    {/* <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                     */}                    
+                    <li><a href="#winged-chamber">תא מכונף</a></li>
+                    <li><a href="#flying-ring">טבעת מעופפת</a></li>
                     <li><a href="#misc">שונות</a></li>
                 </ol>
             </nav>
