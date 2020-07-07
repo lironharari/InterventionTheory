@@ -2,10 +2,6 @@ export function sortByRank(list) {
   return list.sort((a, b) => b.rank - a.rank );      
 }
 
-export function inPageLink(id) {
-  return id.replace( ' ', '-');      
-}
-
 export function filter(photos,subcategory) {
   return adjustGalleryPhotos(sortByRank(photos.filter(function (photo) { return photo.subcategory === subcategory;})))
 }
@@ -56,8 +52,4 @@ export function adjustGalleryPhotos(photos) {
                               });                                
     });
     return galleryPhotos;
-  }
-  
-  export function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
   }

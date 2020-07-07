@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './style/Lightbox.css';
 import './style/Responsive.css';
 import './style/Fonts.css';
-import './style/modal-video.scss';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-image-lightbox/style.css';

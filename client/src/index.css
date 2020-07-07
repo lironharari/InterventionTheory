@@ -10,76 +10,7 @@ body {
   background-color: #ffffff !important;
 }
 
-.documentaryRow,
-.musicRow{
-  margin-top: 20px;
-}
-
-.documentaryRow h2, 
-.musicRow h2{
-  margin-bottom: 30px;
-}
-
-.documentaryHeadContainer{
-  width: 100%;
-}
-
-.documentaryHeadContainer img{
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.dropdown-menu .dropdown-item{
-  text-transform:uppercase !important;
-}
-
-.documentaryHeadContainer h1{
-  text-align: center;
-}
-.documentaryHeadContainer h4{
-  text-align: center;
-  color:rgba(0,0,0,.6);
-}
-
-.pageHeader{
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  color:rgba(0,0,0,.5);
-}
-
-.homeDescription h2,
-.homeDescription h4,
-.pageHeader h1,
-.documentaryHeadContainer h1{
-  color:rgba(0,0,0,.7);
-}
-
-.navbarFooter .dropdown-divider{
-  border-top:none;
-}
-
-.navbarFooter .nav-link:hover,
-.navbarHeader .nav-link:hover,
-.navbarHeader .dropdown-item:hover{
-  text-decoration: underline;  
-  background-color: transparent;
-  color:rgba(0,0,0,.5);
-}
- /* .navbarHeader .navbar-nav .nav-link,
-  .navbarHeader .navbar-nav .nav-item{
-  margin-left: 15px;
-} */
-
-.documentaryHeader,
-.documentaryRow,
-.musicRow,
-.navbarFooter,
-.navbarFooter a,
-.navbarFooter .footerCopyright,
 .dropdown-menu button,
-.homeCategory,
 .navbar .dropdown-menu{
   font-size: 1.2rem;
   font-weight: 400;
@@ -95,129 +26,14 @@ body {
   font-weight: 400;
   color:rgba(0,0,0,.5);
 }
-
 .is-active{
   text-decoration: underline;
 }
 
-/* .logo{
-    margin-left:15px;
- } */
-
- .links{
-  float: right;
-}
-
-.drawingGrid,
-.photographyGrid{
-  display: inline-block;
-  width: 100%;
-  padding: 0 10% 40px 10%;
-}
-
-.musicGrid span{
-  display: block;
-}
-
-.musicGrid .video{
-  margin:20% 0;
-}
-
-.musicGrid p{
-  font-size: 1.2rem;
-  font-weight: 400;
-  color:rgba(0,0,0,.8) !important;
-}
 .ril__captionContent{
   margin-left: auto;
   margin-right: auto;
 }
-
-.musicGrid h2{
-  margin-bottom:20px;
-}
-
-.streetGallery .mt-5{
-  margin-top: 0 !important;
-}
-
-.drawingGrid{
-  margin-top:40px;
-}
-
-.photographyGrid{
-  margin-bottom:30px;
-  margin-top:40px;
-}
-
-.drawingImage,
-.photographyImage{
-  width: 100%;
-}
-
-.page-footer{
-border-top:1px solid black;
-}
-
-.documentaryHeader{
-  margin-top: 30px;
-}
-
-.homeHeader{
-  text-align: center;
-}
-
-.homeHeader h2{
-  color:rgba(0,0,0,.7);
-}
-
-.homeHeader h4{
-  color:rgba(0,0,0,.5);
-}
-
-.homeDescription {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  color:rgba(0,0,0,.7);
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .2s, visibility .2s;
-}
-
-.footerGrid{
-  height: 270px;
-  margin:0 0;
-  padding:0 0;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footerCopyright{
-  padding: 100px 0;
-}
-
-.footerRow{
-  width: 100%;
-  padding-top: 50px;
-}
-
-.thumbnailtext{
-  margin: 10px 0;
-  text-align: center;
-}
-
-.humanHistoryRows{
-  margin-bottom: 10px;
-}
-
-
 
 .MuiAppBar-colorPrimary{
   background-color:#ffffff !important;
@@ -231,55 +47,11 @@ border-top:1px solid black;
 .MuiButtonBase-root:hover{
   color:rgba(0,0,0,.5);
 }
-
-.photographyPage{
-  display: inline-block;
-  width: 100%;
-  padding: 10px 10% 40px 10%;
-}
-
-.photographyPage .photographyRow, .photographyPage .photographyCol{
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.photographyPage .photographyCol .card-title{
-  color:rgba(0,0,0,.7);
-}
-
-.photographyPage .photographyCol{
-margin-bottom:40px;
-}
-
-.photographyPage .photographyCol img{
-  margin-top:10px;
-  }
-
-.photographyPage .photographyHeader{
-  margin-bottom:20px;
-}
-
-.photographyPage .photographyHeader h2,
-.photographyPage .photographyHeader h4{
-  color:rgba(0,0,0,.6);
-}
-
-.photographyPage .row{
-  margin-right: 0px !important;
-  margin-left: 0px !important;
-}
-
 .MuiButton-root:active,
 .MuiButton-root:focus {
   outline: 0;
 }
-
-.MuiTypography-root span:hover,
-.thumbnailImage,
-.photographyContainer img:hover,
-.thumbnailtext{
+.MuiTypography-root span:hover{
   cursor: pointer;
 }
 
@@ -304,12 +76,9 @@ margin-bottom:40px;
   box-shadow: none;
   outline: none;
 }
-
-
 .dropdown-menu .dropdown-item:active{
   background-color: #DBDBDB !important;
 }
-
 .dropdown .btn-primary .dropdown-toggle:link{
   background-color: #fff !important;
 }
@@ -328,125 +97,24 @@ margin-bottom:40px;
   background-color: #DBDBDB !important;    
   color:rgba(0,0,0,.6) !important;
 }
-
-button.barLinks:hover, 
 #dropdown-item-button:visited,
 #dropdown-item-button:hover,
 #dropdown-item-button:focus{  
   border-color:transparent !important;
   box-shadow:none !important;
 }
-
-div.documentaryHeadContainer.row{
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-
 .MuiAppBar-root{
   z-index: 1 !important;
 }
 
-.toolbarTop{
-  border-bottom:1px solid rgba(0,0,0,.1);
-  background-color: #ffffff;
-  position: fixed !important;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.barhome span,
-.barhome h6
-{
-  float:left;
-}
-
-.barhome button,.drawerCloser{
-  outline: 0 !important;
-}
-
-.barhome{
-  display: block;
-  width: 40px;
-  float: left;
-}
-
-.barLinks
-{
-  margin-right:25px;
-  display: block;
-  position:absolute;
-  right:0;
-  top:0;
-  width: 450px;
-}
-
-.barLinks button
-{
-  margin: 15px 0;
-  display: block;
-  float: left;
-
-}
-.barLinks .dropdown-menu .dropdown-divider{
-  border-top:1px solid rgba(59, 57, 57, 0.1);
-  height: 1px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.barLinks .dropdown-menu  button
-{
-  margin: 5px 0;
-  display: block;
-  float: left;
-}
 .dropdown-item:hover{
   background-color: rgba(201, 173, 173, 0.05) !important;
 }
-
 .galleryImage{
   margin: 2px; display: block;  
 }
 .galleryImage:hover{
   cursor: pointer;
-}
-
-.homePage{
-  z-index: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin:30px 5%;
-}
-
-.homeContainer .mt-4{
-  margin-top: 0 !important;
-}
-
-.documentaryHeader.col{
-padding-right: 0 !important;
-padding-left: 0 !important;
-}
-.videoThumbnail:hover{
-  cursor: pointer;
-}
-.pageContainer{
-  margin-top: 30px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.documentaryGrid,.musicGrid{
-  display: inline-block;
-  width: 100%;
-  padding: 0 5%;
-  margin-top: 30px;
-}
-.documentaryGrid{
-  margin-bottom: 30px;
 }
 .nav-link{
   padding-left: 10px !important;
@@ -455,22 +123,18 @@ padding-left: 0 !important;
   letter-spacing: 0.02857em;
   outline: 0;
 }
-
 .navbar-brand{
   font-size:1.2rem !important;
   text-transform: uppercase;
 }
-
 .navbar-nav .dropdown-item,
 .navbar .navbar-brand{
   color:rgba(0,0,0,.5) !important;
-
 }
 .navbar-nav .dropdown-item:hover,
 .navbar .navbar-brand:hover{
   color:rgba(0,0,0,.5) !important;
 }
-
 .navbar-nav{
   padding-top: 5px !important;
   text-transform: uppercase;  
@@ -481,21 +145,8 @@ padding-left: 0 !important;
 .navbar-toggler:focus {
   outline: 0;
 }
-.musicBody{
-  margin-top: 10px;
-}
 .galleryContainer{
   margin-top: 10px;
-}
-.modal-video{
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.modal-video-close-btn{
-  top:10px;
-  right: -45px;
-}
-.modal-video-movie-wrap{
-  background-color: #000000;
 }
 .ril-close,
 .ril-zoom-in,
@@ -504,7 +155,6 @@ padding-left: 0 !important;
 .ril-next-button{
   outline:0 !important;
 }
-
 .ril-close:active,
 .ril-zoom-in:active,
 .ril-zoom-out:active,
@@ -512,90 +162,9 @@ padding-left: 0 !important;
 .ril-next-button:active{
   border: 1px solid white !important;
 }
-
-
-.documentaryRow h2,
-.documentaryHeadContainer h1,
-.pageHeader h1,
-.musicRow h2{
-    text-decoration: underline;
-}
-.pageHeader h4{
-  margin-bottom: 25px;
-}
-
-.pageHeader h4,
-.pageHeader h1{
-  text-align: center;
-  width: 100%;
-  display: block;
-}
-
-.songDetail{
-  text-align: center;
-}
-
-.homeGrid{
-  margin:30px 5%; 
-}
-
-.homeContainer .homePage .imageContainer img{
-  height: auto;  
-  width: 100%;
-  margin-bottom:30px;
-}
-
-.homePage .about h2{                  
-  text-align: center;  
-  margin-bottom: 20px;  
-}        
-
-.homePage .about{     
-  color:rgba(0,0,0,.6);             
-  text-align: left;  
-} 
-.homePage .about h4{     
-  text-decoration: underline;
-} 
-
-.homePage .about .quotation{
-  font-size: 30px;
-  margin: 0 auto;
-  quotes: "\201C""\201D""\2018""\2019";
-  padding: 10px 20px;
-  line-height: 1.4;
-}
-
-.homePage .about .quotation:before {
-  content: open-quote;
-  display: inline;  
-  line-height: 0;
-  left: -10px;
-  position: relative;
-  top: 30px;
-  color: #ccc;
-  font-size: 3em;
-}
-.homePage .about .quotation::after {
-  content: close-quote;
-  display: inline;
-  line-height: 0;
-  left: 10px;
-  position: relative;
-  top: 35px;
-  color: #ccc;
-  font-size: 3em;
-}
-.homePage .about footer{
-  margin:0;
-  text-align: right;
-  font-size: 1.5em;
-  font-style: italic;
-}
 .social-icon{
   margin: 0 5px;
 }
-
 .home-bottom-social-icons{
   margin-bottom: 15px;
   margin-top: 10px;
