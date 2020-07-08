@@ -1,5 +1,4 @@
 import React from 'react';
-import notes from './data/notes.json';
 
 class Reference extends React.Component {  
     constructor(props) {
@@ -9,9 +8,7 @@ class Reference extends React.Component {
         };        
       }
     render() {        
-        const {id} = this.state;
-        const note = notes.find(element => element.id === id);        
-
+        const {id} = this.state;     
       return (
             <sup 
                 key={id}                 
