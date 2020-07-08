@@ -3,7 +3,7 @@ import notes from './data/notes.json';
 
 function Note(props) {           
     return <li id={`cite_note-${props.id}`} key={props.id}>          
-                <a className="cite_note" href={`#cite_ref-${props.id}`}>^</a>
+                <a className="cite_note" title="לקפוץ למעלה" href={`#cite_ref-${props.id}`}>^</a>
                 <cite>
                     {props.info}
                     <span className="space" />

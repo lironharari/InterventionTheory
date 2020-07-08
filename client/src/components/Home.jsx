@@ -1526,9 +1526,9 @@ class Home extends Component {
                 </section>                                                
                 <section id="bibliography">
                     <h2>ביבליוגרפיה</h2>
-                    <ol>                                              
+                    <ol>
                         <Notes />
-                    </ol>                    
+                    </ol>
                 </section>
             </div>
             <nav className="section-nav">
@@ -1540,7 +1540,7 @@ class Home extends Component {
                     <li><a href="#nephilim">נפילים</a></li>
                     <li><a href="#anunnaki">אנונקי</a></li>
                     <li><a href="#advanced-knowledge">ידע מתקדם</a></li>
-                    <li><a href="#advanced-technology">טכנולוגיה</a></li>                    
+                    <li><a href="#advanced-technology">טכנולוגיה</a></li>                                        
                     <li><a href="#bibliography">ביבליוגרפיה</a></li>
                 </ol>
             </nav>

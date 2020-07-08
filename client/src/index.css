@@ -298,6 +298,17 @@ section .space::after{
   content: " ";
   white-space: pre;
 }
+section .ref::before{
+  content: none;
+  white-space: unset;
+}
+section .ref{
+  color:#0645ad;
+}
+section .ref:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
 section .comma::before{
   content: none;
   white-space: unset;
@@ -376,4 +387,9 @@ cite a:hover{
 }
 cite a{
   color:#0645ad;
+}
+.popover-header{
+  text-align: right;    
+  font-weight: 400;  
+  color:rgba(0,0,0,.6);
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-//import notes from './data/notes.json';
+import notes from './data/notes.json';
 
 class Reference extends React.Component {  
     constructor(props) {
@@ -10,14 +10,14 @@ class Reference extends React.Component {
       }
     render() {        
         const {id} = this.state;
-        //const note = notes.find(element => element.id === id);        
+        const note = notes.find(element => element.id === id);        
+
       return (
             <sup 
-                key={id} 
-                // alt={note.text}
+                key={id}                 
                 id={`cite_ref-${id}`} 
-                className="reference">
-                    <a href={`#cite_note-${id}`}>[{id}]</a>
+                className="reference">                    
+                    <a className="cite_ref" key={id} href={`#cite_note-${id}`}>[{id}]</a>                    
             </sup>         
         );
     }

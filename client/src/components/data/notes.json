@@ -1,97 +1,97 @@
 [
     {
         "id":1,
-        "info":"הדת המסופוטמית",                
+        "info":"מבוא לדת המסופוטמית, תמי שניידר",                
         "href":"https://www.amazon.com/Introduction-Ancient-Mesopotamian-Religion/dp/0802829597",
         "text":"An Introduction to Ancient Mesopotamian Religion By Tammi J. Schneider"    
     },
     {
         "id":2,
-        "info":"אבולוציה",                
+        "info":"מקור המינים, צארלס דרווין",                
         "href":"https://www.gutenberg.org/files/1228/1228-h/1228-h.htm",
         "text":"The Origin of Species By Charles Darwin"    
     },
     {
         "id":3,
-        "info":"שומר",                
+        "info":"ערש הציויליזציה, סמואל קרמר",                
         "href":"https://www.amazon.com/Cradle-Civilization-Samuel-Noah-Kramer/dp/0316326178",
         "text":"Cradle of Civilization By Samuel Noah Kramer"
     },
     {
         "id":4,
-        "info":"שומר",                
+        "info":"ההיסטוריה התחילה בשומר, סמואל קרמר",                
         "href":"https://www.amazon.com/History-Begins-Sumer-Thirty-Nine-Recorded/dp/0812212762",
         "text":"History begins at Sumer By Samuel Noah Kramer"
     },
     {
         "id":5,
-        "info":"שפה שומרית",                
+        "info":"היסטוריית השפה, סטיב פישר",                
         "href":"http://www.reaktionbooks.co.uk/display.asp?ISB=9781780239033",
         "text":"A History of Language By Steven Roger Fischer"
     },
     {
         "id":6,
-        "info":"כתב שומרי",                
+        "info":"המצאת כתב יתדות, זאן גלסנר",                
         "href":"https://www.amazon.ca/Invention-Cuneiform-Writing-Sumer/dp/0801873894",
-        "text":"The Invention of Cuneiform: Writing in Sumer By Jean-Jacques Glassner and Donald M. Herron"
+        "text":"The Invention of Cuneiform: Writing in Sumer By Glassner and  Herron"
     },
     {
         "id":7,
-        "info":"מתמטיקה בשומר",                
+        "info":"היסטורית המתמטיקה, מרטין קמבל",                
         "href":"https://www.amazon.com/History-Mathematical-Tables-Sumer-Spreadsheets/dp/0198508417",
-        "text":"The History of Mathematical Tables: From Sumer to Spreadsheets By Martin Campbell-Kelly and Mary Croarken"
+        "text":"The History of Mathematical Tables By Martin Campbell-Kelly and Mary Croarken"
     },
     {
         "id":8,
-        "info":"חותם גליל",                
+        "info":"חותמות גליל, ביטריס טיסאר",                
         "href":"https://www.amazon.com/Ancient-Eastern-Cylinder-Marcopoli-Collection/dp/0520049276",
         "text":"Ancient Near Eastern Cylinder Seals from the Marcopoli Collection By Beatrice Teissier"
     },
     {
         "id":9,
-        "info":"אתרחסיס",                
+        "info":"אתרחסיס, סטפני דאלי",                
         "href":"https://geha.paginas.ufsc.br/files/2017/04/Atrahasis.pdf",
         "text":"Myths from Mesopotamia: Creation, The Flood, Gilgamesh and others By Stephanie Dalley"
     },
     {
         "id":10,
-        "info":"אתרחסיס",                
+        "info":"אתרחסיס, אלן מילרד",                
         "href":"https://eprints.soas.ac.uk/29625/1/10752597.pdf",
         "text":"THE ATRAHASIS EPIC and Its Place in Babylonian Literature By Alan Ralph Millard"
     },
     {
         "id":11,
-        "info":"אנומה אליש",                
+        "info":"אנומה אליש, לאונרד קינג",                
         "href":"http://www.etana.org/sites/default/files/coretexts/14907.pdf",
         "text":"The seven tablets of creation, Vol. 1 By Leonard William King"
     },
     {
         "id":12,        
-        "info":"קדשתו",                
+        "info":"קדשה וקדשתו, גון גודניק",                
         "href":"https://www.jstor.org/stable/1510077?seq=1",
         "text":"Tamar, Qědēšā, Qadištu, and Sacred Prostitution in Mesopotamia By Joan Goodnick Westenholz"
     },
     {
         "id":13,
-        "info":"טיט בשומרית",                
+        "info":"כוכב הלכת ה-12, זכריה סיטצין",                
         "href":"https://books.google.com/books?id=ZVooDwAAQBAJ&pg=PT316&dq=zecharia+sitchin+ti.it+clay&hl=en&sa=X&ved=2ahUKEwir3uX73rHqAhWPVs0KHTTUCpwQ6AEwAXoECAUQAg#v=onepage&q=zecharia%20sitchin%20ti.it%20clay&f=false",
         "text":"The 12th Planet By Zecharia Sitchin"
     },
     {
         "id":14,
-        "info":"מילים מקראיות שאולות מאכדית",                
+        "info":"מילים אכדיות במקרא, פל מנקוסקי",                
         "href":"https://books.google.com/books?id=rt6mDwAAQBAJ&pg=PA57&lpg=PA57&dq=clay+akkadian+tit&source=bl&ots=HI6MstPZv5&sig=ACfU3U3BrAAHSEo7_B3Vtj71srhRBRpUKw&hl=en&sa=X&redir_esc=y#v=onepage&q=clay%20akkadian%20tit&f=false",
         "text":"Akkadian Loanwords in Biblical Hebrew By Paul V. Mankowski"
     },
     {
         "id":15,
-        "info":"נפישתו",                
+        "info":"נפישתו, מילון אכדי-אנגלי",                
         "href":"https://books.google.com/books?id=dLRADwAAQBAJ&pg=PA147&lpg=PA147&dq=napishtu+akkadian&source=bl&ots=hJu9f7MFM7&sig=ACfU3U1g40cbYRCPcF0R5iE_DAWxcTn7ow&hl=en&sa=X&redir_esc=y#v=onepage&q=napishtu%20akkadian&f=false",
         "text":"Akkadian-English Dictionary. Volume II (G-Q) By Maximillien De Lafayette"
     },
     {
         "id":16,
-        "info":"שימתי",
+        "info":"כת אנקי, קרי צייס",
         "href":"https://books.google.com/books?id=tyPhOVdLhakC&pg=PA258&lpg=PA258&dq=sumerian+shi-im-ti&source=bl&ots=4ttkEpyjMg&sig=ACfU3U0vkuR6J_ATVjgqU_NeGmEClGf7rg&hl=en&sa=X&redir_esc=y#v=onepage&q=sumerian%20shi-im-ti&f=false",
         "text":"The Enki Clan By Kerry Chase"
     },
@@ -109,9 +109,9 @@
     },
     {
         "id":19,
-        "info":"היפוך גנטי",
+        "info":"היפוך גנטי - גנום השימפנזה",
         "href":"https://en.wikipedia.org/wiki/Chimpanzee_genome_project",
-        "text":"גנום שימפנזה"
+        "text":"ויקיפדיה"
     },
     {
         "id":20,
@@ -135,41 +135,41 @@
         "id":23,
         "info":"חוה המיטוכונדרית",
         "href":"https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%94_%D7%94%D7%9E%D7%99%D7%98%D7%95%D7%9B%D7%95%D7%A0%D7%93%D7%A8%D7%99%D7%AA",
-        "text":"ויקיפדיה עברית"
+        "text":"ויקיפדיה"
     },
     {
         "id":24,
-        "info":"לויד פאי",
+        "info":"עיקרי תאורית ההתערבות, לויד פאי",
         "href":"https://www.amazon.com/Intervention-Theory-Essentials-Everything-Wrong-ebook/dp/B00IWBELQI",
         "text":"Intervention Theory Essentials By Lloyd Pye"
     },
     {
         "id":25,
-        "info":"בריאן פורסטר",
+        "info":"גולגלות מאורכות, בריאן פורסטר",
         "href":"https://www.amazon.com/Elongated-Skulls-Peru-Bolivia-Viracocha/dp/1507892810",
         "text":"Elongated Skulls Of Peru And Bolivia: The Path Of Viracocha By Brien Foerster"
     },
     {
         "id":26,
-        "info":"תקופת אמרנה",
+        "info":"אומנות תקופת אמרנה",
         "href":"https://www.britannica.com/art/Amarna-style",
         "text":"בריטניקה"
     },
     {
         "id":27,
-        "info":"מנתון",
+        "info":"מנתון, כהן דת מצרי",
         "href":"https://en.wikipedia.org/wiki/Manetho",
         "text":"ויקיפדיה"
     },
     {
         "id":28,
-        "info":"אל למחצה",
+        "info":"כשענקים התהלכו בארץ, זכריה סיטצין",
         "href":"https://www.amazon.com/There-Were-Giants-Upon-Earth/dp/1591431948",
         "text":"There Were Giants Upon the Earth By Zecharia Sitchin"
     },
     {
         "id":29,
-        "info":"אנונקי",
+        "info":"כוכב הלכת ה-12, זכריה סיטצין",
         "href":"https://www.amazon.com/12th-Planet-Chronicles-Zecharia-Sitchin/dp/B004HWOZHQ",
         "text":"The 12th Planet By Zecharia Sitchin"
     },
@@ -199,61 +199,61 @@
     },
     {
         "id":34,
-        "info":"אסטרונומיה בשומר",
+        "info":"כוכב הלכת ה-12, זכריה סיטצין",
         "href":"https://books.google.com/books?id=ZVooDwAAQBAJ&pg=PT179&dq=lu.bad&hl=en&sa=X&ved=2ahUKEwjs0uOLrbTqAhVvmK0KHTt0CJkQ6AEwAHoECAYQAg#v=onepage&q=lu.bad&f=false",
         "text":"The 12th Planet By Zecharia Sitchin"
     },
     {
         "id":35,
-        "info":"מודל הליוצנטרי",
+        "info":"חותם גליל, מודל הליוצנטרי",
         "href":"http://repository.edition-topoi.org/collection/VMRS/object/15843",
-        "text":"חותם גליל"
+        "text":"גלרית תמונות"
     },
     {
         "id":36,
-        "info":"מודל הליוצנטרי",
+        "info":"חותם גליל, מודל הליוצנטרי",
         "href":"https://blog.kareldonk.com/planet-x-nibiru-an-analysis-of-akkadian-seal-va243/",
         "text":"מחקר קרל דונק"
     },
     {
         "id":37,
-        "info":"טבעות שבתאי",
+        "info":"חותם גליל, טבעות שבתאי",
         "href":"https://www.britishmuseum.org/collection/object/W_1919-0712-332",
         "text":"המוזיאון הבריטי"
     },
     {
         "id":38,
-        "info":"הכוכב השביעי",
+        "info":"תחילת הזמן, זכריה סיטצין",
         "href":"https://books.google.com/books?id=R1ooDwAAQBAJ&pg=PT143&lpg=PT143&dq=%22as+commander+of+Earth,+the+seventh+planet%22&source=bl&ots=Ng1Bs-Y3_v&sig=ACfU3U13E1PHOsAptIII0j3GpO6NN6XhAg&hl=en&sa=X&redir_esc=y#v=onepage&q=%22as%20commander%20of%20Earth%2C%20the%20seventh%20planet%22&f=false",
         "text":"When Time Began By Zecharia Sitchin"
     },
     {
         "id":39,
-        "info":"שבוע",
+        "info":"קוסמולוגית המקרא, גון הילבר",
         "href":"https://books.google.com/books?id=zdXaDwAAQBAJ&pg=PT55&lpg=PT55&dq=%22a+seven-day+temple+dedication+sets+apart+Gudea%27s+temple+in+Mesopotamia%22&source=bl&ots=TwkaA93C2C&sig=ACfU3U2WHO8Gve1dOw22IelOFNk_Ex4qTw&hl=en&sa=X&redir_esc=y#v=onepage&q=%22a%20seven-day%20temple%20dedication%20sets%20apart%20Gudea's%20temple%20in%20Mesopotamia%22&f=false",
         "text":"Old Testament Cosmology and Divine Accommodation: A Relevance Theory Approach By John W. Hilber"
     },
     {
         "id":40,
-        "info":"חודש",
+        "info":"דברי ימי האנונקי, זכריה סיטצין",
         "href":"https://books.google.com/books?id=zlgoDwAAQBAJ&pg=PT348&lpg=PT348&dq=%22Sumer+had+the+prefix+EZEN%22&source=bl&ots=HZIPb64RTR&sig=ACfU3U1evnamf5Mcdz0taigOPtt1J5ssIQ&hl=en&sa=X&redir_esc=y#v=onepage&q=%22Sumer%20had%20the%20prefix%20EZEN%22&f=false",
         "text":"The Anunnaki Chronicles By Zecharia Sitchin"
     },
     {
         "id":41,
-        "info":"לוח שנה",
+        "info":"לוח השנה הראשון",
         "href":"http://www.angelfire.com/oz/lessthanlucid/calendar0.html",
         "text":"ניפור"
     },
     {
         "id":42,
-        "info":"לוח שנה בבילוני",
+        "info":"לוח השנה בבבל",
         "href":"https://en.wikipedia.org/wiki/Babylonian_calendar",
         "text":"ויקיפדיה"
     },
     {
         "id":43,
-        "info":"גלגל המזלות",
+        "info":"תחילת הזמן, זכריה סיטצין",
         "href":"https://books.google.com/books?id=R1ooDwAAQBAJ&pg=PT23&dq=the+anunnaki+invented+the+twelve+houses+of+the+zodiac&hl=en&sa=X&ved=2ahUKEwiA35a247bqAhVDUK0KHVOrDQoQ6AEwAHoECAQQAg#v=onepage&q=the%20anunnaki%20invented%20the%20twelve%20houses%20of%20the%20zodiac&f=false",
         "text":"When Time Began By Zecharia Sitchin"
     },
@@ -271,25 +271,25 @@
     },
     {
         "id":46,
-        "info":"ווסאיקה פייסיס",
+        "info":"גאומטריה קדושה, ווסאיקה פייסיס",
         "href":"https://en.wikipedia.org/wiki/Vesica_piscis",
         "text":"ויקיפדיה"
     },
     {
         "id":47,
-        "info":"טריקטרה",
+        "info":"גאומטריה קדושה, טריקטרה",
         "href":"https://en.wikipedia.org/wiki/Triquetra",
         "text":"ויקיפדיה"
     },
     {
         "id":48,
-        "info":"זרע החיים",
+        "info":"גאומטריה קדושה, זרע החיים",
         "href":"https://blog.etemetaphysical.com/seedoflife/",
         "text":"Metaphysical Corner"
     },
     {
         "id":49,
-        "info":"שש עלי כותרת",
+        "info":"גאומטריה קדושה, ששת עלי כותרת",
         "href":"https://en.wikipedia.org/wiki/Six-petal_rosette",
         "text":"ויקיפדיה"
     },
@@ -301,50 +301,50 @@
     },
     {
         "id":51,
-        "info":"מתחם גיזה",
+        "info":"הפירמידות במתחם גיזה",
         "href":"https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
         "text":"ויקיפדיה"
     },
     {
         "id":52,
-        "info":"רצפת הבזלת",
+        "info":"הפירמידה של חופו, רצפת הבזלת",
         "href":"https://www.theglobaleducationproject.org/egypt/articles/hrdfact2.php",
         "text":"חיתוך אבנים קשות"
     },
     {
         "id":53,
-        "info":"בעלבק",
+        "info":"אבנים מגליתיות בבעלבק",
         "href":"https://en.wikipedia.org/wiki/Stone_of_the_Pregnant_Woman",
         "text":"אבן האישה בהריון"
     },
     {
         "id":54,
-        "info":"האובליסק לא גמור",
+        "info":"האובליסק לא גמור, מצרים",
         "href":"https://en.wikipedia.org/wiki/Unfinished_obelisk",
         "text":"ויקיפדיה"
     },
     {
         "id":55,
-        "info":"סאקסאיוואמן",
+        "info":"מבנים מגליתים בסאקסאיוואמן, פרו",
         "href":"https://hiddenincatours.com/megalithic-works-in-cusco-peru-made-long-before-the-inca-existed/",
         "text":"בריאן פורסטר"
     },
     {
         "id":56,
-        "info":"חותמות גליל",
+        "info":"חותמות גליל, מאגר טופוי",
         "href":"http://repository.edition-topoi.org/collection/VMRS/search",
-        "text":"מאגר טופוי"
+        "text":"גלריית תמונות"
     },
     {
         "id":57,
-        "info":"חותמות גליל",
+        "info":"חותמות גליל, מאגר הרוארד",
         "href":"https://www.harvardartmuseums.org/collections?q=cylinder+seal",
-        "text":"מאגר הרוארד"
+        "text":"גלריית תמונות"
     },
     {
         "id":58,
-        "info":"חותמות גליל",
+        "info":"חותמות גליל, מאגר סידיאלאי",
         "href":"https://cdli.ucla.edu/projects/seals/seals.html",
-        "text":"מאגר סידיאלאי"
+        "text":"גלריית תמונות"
     }                
 ]
