@@ -3,6 +3,13 @@ import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
 import ScrollUpButton from "react-scroll-up-button";
+import Skeleton from "react-loading-skeleton";
+
+function Loader(props) {           
+  return  <div className="skeleton-container">
+            {props.photos.length === 0 && <Skeleton count={6} />}
+          </div>;  
+}
 
 class Anunnaki extends Component {
   constructor(props) {
@@ -42,10 +49,12 @@ getImages = ( ) => {
             <div className="section-content">                                                               
                 <section id="abgal">                    
                     <h2>אבגל</h2>
+                    <Loader photos={photos} />
                     <ImageGallery photos={commonScript.filter(photos,"Abgal")}></ImageGallery>
                 </section>                
                 <section id="tree-of-life">
                     <h2>עץ החיים</h2>
+                    <Loader photos={photos} />
                     <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
                 </section>        
                 <section id="misc">

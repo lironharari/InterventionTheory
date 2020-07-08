@@ -3,6 +3,13 @@ import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
 import ScrollUpButton from "react-scroll-up-button";
+import Skeleton from "react-loading-skeleton";
+
+function Loader(props) {           
+  return  <div className="skeleton-container">
+            {props.photos.length === 0 && <Skeleton count={6} />}
+          </div>;  
+}
 
 class Megalith extends Component {
   constructor(props) {
@@ -42,24 +49,20 @@ getImages = ( ) => {
             <div className="section-content">                                                               
                 <section id="sacsayhuaman">
                     <h2>סאסקיואמן</h2>
-                    <p>
+                        <Loader photos={photos} />
                         <ImageGallery photos={commonScript.filter(photos,"Sacsayhuaman")}></ImageGallery>
-                    </p>
                 </section>               
                 <section id="egypt">
                     <h2>מצרים</h2>
-                    <p>
+                        <Loader photos={photos} />
                         <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
-                    </p>
                 </section>
                 <section id="baalbek">
                     <h2>בעלבק</h2>
-                    <p>
                         <ImageGallery photos={commonScript.filter(photos,"Baalbek")}></ImageGallery>
-                    </p>
                 </section>                                                               
             </div>
-            <nav class="section-nav">
+            <nav className="section-nav">
                 <ol>                                                              
                     <li><a href="#sacsayhuaman">סאסקיואמן</a></li>               
                     <li><a href="#egypt">מצרים</a></li>               

@@ -17,9 +17,10 @@
     "compression": "^1.7.4",
     "express": "^4.16.4",
     "html-react-parser": "^0.13.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mongoose": "^5.4.13",
     "prop-types": "^15.7.2",
+    "react-loading-skeleton": "^2.1.1",
     "react-photo-gallery": "^8.0.0",
     "react-scroll-up-button": "^1.6.4",
     "serve": "^11.3.2"

@@ -3,6 +3,13 @@ import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
 import ScrollUpButton from "react-scroll-up-button";
+import Skeleton from "react-loading-skeleton";
+
+function Loader(props) {           
+  return  <div className="skeleton-container">
+            {props.photos.length === 0 && <Skeleton count={6} />}
+          </div>;  
+}
 
 class Nephilim extends Component {
   constructor(props) {
@@ -42,21 +49,17 @@ getImages = ( ) => {
             <div className="section-content">                                                               
                 <section id="elongated-skulls">
                     <h2>גולגולות מאורכות</h2>
-                    <p>
+                        <Loader photos={photos} />
                         <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery>                      
-                    </p>
                 </section>               
                 <section id="egypt">
                     <h2>מצרים</h2>
-                    <p>
+                        <Loader photos={photos} />
                         <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
-                    </p>
                 </section>  
                 <section id="cylinder-seals">
                     <h2>חותמות גליל</h2>
-                    <p>
                         <ImageGallery photos={commonScript.filter(photos,"CylinderSeals")}></ImageGallery>
-                    </p>
                 </section>                                                   
             </div>
             <nav class="section-nav">

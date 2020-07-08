@@ -3,6 +3,13 @@ import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
 import ScrollUpButton from "react-scroll-up-button";
+import Skeleton from "react-loading-skeleton";
+
+function Loader(props) {           
+  return  <div className="skeleton-container">
+            {props.photos.length === 0 && <Skeleton count={6} />}
+          </div>;  
+}
 
 class CylinderSeals extends Component {
   constructor(props) {
@@ -41,36 +48,24 @@ getImages = ( ) => {
             <div className="section-content">                                                               
                 <section id="tree-of-life">
                     <h2>עץ החיים</h2>
-                    <p>
-                        <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
-                    </p>
+                    <Loader photos={photos} />                                                                                                                      
+                    <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
                 </section>               
-                {/* <section id="nibiru-pull">
-                    <h2>משיכת ניבירו</h2>
-                    <p>
-                        <ImageGallery photos={commonScript.filter(photos,"NibiruPull")}></ImageGallery>
-                    </p>
-                </section>                */}
                 <section id="winged-chamber">
                     <h2>תא מכונף</h2>
-                    <p>
-                        <ImageGallery photos={commonScript.filter(photos,"WingedChamber")}></ImageGallery>
-                    </p>
+                    <Loader photos={photos} />
+                    <ImageGallery photos={commonScript.filter(photos,"WingedChamber")}></ImageGallery>
                 </section> 
                 <section id="flying-ring">
                     <h2>טבעת מעופפת</h2>
-                    <p>
                         <ImageGallery photos={commonScript.filter(photos,"FlyingRing")}></ImageGallery>
-                    </p>
                 </section>                                                      
                 <section id="misc">
                     <h2>שונות</h2>
-                    <p>
                         <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
-                    </p>
                 </section>                                                      
             </div>
-            <nav class="section-nav">
+            <nav className="section-nav">
                 <ol>                                                              
                     <li><a href="#tree-of-life">עץ החיים</a></li>                                   
                     {/* <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                     */}                    
