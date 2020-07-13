@@ -4,40 +4,35 @@ import Lightbox from 'react-image-lightbox';
 
 export default function ImageGallery({ photos }) {
     const [photoIndex,setPhotoIndex] = useState(0);
-    const [isOpen,setIsOpen] = useState(false);    
-
-    const imageRenderer = ({
-      key,
-      index,
-      photo,     
-    }) => {
+    const [isOpen,setIsOpen] = useState(false);            
+  
+    const imageRenderer = ({key,index,photo}) => {      
       
       const handleOnClick = e => {
         setIsOpen(true);
         setPhotoIndex(index);
-      };  
-
+      };                
       return (
-        <div 
-            key={key} >  
-                  <img                    
+                <img                     
+                    key={key}       
                     alt={photo.title}
                     className="galleryImage"
-                    {...photo}                    
-                    onClick={handleOnClick}
-                  />                            
-        </div>
+                    onClick={handleOnClick} 
+                    src={photo.src}
+                    srcSet={photo.srcSet}
+                    sizes={photo.sizes}
+                    width={photo.width}
+                    height={photo.height}                    
+                    title={photo.title}                                        
+                    caption={photo.description}                                        
+            />                        
       );
     };
-        
+  
   return (
-    <div className="galleryContainer">          
-      <Gallery 
-                renderImage={imageRenderer}
-                photos={photos}            
-                                />                                         
-            
-            {isOpen && (
+    <div className="galleryContainer">  
+      <Gallery renderImage={imageRenderer} photos={photos}  />                                                             
+      {isOpen && (
           <Lightbox            
             imageCaption={photos[photoIndex].caption}            
             mainSrc={photos[photoIndex].src}            

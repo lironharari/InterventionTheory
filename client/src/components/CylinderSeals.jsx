@@ -11,10 +11,12 @@ class CylinderSeals extends Component {
       photos: []
     };   
   }
-  componentDidMount() { 
-    commonScript.enableScroll();   
-    this.getImages(); 
+  componentWillMount() { 
+    this.getImages();
+    commonScript.enableScroll();                          
 }    
+componentDidMount() {    
+}
 componentWillUnmount() {}
 
 getImages = ( ) => {
@@ -34,10 +36,11 @@ getImages = ( ) => {
 
     render() {
       const { photos } = this.state;       
-
+          
       return (     
-        <div className="siteContainer">                    
-        <main className="archive">
+        <div className="siteContainer">       
+        {photos.length > 0 && (             
+        <main className="archive">                  
             <div className="section-content">                                                               
                 <section id="tree-of-life">
                     <h2>עץ החיים</h2>                    
@@ -65,8 +68,9 @@ getImages = ( ) => {
                     <li><a href="#misc">שונות</a></li>
                 </ol>
             </nav>
-            <ScrollUpButton />
+            <ScrollUpButton />                        
         </main>
+        )}
       </div>   
       );
     }

@@ -85,21 +85,21 @@ body {
 .dropdown .btn-primary .dropdown-toggle:visited{
   background-color: #fff !important;
 }
-.dropdown .btn-primary .dropdown-toggle:hover{  
+.dropdown .btn-primary .dropdown-toggle:hover{
   color:rgba(0,0,0,.5) !important;
-  background-color: #DBDBDB !important;    
+  background-color: #DBDBDB !important;
 }
 .dropdown .btn-primary .dropdown-toggle:active {
-  background-color: #DBDBDB !important;    
+  background-color: #DBDBDB !important;
   color:rgba(0,0,0,.6) !important;
 }
 .dropdown .btn-primary .dropdown-toggle:focus {
-  background-color: #DBDBDB !important;    
+  background-color: #DBDBDB !important;
   color:rgba(0,0,0,.6) !important;
 }
 #dropdown-item-button:visited,
 #dropdown-item-button:hover,
-#dropdown-item-button:focus{  
+#dropdown-item-button:focus{
   border-color:transparent !important;
   box-shadow:none !important;
 }
@@ -111,7 +111,7 @@ body {
   background-color: rgba(201, 173, 173, 0.05) !important;
 }
 .galleryImage{
-  margin: 2px; display: block;  
+  margin: 2px; display: block;
 }
 .galleryImage:hover{
   cursor: pointer;
@@ -137,11 +137,11 @@ body {
 }
 .navbar-nav{
   padding-top: 5px !important;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
-.navbar-toggler, 
-.navbar-toggler:active, 
+.navbar-toggler,
+.navbar-toggler:active,
 .navbar-toggler:focus {
   outline: 0;
 }
@@ -177,7 +177,7 @@ margin-bottom: 25px;
 .copyright a{
   color:rgba(0,0,0,.6);
   }
-  
+
   .section-footer{
   margin-top: 40px;
   text-align: center;
@@ -185,7 +185,7 @@ margin-bottom: 25px;
 }
 
 .dropdown-menu .show,
-.navbar-nav,.dropdown-menu,.dropdown-item,.dropdown,.dropdown-item{  
+.navbar-nav,.dropdown-menu,.dropdown-item,.dropdown,.dropdown-item{
   text-align: right !important;
 }
 
@@ -213,16 +213,16 @@ main > nav {
 
 .section-content{
   text-align: right;
-  direction: rtl;  
+  direction: rtl;
   margin: 0 3%;
-  padding-bottom: 50px;  
+  padding-bottom: 50px;
 }
 
 /* Sidebar Navigation */
 .section-nav {
   padding-left: 0;
   border-left: 1px solid #efefef;
-  text-align: right;  
+  text-align: right;
 }
 
 .section-nav a:hover{
@@ -267,7 +267,7 @@ h1 {
 
 /** page layout **/
 main {
-  display: grid !important;  
+  display: grid !important;
   width: 100%;
   margin: 0 auto;
 }
@@ -278,13 +278,13 @@ section{
 }
 /** enlarge the sections for this demo, so that we have a long scrollable page **/
 section p, section li{
-  direction: rtl;  
+  direction: rtl;
 }
 .modal-dialog{
-  max-width: 40% !important;  
+  max-width: 40% !important;
 }
 img.dialogImage{
-  float:left;  
+  float:left;
 }
 img.dialogImageRight{
   float:right;
@@ -325,7 +325,7 @@ section h2, .section-content h2{
   text-decoration: underline;
   text-align: center;
 }
-section li{  
+section li{
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -340,7 +340,7 @@ section li{
 
 .quotation:before {
   content: open-quote;
-  display: inline;  
+  display: inline;
   line-height: 0;
   left: 0px;
   position: relative;
@@ -370,11 +370,11 @@ h2{
 }
 .siteContainer
 {
-  margin-top: 0;  
+  margin-top: 0;
 }
 .section-nav{
   /* border-top:1px solid red; */
-  margin-top: 30px;  
+  margin-top: 30px;
 }
 #bibliography li{
   list-style-type: decimal;
@@ -383,24 +383,8 @@ h2{
   padding: 0 5px;
 }
 cite a:hover{
-  text-decoration: underline;  
+  text-decoration: underline;
 }
 cite a{
   color:#0645ad;
-}
-.popover-header{
-  text-align: right;    
-  font-weight: 400;  
-  color:rgba(0,0,0,.6);
-}
-
-.react-loading-skeleton{  
-  width:30% !important;
-  margin: 5px 5px;
-  height: 280px;
-  display: inline-block;
-}
-.skeleton-container{
-  width:100%;
-  text-align: center
 }

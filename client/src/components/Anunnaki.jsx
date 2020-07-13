@@ -11,9 +11,11 @@ class Anunnaki extends Component {
       photos: []
     };   
   }
-  componentDidMount() { 
+  componentWillMount() { 
     commonScript.enableScroll();   
     this.getImages(); 
+}    
+  componentDidMount() {     
 }    
 componentWillUnmount() {}
 
@@ -37,7 +39,7 @@ getImages = ( ) => {
 
       return (     
         <div className="siteContainer">            
-        <ScrollUpButton />
+      {photos.length > 0 && (             
         <main className="archive">
             <div className="section-content">                                                               
                 <section id="abgal">                    
@@ -60,7 +62,9 @@ getImages = ( ) => {
                     <li><a href="#misc">שונות</a></li>               
                 </ol>
             </nav>
+            <ScrollUpButton />
         </main>
+        )}
       </div>   
       );
     }

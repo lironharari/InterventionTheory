@@ -32,16 +32,16 @@ export function adjustGalleryPhotos(photos) {
     const galleryPhotos = [];
     const defaultWidth = 3;
     const defaultHeight = 2;
-
+    
     photos.forEach(function (photo) {             
         const isCustomSize = photo.width > 0 && photo.height > 0;        
         galleryPhotos.push( { 
-                                src:'/images/' + photo.src, 
+                                src:`/images/${photo.src}`, 
                                 srcSet: [
-                                  '/images/thumbnails/' + photo.src + " 500w",
-                                  '/images/thumbnails/' + photo.src + " 800w",
-                                  '/images/thumbnails/' + photo.src + " 1024w",
-                                  '/images/thumbnails/' + photo.src + " 1600w",
+                                  `/images/thumbnails/${photo.src} 500w`,
+                                  `/images/thumbnails/${photo.src} 800w`,
+                                  `/images/thumbnails/${photo.src} 1024w`,                                  
+                                  `/images/thumbnails/${photo.src} 1600w`,
                                 ],
                                 sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],                                
                                 width: isCustomSize ? photo.width : defaultWidth, 

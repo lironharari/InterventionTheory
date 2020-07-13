@@ -1,20 +1,13 @@
 import React from 'react';
 
 class Reference extends React.Component {  
-    constructor(props) {
-        super(props);
-        this.state = {
-            id: props.id
-        };        
-      }
     render() {        
-        const {id} = this.state;     
       return (
             <sup 
-                key={id}                 
-                id={`cite_ref-${id}`} 
+                key={this.props.id}                 
+                id={`cite_ref-${this.props.id}`} 
                 className="reference">                    
-                    <a className="cite_ref" key={id} href={`#cite_note-${id}`}>[{id}]</a>                    
+                    <a className="cite_ref" key={this.props.id} href={`#cite_note-${this.props.id}`}>[{this.props.id}]</a>                    
             </sup>         
         );
     }

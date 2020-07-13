@@ -11,9 +11,11 @@ class Nephilim extends Component {
       photos: []
     };   
   }
-  componentDidMount() { 
-    commonScript.enableScroll();   
-    this.getImages(); 
+  componentWillMount() { 
+    this.getImages();
+    commonScript.enableScroll();        
+}    
+  componentDidMount() {     
 }    
 componentWillUnmount() {}
 
@@ -37,7 +39,7 @@ getImages = ( ) => {
 
       return (     
         <div className="siteContainer">            
-        <ScrollUpButton />
+        {photos.length > 0 && (             
         <main className="archive">
             <div className="section-content">                                                               
                 <section id="elongated-skulls">
@@ -60,7 +62,9 @@ getImages = ( ) => {
                     <li><a href="#cylinder-seals">חותמות גליל</a></li>                    
                 </ol>
             </nav>
+            <ScrollUpButton />
         </main>
+        )}
       </div>   
       );
     }
