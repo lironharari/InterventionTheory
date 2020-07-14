@@ -8,7 +8,6 @@ class Home extends Component {
     componentDidMount() { 
         commonScript.enableScroll();   
     }  
-    componentWillUnmount() {}    
     render() {                
         
       return (     

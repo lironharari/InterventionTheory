@@ -11,13 +11,10 @@ class Megalith extends Component {
       photos: []
     };   
   }
-  componentWillMount() { 
+  componentDidMount() {     
     this.getImages();
     commonScript.enableScroll();        
 }    
-  componentDidMount() {     
-}    
-componentWillUnmount() {}
 
 getImages = ( ) => {
   axios({

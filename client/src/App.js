@@ -9,12 +9,11 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Content from './components/Content';
 
-
 class App extends Component {  
   render() {
     return (
       <div className="App"> 
-        <NavBar />
+        <NavBar />          
         <Content />        
         <Footer />
       </div>

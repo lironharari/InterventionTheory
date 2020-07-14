@@ -10,14 +10,11 @@ class Nephilim extends Component {
     this.state = {
       photos: []
     };   
-  }
-  componentWillMount() { 
+  }  
+  componentDidMount() {     
     this.getImages();
     commonScript.enableScroll();        
 }    
-  componentDidMount() {     
-}    
-componentWillUnmount() {}
 
 getImages = ( ) => {
   axios({

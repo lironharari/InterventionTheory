@@ -10,14 +10,11 @@ class Anunnaki extends Component {
     this.state = {
       photos: []
     };   
-  }
-  componentWillMount() { 
-    commonScript.enableScroll();   
-    this.getImages(); 
-}    
+  }  
   componentDidMount() {     
+    this.getImages(); 
+    commonScript.enableScroll();
 }    
-componentWillUnmount() {}
 
 getImages = ( ) => {
   axios({
