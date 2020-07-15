@@ -165,9 +165,8 @@ body {
 .social-icon{
   margin: 0 5px;
 }
-.home-bottom-social-icons{
-  margin-bottom: 15px;
-  margin-top: 10px;
+.home-bottom-social-icons a{  
+  margin: 15px 5px;
 }
 
 .copyright{
