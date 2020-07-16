@@ -7,17 +7,21 @@ export default function ImageGallery({ photos }) {
     const [isOpen,setIsOpen] = useState(false);            
   
     const imageRenderer = ({key,index,photo}) => {      
-      
       const handleOnClick = e => {
         setIsOpen(true);
         setPhotoIndex(index);
-      };                
+      };        
+      const handleLoad = e => {        
+        e.target.classList.remove('galleryImageLoading');
+        e.target.classList.add('galleryImage');      
+      };                      
       return (
                 <img                     
                     key={key}       
                     alt={photo.title}
-                    className="galleryImage"
+                    className="galleryImageLoading"
                     onClick={handleOnClick} 
+                    onLoad={handleLoad}
                     src={photo.src}
                     srcSet={photo.srcSet}
                     sizes={photo.sizes}

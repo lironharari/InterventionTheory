@@ -113,6 +113,9 @@ body {
 .galleryImage{
   margin: 2px; display: block;
 }
+.galleryImageLoading{
+  display: none;
+}
 .galleryImage:hover{
   cursor: pointer;
 }
