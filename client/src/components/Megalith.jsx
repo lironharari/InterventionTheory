@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
-import ScrollUpButton from "react-scroll-up-button";
+//import ScrollUpButton from "react-scroll-up-button";
 
 class Megalith extends Component {
   constructor(props) {
@@ -59,7 +59,7 @@ getImages = ( ) => {
                     <li><a href="#baalbek">בעלבק</a></li>                                   
                 </ol>
             </nav>
-            <ScrollUpButton />
+            {/* <ScrollUpButton /> */}
         </main>
         )}
       </div>   

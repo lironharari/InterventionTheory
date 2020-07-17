@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as commonScript from '../script/common';
-import ScrollUpButton from "react-scroll-up-button";
+// import ScrollUpButton from "react-scroll-up-button";
 import Reference from './Reference';
 import Notes from './Notes';
 
@@ -1544,7 +1544,7 @@ class Home extends Component {
                     <li><a href="#bibliography">ביבליוגרפיה</a></li>
                 </ol>
             </nav>
-            <ScrollUpButton />
+            {/* <ScrollUpButton /> */}
         </main>
       </div>               
       );
