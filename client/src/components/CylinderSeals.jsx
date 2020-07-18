@@ -35,10 +35,8 @@ getImages = ( ) => {
       const { photos } = this.state;       
           
       return (
-      <div>
-        {photos.length > 0 && (             
-          <div className="siteContainer">
-        <main className="archive">                  
+      <div className="siteContainer">
+        <main className="archive">             
             <div className="section-content">                                                               
                 <section id="tree-of-life">
                     <h2>עץ החיים</h2>                    
@@ -68,8 +66,6 @@ getImages = ( ) => {
             </nav>
             {/* <ScrollUpButton />                         */}
         </main>
-        </div>
-        )}
         </div>
       );
     }

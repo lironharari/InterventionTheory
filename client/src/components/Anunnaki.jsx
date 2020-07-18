@@ -36,7 +36,6 @@ getImages = ( ) => {
 
       return (     
         <div className="siteContainer">            
-      {photos.length > 0 && (             
         <main className="archive">
             <div className="section-content">                                                               
                 <section id="abgal">                    
@@ -61,7 +60,6 @@ getImages = ( ) => {
             </nav>
             {/* <ScrollUpButton /> */}
         </main>
-        )}
       </div>   
       );
     }
