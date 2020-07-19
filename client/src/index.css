@@ -111,10 +111,7 @@ body {
   background-color: rgba(201, 173, 173, 0.05) !important;
 }
 .galleryImage{
-  margin: 2px; display: block;
-}
-.galleryImageLoading{
-  display: none;
+  padding: 2px; display: block;
 }
 .galleryImage:hover{
   cursor: pointer;
