@@ -387,3 +387,7 @@ cite a:hover{
 cite a{
   color:#0645ad;
 }
+#loading{
+  text-align: center;
+  margin-top: 40px;
+}
