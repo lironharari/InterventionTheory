@@ -231,7 +231,7 @@ main > nav {
   text-decoration: none;
   display: block;
   padding: .125rem 0;
-  color: #ccc;
+  color: rgba(0,0,0,.5);   
   transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 }
 
