@@ -8,7 +8,7 @@ class NavBar extends React.Component {
         
       return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="white">
+            <Navbar collapseOnSelect expand="lg" bg="white" id="top">
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>                        
                         {/* <Nav.Link href="/archive">ארכיון</Nav.Link>                         */}

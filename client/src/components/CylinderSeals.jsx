@@ -57,7 +57,7 @@ getImages = ( ) => {
             </div>
             <nav className="section-nav">
                 <ol>                                                              
-                    <li><a href="#tree-of-life">עץ החיים</a></li>                                   
+                    <li><a href="#top">עץ החיים</a></li>                                   
                     {/* <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                     */}                    
                     <li><a href="#winged-chamber">תא מכונף</a></li>
                     <li><a href="#flying-ring">טבעת מעופפת</a></li>

@@ -53,7 +53,7 @@ getImages = ( ) => {
             </div>
             <nav className="section-nav">
                 <ol>                                                              
-                    <li><a href="#sacsayhuaman">סאסקיואמן</a></li>               
+                    <li><a href="#top">סאסקיואמן</a></li>               
                     <li><a href="#egypt">מצרים</a></li>               
                     <li><a href="#baalbek">בעלבק</a></li>                                   
                 </ol>

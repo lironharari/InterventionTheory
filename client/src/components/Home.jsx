@@ -1533,7 +1533,7 @@ class Home extends Component {
             </div>
             <nav className="section-nav">
                 <ol>
-                    <li><a href="#intro">מבוא</a></li>                    
+                    <li><a href="#top">מבוא</a></li>                    
                     <li><a href="#sumer">שומר</a></li>                                     
                     <li><a href="#human-creation">יצירת האדם</a></li>                                          
                     <li><a href="#man-ape">אדם/קוף</a></li>                                          
