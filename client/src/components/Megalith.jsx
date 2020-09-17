@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
-//import ScrollUpButton from "react-scroll-up-button";
+
+const { isEmpty } = require('lodash');
 
 class Megalith extends Component {
   constructor(props) {
@@ -37,19 +38,19 @@ getImages = ( ) => {
       return (     
         <div className="siteContainer">            
         <main className="archive">
-            <div className="section-content">                                                               
-                <section id="sacsayhuaman">
-                    <h2>סאסקיואמן</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"Sacsayhuaman")}></ImageGallery>
+            <div className="section-content">                                                                           
+            <section id="sacsayhuaman">
+                    {!isEmpty(photos) ? <h2>סאסקיואמן</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"Sacsayhuaman")}></ImageGallery>
                 </section>               
                 <section id="egypt">
-                    <h2>מצרים</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
+                    {!isEmpty(photos) ? <h2>מצרים</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
                 </section>
                 <section id="baalbek">
-                    <h2>בעלבק</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"Baalbek")}></ImageGallery>
-                </section>                                                               
+                {!isEmpty(photos) ? <h2>בעלבק</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"Baalbek")}></ImageGallery>
+                </section>  
             </div>
             <nav className="section-nav">
                 <ol>                                                              
@@ -57,8 +58,7 @@ getImages = ( ) => {
                     <li><a href="#egypt">מצרים</a></li>               
                     <li><a href="#baalbek">בעלבק</a></li>                                   
                 </ol>
-            </nav>
-            {/* <ScrollUpButton /> */}
+            </nav>          
         </main>
       </div>   
       );

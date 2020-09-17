@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
-//import ScrollUpButton from "react-scroll-up-button";
+const { isEmpty } = require('lodash');
 
 class CylinderSeals extends Component {
   constructor(props) {
@@ -38,21 +38,21 @@ getImages = ( ) => {
       <div className="siteContainer">
         <main className="archive">             
             <div className="section-content">                                                               
-                <section id="tree-of-life">
-                    <h2>עץ החיים</h2>                    
+                <section id="tree-of-life">                      
+                    {!isEmpty(photos) ? <h2>עץ החיים</h2>: null}                  
                     <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
                 </section>               
                 <section id="winged-chamber">
-                    <h2>תא מכונף</h2>
+                    {!isEmpty(photos) ? <h2>תא מכונף</h2>: null}
                     <ImageGallery photos={commonScript.filter(photos,"WingedChamber")}></ImageGallery>
                 </section> 
                 <section id="flying-ring">
-                    <h2>טבעת מעופפת</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"FlyingRing")}></ImageGallery>
+                    {!isEmpty(photos) ? <h2>טבעת מעופפת</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"FlyingRing")}></ImageGallery>
                 </section>                                                      
                 <section id="misc">
-                    <h2>שונות</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
+                    {!isEmpty(photos) ? <h2>שונות</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
                 </section>                                                      
             </div>
             <nav className="section-nav">
@@ -63,8 +63,7 @@ getImages = ( ) => {
                     <li><a href="#flying-ring">טבעת מעופפת</a></li>
                     <li><a href="#misc">שונות</a></li>
                 </ol>
-            </nav>
-            {/* <ScrollUpButton />                         */}
+            </nav>          
         </main>
         </div>
       );

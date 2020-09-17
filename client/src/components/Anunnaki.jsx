@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
-//import ScrollUpButton from "react-scroll-up-button";
+const { isEmpty } = require('lodash');
 
 class Anunnaki extends Component {
   constructor(props) {
@@ -39,15 +39,15 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                                               
                 <section id="abgal">                    
-                    <h2>אבגל</h2>
+                    {!isEmpty(photos) ? <h2>אבגל</h2>: null}
                     <ImageGallery photos={commonScript.filter(photos,"Abgal")}></ImageGallery>
                 </section>                
                 <section id="tree-of-life">
-                    <h2>עץ החיים</h2>
+                    {!isEmpty(photos) ? <h2>עץ החיים</h2>: null}
                     <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
                 </section>        
                 <section id="misc">
-                    <h2>שונות</h2>
+                    {!isEmpty(photos) ? <h2>שונות</h2>: null}
                     <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
                 </section>                                                                                    
             </div>
@@ -58,7 +58,6 @@ getImages = ( ) => {
                     <li><a href="#misc">שונות</a></li>               
                 </ol>
             </nav>
-            {/* <ScrollUpButton /> */}
         </main>
       </div>   
       );

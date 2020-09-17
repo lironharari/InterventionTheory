@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
-//import ScrollUpButton from "react-scroll-up-button";
+const { isEmpty } = require('lodash');
 
 class Nephilim extends Component {
   constructor(props) {
@@ -35,20 +35,20 @@ getImages = ( ) => {
       const { photos } = this.state;       
 
       return (     
-        <div className="siteContainer">            
-        <main className="archive">
-            <div className="section-content">                                                               
+        <div className="siteContainer">                    
+        <main className="archive">          
+            <div className="section-content">                                                                               
                 <section id="elongated-skulls">
-                    <h2>גולגולות מאורכות</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery>                      
+                    {!isEmpty(photos) ? <h2>גולגולות מאורכות</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery>                      
                 </section>               
                 <section id="egypt">
-                    <h2>מצרים</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
+                    {!isEmpty(photos) ? <h2>מצרים</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
                 </section>  
                 <section id="cylinder-seals">
-                    <h2>חותמות גליל</h2>
-                        <ImageGallery photos={commonScript.filter(photos,"CylinderSeals")}></ImageGallery>
+                    {!isEmpty(photos) ? <h2>חותמות גליל</h2>: null}
+                    <ImageGallery photos={commonScript.filter(photos,"CylinderSeals")}></ImageGallery>
                 </section>                                                   
             </div>
             <nav class="section-nav">
@@ -58,7 +58,6 @@ getImages = ( ) => {
                     <li><a href="#cylinder-seals">חותמות גליל</a></li>                    
                 </ol>
             </nav>
-            {/* <ScrollUpButton /> */}
         </main>
       </div>   
       );
