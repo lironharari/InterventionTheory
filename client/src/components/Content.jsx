@@ -1,6 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 const Notfound = lazy(() => import('./Notfound'));
 const Home = lazy(() => import('./Home'));
 const CylinderSeals = lazy(() => import('./CylinderSeals'));  

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
+import { CircularProgress } from '@material-ui/core';
 const { isEmpty } = require('lodash');
 
 class CylinderSeals extends Component {
@@ -39,20 +40,20 @@ getImages = ( ) => {
         <main className="archive">             
             <div className="section-content">                                                               
                 <section id="tree-of-life">                      
-                    {!isEmpty(photos) ? <h2>עץ החיים</h2>: null}                  
-                    <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery>
+                    <h2>עץ החיים</h2>
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>               
                 <section id="winged-chamber">
-                    {!isEmpty(photos) ? <h2>תא מכונף</h2>: null}
-                    <ImageGallery photos={commonScript.filter(photos,"WingedChamber")}></ImageGallery>
+                    <h2>תא מכונף</h2>
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"WingedChamber")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section> 
                 <section id="flying-ring">
-                    {!isEmpty(photos) ? <h2>טבעת מעופפת</h2>: null}
-                    <ImageGallery photos={commonScript.filter(photos,"FlyingRing")}></ImageGallery>
+                    <h2>טבעת מעופפת</h2>                    
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"FlyingRing")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>                                                      
                 <section id="misc">
-                    {!isEmpty(photos) ? <h2>שונות</h2>: null}
-                    <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery>
+                    <h2>שונות</h2>
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>                                                      
             </div>
             <nav className="section-nav">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
 import ImageGallery from './ImageGallery';
+import { CircularProgress } from '@material-ui/core';
 const { isEmpty } = require('lodash');
 
 class Nephilim extends Component {
@@ -39,16 +40,16 @@ getImages = ( ) => {
         <main className="archive">          
             <div className="section-content">                                                                               
                 <section id="elongated-skulls">
-                    {!isEmpty(photos) ? <h2>גולגולות מאורכות</h2>: null}
-                    <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery>                      
+                    <h2>גולגולות מאורכות</h2>                          
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>               
                 <section id="egypt">
-                    {!isEmpty(photos) ? <h2>מצרים</h2>: null}
-                    <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery>
+                    <h2>מצרים</h2>
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>  
                 <section id="cylinder-seals">
-                    {!isEmpty(photos) ? <h2>חותמות גליל</h2>: null}
-                    <ImageGallery photos={commonScript.filter(photos,"CylinderSeals")}></ImageGallery>
+                    <h2>חותמות גליל</h2>
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"CylinderSeals")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>                                                   
             </div>
             <nav class="section-nav">
