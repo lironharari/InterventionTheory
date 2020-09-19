@@ -1377,7 +1377,7 @@ class Home extends Component {
                     </p>
                 </section>   
                 <section id="advanced-technology">
-                    <h2>טכנולוגיה</h2>
+                    <h2>טכנולוגיה מתקדמת</h2>
                     <h4>מבנים מגליתים</h4>
                     <p>                        
                         המילה מגלית, מקורה ביוונית

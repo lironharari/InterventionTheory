@@ -37,8 +37,9 @@ getImages = ( ) => {
 
       return (     
         <div className="siteContainer">                    
-        <main className="archive">          
+        <main className="archive">                      
             <div className="section-content">                                                                               
+                <h1>נפילים</h1>
                 <section id="elongated-skulls">
                     <h2>גולגולות מאורכות</h2>                          
                     {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}

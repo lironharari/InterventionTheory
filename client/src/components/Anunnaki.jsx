@@ -39,6 +39,7 @@ getImages = ( ) => {
         <div className="siteContainer">            
         <main className="archive">                                                                                                   
               <div className="section-content">
+              <h1>אנונקי</h1>
               <section id="abgal">
                   <h2>אבגל</h2>
                   {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Abgal")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
