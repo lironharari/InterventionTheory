@@ -38,8 +38,13 @@ getImages = ( ) => {
       return (
       <div className="siteContainer">
         <main className="archive">             
-            <div className="section-content">                                                               
-                <h1>חותמות גליל</h1>
+            <div className="section-content">                                                                               
+                <header>
+                  <h1>חותמות גליל</h1>
+                  <p>
+                    חותמות גליל או אמנות מקודשת אשר נוצרה על ידי תרבות בעלת יכולות טכנולוגיות מתקדמות.
+                  </p>
+                </header>                
                 <section id="tree-of-life">                      
                     <h2>עץ החיים</h2>
                     {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
@@ -51,7 +56,11 @@ getImages = ( ) => {
                 <section id="flying-ring">
                     <h2>טבעת מעופפת</h2>                    
                     {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"FlyingRing")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
-                </section>                                                      
+                </section>  
+                <section id="violence">
+                    <h2>תרבות אלימה</h2>                    
+                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Violence")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                </section>                                                                      
                 <section id="misc">
                     <h2>שונות</h2>
                     {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
@@ -59,10 +68,10 @@ getImages = ( ) => {
             </div>
             <nav className="section-nav">
                 <ol>                                                              
-                    <li><a href="#top">עץ החיים</a></li>                                   
-                    {/* <li><a href="#nibiru-pull">משיכת ניבירו</a></li>                     */}                    
+                    <li><a href="#top">עץ החיים</a></li>                                                       
                     <li><a href="#winged-chamber">תא מכונף</a></li>
                     <li><a href="#flying-ring">טבעת מעופפת</a></li>
+                    <li><a href="#violence">תרבות אלימה</a></li>
                     <li><a href="#misc">שונות</a></li>
                 </ol>
             </nav>          

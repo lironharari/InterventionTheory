@@ -38,14 +38,20 @@ getImages = ( ) => {
       return (     
         <div className="siteContainer">                    
         <main className="archive">                      
-            <div className="section-content">                                                                               
-                <h1>נפילים</h1>
+            <div className="section-content">                                                                                               
+                <header>
+                  <h1>נפילים</h1>
+                  <p>
+                    הגולגלות המאורכות זהות לדימוי המצרי של האל למחצה.                    
+                    הנפילים בספר בראשית הם עדות נוספת לקיומם ומקורם.
+                  </p>
+                </header>                
                 <section id="elongated-skulls">
                     <h2>גולגולות מאורכות</h2>                          
                     {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>               
                 <section id="egypt">
-                    <h2>מצרים</h2>
+                    <h2>מלכות מצרים</h2>
                     {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
                 </section>  
                 <section id="cylinder-seals">
@@ -56,7 +62,7 @@ getImages = ( ) => {
             <nav class="section-nav">
                 <ol>                                                              
                     <li><a href="#top">גולגולות מאורכות</a></li>               
-                    <li><a href="#egypt">מצרים</a></li>
+                    <li><a href="#egypt">מלכות מצרים</a></li>
                     <li><a href="#cylinder-seals">חותמות גליל</a></li>                    
                 </ol>
             </nav>

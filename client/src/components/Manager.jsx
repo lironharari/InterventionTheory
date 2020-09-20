@@ -207,111 +207,106 @@ searchPhotoBySrc = (src, update) => {
   addPhoto = e => {
     e.preventDefault();
     const { src, category, subcategory, width, height } = this.state;    
+    const description = "";
+    const rank = 1;
+    const title = "";
+    
     axios({
       url: '/addPhoto',
       method: 'POST',
       data: {
-        src, category, subcategory, width, height
+        src, category, subcategory, width, height, description, rank, title
       }
     })
-      .then(() => {        
-        this.setState({
-            src: '',
-            category: '',
-            subcategory: '',
-            width: 0,
-            height: 0
-        });
+      .then((res) => {        
+        console.log("added photo",res);
       })
       .catch(() => alert('Failed adding photo'))
   };
   render() {
     return (
-        <form className="form noValidate" autoComplete="off">
-            <Row>
-                <Col>                       
-                        <h2>add photo</h2>
-                        <TextField
-                        id="standard-dense"
-                        value={this.state.src}
-                        label="src"
-                        name="src"
-                        onChange={this.handleChange}
-                        />
+      <div className="siteContainer">
+          <form className="form noValidate" autoComplete="off">
+              <Row>
+                  <Col>                       
+                          <h2>add photo</h2>
+                          <TextField
+                          value={this.state.src}
+                          label="src"
+                          name="src"
+                          onChange={this.handleChange}
+                          />
 
-                        <TextField
-                        name="category"
-                        value={this.state.category}
-                        id="standard-dense"
-                        onChange={this.handleChange}
-                        label="category"
-                        />
+                          <TextField
+                          name="category"
+                          value={this.state.category}
+                          onChange={this.handleChange}
+                          label="category"
+                          />
 
-                        <TextField
-                        name="subcategory"
-                        value={this.state.subcategory}
-                        id="standard-dense"
-                        onChange={this.handleChange}
-                        label="subcategory"
-                        />
+                          <TextField
+                          name="subcategory"
+                          value={this.state.subcategory}
+                          onChange={this.handleChange}
+                          label="subcategory"
+                          />
 
-                        <TextField
-                        name="width"
-                        value={this.state.width}
-                        id="standard-dense"
-                        onChange={this.handleChange}
-                        label="width"
-                        />
+                          <TextField
+                          name="width"
+                          value={this.state.width}
+                          onChange={this.handleChange}
+                          label="width"
+                          />
 
-                        <TextField
-                        name="height"
-                        value={this.state.height}
-                        id="standard-dense"
-                        onChange={this.handleChange}
-                        label="height"
-                        />
-                        
-                        <Button variant="contained" color="primary" onClick={this.addPhoto}> add </Button>
-                                
-                </Col>      
-                <Col>
+                          <TextField
+                          name="height"
+                          value={this.state.height}
+                          onChange={this.handleChange}
+                          label="height"
+                          />
+                          
+                          <Button variant="contained" color="primary" onClick={this.addPhoto}>add</Button>
+                                  
+                  </Col>      
+                  {/* <Col>
 
-                        <h2>update photo</h2>
-                    <TextField
-                        id="standard-dense"
-                        value={this.state.src}
-                        label="src"
-                        name="src"
-                        onChange={this.handleChange}
-                    />
+                          <h2>update photo</h2>
+                      <TextField
+                          id="standard-dense"
+                          value={this.state.src}
+                          label="src"
+                          name="src"
+                          onChange={this.handleChange}
+                      />
 
-                    <TextField
-                        name="rank"
-                        value={this.state.rank}
-                        id="standard-dense"
-                        onChange={this.handleChange}
-                        label="rank"
-                    />
-                    
-                    <Button variant="contained" color="primary" onClick={this.submitUpdate}> update </Button>
-                </Col>
-                <Col>
-                    <Button variant="contained" color="primary" onClick={this.addMultiplePhotos}> add Multiple Photos </Button>
-                </Col>          
-                <Col>
-                    <Button variant="contained" color="primary" onClick={this.addAsset}> add Asset </Button>
-                </Col>                          
-                <Col>
-                    <Button variant="contained" color="primary" onClick={this.searchAsset}> search Asset </Button>
-                </Col>                                          
-                <Col>
-                    <Button variant="contained" color="primary" onClick={this.addImage}> add Image </Button>
-                </Col>                                                          
-                <Col>
-                    <Button variant="contained" color="primary" onClick={this.searchImage}> search Image </Button>
-                </Col>                                                          
-            </Row>         
-    </form>      
+                      <TextField
+                          name="rank"
+                          value={this.state.rank}
+                          id="standard-dense"
+                          onChange={this.handleChange}
+                          label="rank"
+                      />
+                      
+                      <Button variant="contained" color="primary" onClick={this.submitUpdate}> update </Button>
+                  </Col>
+                  <Col>
+                      <Button variant="contained" color="primary" onClick={this.addMultiplePhotos}> add Multiple Photos </Button>
+                  </Col>          
+                  <Col>
+                      <Button variant="contained" color="primary" onClick={this.addAsset}> add Asset </Button>
+                  </Col>                          
+                  <Col>
+                      <Button variant="contained" color="primary" onClick={this.searchAsset}> search Asset </Button>
+                  </Col>                                          
+                  <Col>
+                      <Button variant="contained" color="primary" onClick={this.addImage}> add Image </Button>
+                  </Col>                                                          
+                  <Col>
+                      <Button variant="contained" color="primary" onClick={this.searchImage}> search Image </Button>
+                  </Col>                                                           */}
+              </Row>         
+      </form>      
+    </div>
     );
   }
 }
