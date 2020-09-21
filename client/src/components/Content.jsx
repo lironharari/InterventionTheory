@@ -15,7 +15,7 @@ class Content extends Component {
     render() {
       return (     
         <Router>  
-          <Suspense fallback={<div id="loading">Loading...</div>}>
+          <Suspense fallback={<div id="loading">טוען...</div>}>
             <Switch>                      
             <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
             <Route exact path="/manager" component={Manager} />            
