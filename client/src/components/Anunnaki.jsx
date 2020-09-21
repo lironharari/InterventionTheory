@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
-import ImageGallery from './ImageGallery';
-import { CircularProgress } from '@material-ui/core';
-const { isEmpty } = require('lodash');
+import Gallery from './Gallery';
 
 class Anunnaki extends Component {
   constructor(props) {
@@ -36,7 +34,7 @@ getImages = ( ) => {
       const { photos } = this.state;       
 
       return (     
-        <div className="siteContainer">            
+        <div className="site-container">            
         <main className="archive">                                                                                                   
           <div className="section-content">              
               <header>
@@ -46,16 +44,13 @@ getImages = ( ) => {
                   </p>
                 </header>              
               <section id="abgal">
-                  <h2>אבגל</h2>
-                  {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Abgal")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                  <Gallery photos={photos} subcategory="Abgal" header="אבגל" />
               </section>                
               <section id="tree-of-life">
-                  <h2>עץ החיים</h2>
-                  {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"TreeOfLife")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                  <Gallery photos={photos} subcategory="TreeOfLife" header="עץ החיים" />
               </section>        
               <section id="misc">
-                  <h2>שונות</h2>
-                  {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Misc")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                  <Gallery photos={photos} subcategory="Misc" header="שונות" />
               </section>        
               </div>
             <nav className="section-nav">

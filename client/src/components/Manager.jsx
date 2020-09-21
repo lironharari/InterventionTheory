@@ -225,7 +225,7 @@ searchPhotoBySrc = (src, update) => {
   };
   render() {
     return (
-      <div className="siteContainer">
+      <div className="site-container">
           <form className="form noValidate" autoComplete="off">
               <Row>
                   <Col>                       

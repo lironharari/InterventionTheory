@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
-import ImageGallery from './ImageGallery';
-import { CircularProgress } from '@material-ui/core';
-const { isEmpty } = require('lodash');
+import Gallery from './Gallery';
 
 class Megalith extends Component {
   constructor(props) {
@@ -36,7 +34,7 @@ getImages = ( ) => {
       const { photos } = this.state;       
 
       return (     
-        <div className="siteContainer">            
+        <div className="site-container">            
         <main className="archive">
             <div className="section-content">                                                                                           
                 <header>
@@ -46,32 +44,25 @@ getImages = ( ) => {
                   </p>
                 </header>                 
                 <section id="gobekliTepe">
-                    <h2>גובקלי טפה, טורקיה</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"GobekliTepe")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="GobekliTepe" header="גובקלי טפה, טורקיה" />
                 </section>               
                 <section id="baalbek">
-                    <h2>בעלבק, לבנון</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Baalbek")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="Baalbek" header="בעלבק, לבנון"/>
                 </section>                
                 <section id="sacsayhuaman">
-                    <h2>סאסקיואמן, פרו</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Sacsayhuaman")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="Sacsayhuaman" header="סאסקיואמן, פרו" />
                 </section>               
                 <section id="cusco">
-                    <h2>קוסקו, פרו</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Cusco")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="Cusco" header="קוסקו, פרו" />
                 </section>                          
                 <section id="egypt">
-                    <h2>מצרים</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="Egypt" header="מצרים" />
                 </section>
                 <section id="sphinx">
-                    <h2>ספינקס, מצרים</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Sphinx")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="Sphinx" header="ספינקס, מצרים"/>
                 </section>  
                 <section id="obelisk">
-                    <h2>האובליסק הלא מוגמר, מצרים</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Obelisk")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="Obelisk" header="האובליסק הלא מוגמר, מצרים"/>
                 </section>                                                       
             </div>
             <nav className="section-nav">

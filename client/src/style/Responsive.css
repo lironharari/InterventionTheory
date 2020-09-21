@@ -20,7 +20,7 @@
     .section-nav{
       display: none;
     }
-    .siteContainer{
+    .site-container{
       margin-top: 30px;
       margin-left: 0;
       margin-right: 0;            
@@ -73,7 +73,7 @@
     main.archive{
       grid-template-columns: 1fr 9.5em;
     }
-    .siteContainer{
+    .site-container{
       margin-top: 30px;
       margin-left: 2%;
       margin-right: 2%;            
@@ -147,7 +147,7 @@
     main.archive{
       grid-template-columns: 1fr 9.5em;
     }    
-    .siteContainer{
+    .site-container{
       margin-top: 30px;
       margin-left: 5%;
       margin-right: 5%;      

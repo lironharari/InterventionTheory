@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import * as commonScript from '../script/common';
 import axios from 'axios';
-import ImageGallery from './ImageGallery';
-import { CircularProgress } from '@material-ui/core';
-const { isEmpty } = require('lodash');
+import Gallery from './Gallery';
 
 class Nephilim extends Component {
   constructor(props) {
@@ -36,27 +34,24 @@ getImages = ( ) => {
       const { photos } = this.state;       
 
       return (     
-        <div className="siteContainer">                    
+        <div className="site-container">                    
         <main className="archive">                      
             <div className="section-content">                                                                                               
                 <header>
                   <h1>נפילים</h1>
                   <p>
-                    הגולגלות המאורכות זהות לדימוי המצרי של האל למחצה.                    
+                    הגולגלות המאורכות זהות לדימוי המצרי של האלים למחצה.                    
                     הנפילים בספר בראשית הם עדות נוספת לקיומם ומקורם.
                   </p>
                 </header>                
-                <section id="elongated-skulls">
-                    <h2>גולגולות מאורכות</h2>                          
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"ElongatedSkulls")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                <section id="elongated-skulls">                    
+                    <Gallery photos={photos} subcategory="ElongatedSkulls" header="גולגולות מאורכות" />
                 </section>               
                 <section id="egypt">
-                    <h2>מלכות מצרים</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"Egypt")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="Egypt" header="מלכות מצרים" />
                 </section>  
                 <section id="cylinder-seals">
-                    <h2>חותמות גליל</h2>
-                    {!isEmpty(photos) ? <ImageGallery photos={commonScript.filter(photos,"CylinderSeals")}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
+                    <Gallery photos={photos} subcategory="CylinderSeals" header="חותמות גליל" />
                 </section>                                                   
             </div>
             <nav class="section-nav">
