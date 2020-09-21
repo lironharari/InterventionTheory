@@ -38,7 +38,7 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                                                                           
                 <header>
-                  <h1>גאומטריה קדושה</h1>                  
+                  <h1>גאומטריה מקודשת</h1>                  
                   <p>
                   רשת מעגלים חופפים הידועים כמבנה היסודי של המרחב. פרח החיים מכילה את קוביית מטטרון ואת כל הצורות הגיאומטריות הקיימות.                  
                   </p>
@@ -56,7 +56,7 @@ getImages = ( ) => {
                     <Gallery photos={photos} subcategory="SeedOfLife" header="זרע החיים" />
                 </section>   
                 <section id="six-petal-rosette">
-                    <Gallery photos={photos} subcategory="SixPetalRosette" header="ששת עלי כותרת" />
+                    <Gallery photos={photos} subcategory="SixPetalRosette" header="ששת עלי הכותרת" />
                 </section>                
                 <section id="flower-of-life">
                     <Gallery photos={photos} subcategory="FlowerOfLife" header="פרח החיים" />
@@ -71,7 +71,7 @@ getImages = ( ) => {
                     <li><a href="#vesica-piscis">ווסאיקה פייסיס</a></li>                    
                     <li><a href="#triquetra">טריקטרה</a></li>
                     <li><a href="#seed-of-life">זרע החיים</a></li>
-                    <li><a href="#six-petal-rosette">ששת עלי כותרת</a></li>
+                    <li><a href="#six-petal-rosette">ששת עלי הכותרת</a></li>
                     <li><a href="#flower-of-life">פרח החיים</a></li>
                     <li><a href="#guardian-lions">האריות המגינים</a></li>                   
                 </ol>

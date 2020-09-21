@@ -4,7 +4,7 @@ import ImageGallery from './ImageGallery';
 import { CircularProgress } from '@material-ui/core';
 const { isEmpty } = require('lodash');
 
-const Gallery = props => (
+const Gallery = React.memo( props => (
     <>
         <h2>{props.header}</h2>
         {
@@ -13,6 +13,6 @@ const Gallery = props => (
             <div className="spinner"><CircularProgress /></div>
         }
     </>    
-    ) ;      
+    )) ;      
 
 export default Gallery
