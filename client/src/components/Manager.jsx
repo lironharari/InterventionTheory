@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
-import { TextField, Button } from '@material-ui/core';
 import axios from 'axios';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
+const { isNull,isEmpty } = require('lodash');
 
 class Manager extends Component {
-  state = {
-    src: '',
-    category: '',
-    subcategory: '',
-    width: 0,
-    height: 0,
-    rank: 0
-  };
+  constructor(props) {
+    super(props);        
+    this.state = {
+      photos: [],
+      id: '',
+      src: '',
+      category: '',
+      subcategory: '',
+      width: 0,
+      height: 0,
+      rank: 0,
+      title: '',
+      description: '' 
+    };   
+  }
+  componentDidMount() {     
+    this.getAllImages();
+}   
 
   handleChange = e => {
     const name = e.target.name;
@@ -20,85 +29,48 @@ class Manager extends Component {
     this.setState({ [name]: value });    
   };
   
-  addMultiplePhotos = e => {
-    e.preventDefault();
-    const list = [
-      // {
-      //   "src": "main-qimg-837a814784a1961317e8eee2a663e160-c.jpg",
-      //   "description": "the solar system",
-      //   "height": 437,
-      //   "width": 777
-      // },            
-    ];
+  selectImage = (id) => {  
+    const {photos} = this.state
+    const photo = photos.find(photo => photo._id === id);
     
-    const photos = [];
-    
-    list.map((x) => {
-      photos.push({ 
-        src:x.src, 
-        category:"humanHistoryRevisited", 
-        subcategory:"episode3",
-        description:x.description,
-        width:x.width, 
-        height:x.height,         
-        rank:0});
-        return true;
-    });
-
-    //console.log(photos);
-    photos.map((x) => {          
-          axios({
-            url: '/addPhoto',
-            method: 'POST',
-            data: {
-              src:x.src, 
-              category:x.category,
-              subcategory:x.subcategory, 
-              width:x.width, 
-              height:x.height,
-              description:x.description,
-              rank:x.rank        
-            }
-          })
-            .then((response) => {        
-                console.log(response.data);              
-            })
-            .catch(() => alert('Failed adding photo'));
-      return true;    
-    });    
-  };  
+    this.setState({
+      id: photo._id,
+      src: photo.src,
+      title: photo.title,
+      description: photo.description,
+      category: photo.category,
+      subcategory: photo.subcategory,
+      rank: photo.rank,
+      width: photo.width,
+      height: photo.height
+    });     
+  } 
+  getAllImages = ( ) => {
+    axios({
+      url: '/api/getAllImages',
+      method: 'POST'           
+    })
+    .then((response) => {            
+      const { images } = response.data;        
+      this.setState({ photos: images })  
+    })
+    .catch((error) => console.log(error))      
+  } 
   
-  
-  searchImage = e => {
-    e.preventDefault();    
-    this.searchImage();
-  };
+  updateImage = e => {
+    e.preventDefault(); 
+    const { id,src,category,subcategory,width,height,rank,title,description } = this.state;                     
+    const update = { 
+                      src:src,
+                      category:category, 
+                      subcategory:subcategory, 
+                      width:width,
+                      height:height,
+                      rank:rank,
+                      title:title,
+                      description:description 
+                    };
 
-  searchAsset = e => {
-    e.preventDefault();
-    //const { src, rank } = this.state;              
-    this.searchAsset();
-  };
-  
-  
-  addImage = e => {
-    e.preventDefault();
-    this.addImage();
-  };    
-
-  addAsset = e => {
-    e.preventDefault();
-    //const { src, rank } = this.state;              
-    this.addAsset();
-  };  
-
-  submitUpdate = e => {
-    e.preventDefault();
-    const { src, rank } = this.state;        
-    this.searchPhotoBySrc(src,{ rank : rank });
-  };
-
-updatePhoto = ( id, update ) => {
       axios({
         url: '/api/updatePhoto',
         method: 'POST', 
@@ -109,107 +81,48 @@ updatePhoto = ( id, update ) => {
       })
       .then((response) => {        
         console.log(response.data);              
-        this.setState({
-            src: '',
-            rank: 0            
-        });
               
       })
-      .catch((error) => console.log(error))      
-    }
+      .catch((error) => console.log(error))                       
+  };
+
+  searchImage = e => {
+    e.preventDefault(); 
+    const { src } = this.state;                 
     
-
-searchImage = (  ) => {
-  axios({
-    url: '/api/searchImage',
-    method: 'POST', 
-    data: {
-      category : 'Nephilim' 
-    }
-  })
-  .then((response) => {            
-    const { images } = response.data;
-    console.log(images);                
-  })
-  .catch((error) => console.log(error))      
-}
-
-
-searchAsset = (  ) => {
-  axios({
-    url: '/api/searchAsset',
-    method: 'POST', 
-    data: {
-      name : 'liron' 
-    }
-  })
-  .then((response) => {            
-    const { asset } = response.data;
-    console.log(asset);                
-  })
-  .catch((error) => console.log(error))      
-}
+    axios({
+      url: '/api/searchImage',
+      method: 'POST', 
+      data: {
+        src : src 
+      }
+    })
+    .then((response) => {            
+      const { image } = response.data;
+      
+      if(!isNull(image)){
+          this.setState({
+            id: image._id,
+            src: image.src,
+            title:image.title,
+            description:image.description,
+            category:image.category,
+            subcategory:image.subcategory,
+            rank:image.rank,
+            width:image.width,
+            height:image.height
+          });       
+      }      
+    })
+    .catch((error) => console.log(error)) 
+  };
 
 
-addImage = (  ) => {
-  axios({
-    url: '/api/addImage',
-    method: 'POST', 
-    data: {
-      src : 'tree2.jpg',       
-      category : 'CylinderSeal',
-      subcategory : 'TreeOfLife',
-      rank : 1,
-      title: '',
-      description: '',          
-      width: 914,
-      height: 555            
-    }
-  })
-  .then((response) => {        
-    console.log(response.data);                
-  })
-  .catch((error) => console.log(error))      
-}
-
-
-addAsset = (  ) => {
-  axios({
-    url: '/api/addAsset',
-    method: 'POST', 
-    data: {
-      name : 'liron',       
-      content : 'harari',
-      category : 'Home'   
-    }
-  })
-  .then((response) => {        
-    console.log(response.data);                
-  })
-  .catch((error) => console.log(error))      
-}
-
-searchPhotoBySrc = (src, update) => {
-      axios({
-        url: '/api/searchPhotoBySrc',
-        method: 'POST', 
-        data: {
-          src
-        }
-      })
-      .then((response) => {
-        const { photo } = response.data;
-        this.updatePhoto( photo._id, update );
-      })
-      .catch((error) => console.log(error))      
-    }
 
   addPhoto = e => {
     e.preventDefault();
-    const { src, category, subcategory, width, height } = this.state;    
-    const description = "";
-    const rank = 1;
-    const title = "";
+    
+    const { src, category, subcategory, width, height, description, rank, title } = this.state;                     
     
     axios({
       url: '/addPhoto',
@@ -224,88 +137,60 @@ searchPhotoBySrc = (src, update) => {
       .catch(() => alert('Failed adding photo'))
   };
   render() {
+    const { photos } = this.state;       
+
     return (
-      <div className="site-container">
-          <form className="form noValidate" autoComplete="off">
-              <Row>
-                  <Col>                       
-                          <h2>add photo</h2>
-                          <TextField
-                          value={this.state.src}
-                          label="src"
-                          name="src"
-                          onChange={this.handleChange}
-                          />
-
-                          <TextField
-                          name="category"
-                          value={this.state.category}
-                          onChange={this.handleChange}
-                          label="category"
-                          />
-
-                          <TextField
-                          name="subcategory"
-                          value={this.state.subcategory}
-                          onChange={this.handleChange}
-                          label="subcategory"
-                          />
-
-                          <TextField
-                          name="width"
-                          value={this.state.width}
-                          onChange={this.handleChange}
-                          label="width"
-                          />
-
-                          <TextField
-                          name="height"
-                          value={this.state.height}
-                          onChange={this.handleChange}
-                          label="height"
-                          />
-                          
-                          <Button variant="contained" color="primary" onClick={this.addPhoto}>add</Button>
-                                  
-                  </Col>      
-                  {/* <Col>
-
-                          <h2>update photo</h2>
-                      <TextField
-                          id="standard-dense"
-                          value={this.state.src}
-                          label="src"
-                          name="src"
-                          onChange={this.handleChange}
-                      />
-
-                      <TextField
-                          name="rank"
-                          value={this.state.rank}
-                          id="standard-dense"
-                          onChange={this.handleChange}
-                          label="rank"
-                      />
-                      
-                      <Button variant="contained" color="primary" onClick={this.submitUpdate}> update </Button>
-                  </Col>
-                  <Col>
-                      <Button variant="contained" color="primary" onClick={this.addMultiplePhotos}> add Multiple Photos </Button>
-                  </Col>          
-                  <Col>
-                      <Button variant="contained" color="primary" onClick={this.addAsset}> add Asset </Button>
-                  </Col>                          
-                  <Col>
-                      <Button variant="contained" color="primary" onClick={this.searchAsset}> search Asset </Button>
-                  </Col>                                          
-                  <Col>
-                      <Button variant="contained" color="primary" onClick={this.addImage}> add Image </Button>
-                  </Col>                                                          
-                  <Col>
-                      <Button variant="contained" color="primary" onClick={this.searchImage}> search Image </Button>
-                  </Col>                                                           */}
-              </Row>         
-      </form>      
+      <div className="site-container manager">          
+      <section>
+           <label>
+            Src:
+              <input type="text" name="src" value={this.state.src} onChange={this.handleChange} />        
+            </label>                    
+            <label>
+            Category:
+              <input type="text" name="category" value={this.state.category} onChange={this.handleChange} />        
+            </label>                
+            <label>
+            Subcategory:
+              <input type="text" name="subcategory" value={this.state.subcategory} onChange={this.handleChange} />        
+            </label>            
+            <label>
+            Rank:
+              <input type="text" name="rank" value={this.state.rank} onChange={this.handleChange} />        
+            </label>        
+            <label>
+            Title:
+              <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />        
+            </label>    
+            <label>
+              Description:
+              <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />        
+            </label>
+            <label>
+              Width:
+              <input type="text" name="width" value={this.state.width} onChange={this.handleChange} />        
+            </label>                  
+            <label>
+              Height:
+              <input type="text" name="height" value={this.state.height} onChange={this.handleChange} />        
+            </label>            
+            <button onClick={this.searchImage}>search</button>
+            <button onClick={this.updateImage}>update</button>
+            <button onClick={this.addPhoto}>Add</button>
+      </section>
+      <section>
+          <h2>Database</h2>                  
+        {
+            !isEmpty(photos) ? 
+            photos.map( (photo,index) =>
+              <li key={index} className="databasePhoto"> 
+                  {photo.src}
+                  <button value={photo._id} onClick={e => this.selectImage(e.target.value)}>select</button>
+              </li>              
+            ) : 
+            null          
+        }
+      </section>    
     </div>
     );
   }

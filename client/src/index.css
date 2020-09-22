@@ -403,3 +403,32 @@ cite a{
   text-align: center;
   margin-top: 50px;  
 }
+.ril__captionContent{
+  direction: rtl;
+}
+.manager section{
+  border: 1px solid rgb(139, 132, 204);
+  padding: 20px 20px;  
+  width: 50%;
+  float: left;
+}
+.manager input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.manager button{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.manager section{
+  border: 1px solid rgb(139, 132, 204);
+  padding: 20px 20px;  
+  width: 33%;
+}
+.databasePhoto{
+  direction: ltr;
+}
