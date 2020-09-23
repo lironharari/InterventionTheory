@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as commonScript from '../script/common';
 import axios from 'axios';
 import Gallery from './Gallery';
 
@@ -12,7 +11,6 @@ class Anunnaki extends Component {
   }  
   componentDidMount() {     
     this.getImages(); 
-    commonScript.enableScroll();
 }    
 
 getImages = ( ) => {

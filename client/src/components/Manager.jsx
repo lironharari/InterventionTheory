@@ -179,7 +179,7 @@ class Manager extends Component {
             <button onClick={this.addPhoto}>Add</button>
       </section>
       <section>
-          <h2>Database</h2>                  
+          <h2>Database</h2>  
         {
             !isEmpty(photos) ? 
             photos.map( (photo,index) =>
