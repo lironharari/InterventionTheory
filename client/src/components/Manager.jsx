@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const { isNull,isEmpty } = require('lodash');
+//const { isNull,isEmpty } = require('lodash');
+const { isNull } = require('lodash');
 
 class Manager extends Component {
   constructor(props) {
@@ -19,9 +20,6 @@ class Manager extends Component {
       description: '' 
     };   
   }
-  componentDidMount() {     
-    this.getAllImages();
-}   
 
   handleChange = e => {
     const name = e.target.name;
@@ -29,33 +27,33 @@ class Manager extends Component {
     this.setState({ [name]: value });    
   };
   
-  selectImage = (id) => {  
-    const {photos} = this.state
-    const photo = photos.find(photo => photo._id === id);
+  // selectImage = (id) => {  
+  //   const {photos} = this.state
+  //   const photo = photos.find(photo => photo._id === id);
     
-    this.setState({
-      id: photo._id,
-      src: photo.src,
-      title: photo.title,
-      description: photo.description,
-      category: photo.category,
-      subcategory: photo.subcategory,
-      rank: photo.rank,
-      width: photo.width,
-      height: photo.height
-    });     
-  } 
-  getAllImages = ( ) => {
-    axios({
-      url: '/api/getAllImages',
-      method: 'POST'           
-    })
-    .then((response) => {            
-      const { images } = response.data;        
-      this.setState({ photos: images })  
-    })
-    .catch((error) => console.log(error))      
-  } 
+  //   this.setState({
+  //     id: photo._id,
+  //     src: photo.src,
+  //     title: photo.title,
+  //     description: photo.description,
+  //     category: photo.category,
+  //     subcategory: photo.subcategory,
+  //     rank: photo.rank,
+  //     width: photo.width,
+  //     height: photo.height
+  //   });     
+  // } 
+  // getAllImages = ( ) => {
+  //   axios({
+  //     url: '/api/getAllImages',
+  //     method: 'POST'           
+  //   })
+  //   .then((response) => {            
+  //     const { images } = response.data;        
+  //     this.setState({ photos: images })  
+  //   })
+  //   .catch((error) => console.log(error))      
+  // } 
   
   updateImage = e => {
     e.preventDefault(); 
@@ -140,45 +138,47 @@ class Manager extends Component {
     const { photos } = this.state;       
 
     return (
-      <div className="site-container manager">          
-      <section>
-           <label>
-            Src:
-              <input type="text" name="src" value={this.state.src} onChange={this.handleChange} />        
-            </label>                    
-            <label>
-            Category:
-              <input type="text" name="category" value={this.state.category} onChange={this.handleChange} />        
-            </label>                
-            <label>
-            Subcategory:
-              <input type="text" name="subcategory" value={this.state.subcategory} onChange={this.handleChange} />        
-            </label>            
-            <label>
-            Rank:
-              <input type="text" name="rank" value={this.state.rank} onChange={this.handleChange} />        
-            </label>        
-            <label>
-            Title:
-              <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />        
-            </label>    
-            <label>
-              Description:
-              <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />        
-            </label>
-            <label>
-              Width:
-              <input type="text" name="width" value={this.state.width} onChange={this.handleChange} />        
-            </label>                  
-            <label>
-              Height:
-              <input type="text" name="height" value={this.state.height} onChange={this.handleChange} />        
-            </label>            
-            <button onClick={this.searchImage}>search</button>
-            <button onClick={this.updateImage}>update</button>
-            <button onClick={this.addPhoto}>Add</button>
-      </section>
-      <section>
+      <div className="site-container manager"> 
+        <main>
+            <section>
+                <label>
+                  Src:
+                    <input type="text" name="src" value={this.state.src} onChange={this.handleChange} />        
+                  </label>                    
+                  <label>
+                  Category:
+                    <input type="text" name="category" value={this.state.category} onChange={this.handleChange} />        
+                  </label>                
+                  <label>
+                  Subcategory:
+                    <input type="text" name="subcategory" value={this.state.subcategory} onChange={this.handleChange} />        
+                  </label>            
+                  <label>
+                  Rank:
+                    <input type="text" name="rank" value={this.state.rank} onChange={this.handleChange} />        
+                  </label>        
+                  <label>
+                  Title:
+                    <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />        
+                  </label>    
+                  <label>
+                    Description:
+                    <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />        
+                  </label>
+                  <label>
+                    Width:
+                    <input type="text" name="width" value={this.state.width} onChange={this.handleChange} />        
+                  </label>                  
+                  <label>
+                    Height:
+                    <input type="text" name="height" value={this.state.height} onChange={this.handleChange} />        
+                  </label>            
+                  <button onClick={this.searchImage}>search</button>
+                  <button onClick={this.updateImage}>update</button>
+                  <button onClick={this.addPhoto}>Add</button>
+            </section>
+        </main>         
+      {/* <section>
           <h2>Database</h2>  
         {
             !isEmpty(photos) ? 
@@ -190,7 +190,7 @@ class Manager extends Component {
             ) : 
             null          
         }
-      </section>    
+      </section>     */}
     </div>
     );
   }

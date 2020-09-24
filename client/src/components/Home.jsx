@@ -1,10 +1,39 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Reference from './Reference';
 import Notes from './Notes';
+import Gallery from './Gallery';
 
 class Home extends Component {    
-    render() {                        
-      return (     
+      constructor(props) {
+        super(props);        
+        this.state = {
+        photos: []
+        };   
+    }  
+    componentDidMount() {    
+    this.getImages();
+    }
+
+    getImages = ( ) => {
+    axios({
+        url: '/api/getImages',
+        method: 'POST', 
+        data: {
+        category : 'Home' 
+        }
+    })
+    .then((response) => {            
+        const { images } = response.data;    
+        this.setState({ photos: images })  
+    })
+    .catch((error) => console.log(error))      
+    }
+
+    render() { 
+        const { photos } = this.state;                              
+
+        return (     
         <div className="site-container">                                                  
         <main className="home">        
             <div className="section-content"> 
@@ -74,7 +103,7 @@ class Home extends Component {
                         בשומרית נכתבו החשובים שבאפוסים המסופוטמים, כגון עלילות גילגמש, אדפה והאתרחסיס.
                         <Reference id={5} />                        
                     </p>
-                    <h5>כתב</h5>
+                    <h5>כתב יתדות</h5>
                     <p>                                        
                         <img src="images/cuneiform1.jpg" alt="" className="dialogImage"  />                                                
                         כתב יתדות (קוניפורמי) היא מערכת כתיבה אשר השומרים השתמשו בה לראשונה בסביבות 3,500 שנים לפנה"ס.
@@ -95,7 +124,7 @@ class Home extends Component {
                          כמו כן, כאשר אנו מודדים זוויות באמצעות מעלות,
                           אנו מייחסים להקפה אחת של מעגל ערך של 360 מעלות.                         
                     </p>
-                    <h5>דפוס</h5>
+                    <h5>חותמות גליל - הדפוס הראשון</h5>
                     <p>
                         <img src="images/clay.jpg" alt="" className="dialogImage"  />                        
                         חותם גליל הוא חותם המעוצב בצורת גליל קטן,
@@ -402,8 +431,7 @@ class Home extends Component {
                         בני אדם וקופים חולקים 93 אחוזים מהדי.אן.איי.                        
                     </p>
                     <h5>מיזוג כרומוזומים</h5>                    
-                    <p>
-                        <img src="images/chromosome2.jpg" alt="" className="dialogImage imgEnlarge" />                                                
+                    <p>                        
                         לבני אדם 23 זוגות כרומוזומים ולשאר קופי האדם 24 זוגות כרומוזומים.
                           כאשר הם מוצגים זה לצד זה, הדבר הבולט ביותר בגנום של בני האדם ושימפנזים הוא עד כמה הם דומים.
                            ההבדל העיקרי נמצא בכרומוזום מספר 2 של בני אדם, המציג מיזוג קצה לקצה של שני כרומוזומים קדומים.                         
@@ -413,6 +441,9 @@ class Home extends Component {
                           שמרמז על כך ששני כרומוזומים קדומים חוברו קצה לקצה.
                           <Reference id={17} />
                           <Reference id={18} />
+                    </p>
+                    <p>
+                            <Gallery photos={photos} subcategory="Genetics" />
                     </p>
                     <p>
                           שלושה מדדים גנטיים מספקים עדות חזקה, אם לא חותכת, למיזוג כרומוזומים:
@@ -491,7 +522,6 @@ class Home extends Component {
                     <h5>גולגולת</h5>
                     <div>       
                         <li>                            
-                            <img src="images/foramenmagnum.jpg" alt="" className="dialogImage"  />
                               נקב העורף ("פורמן מגנום") הוא החור בחלק התחתון של הגולגולת ממנה יוצא חוט השדרה ועוקב אחר עמוד השדרה.
                              אצל בני אדם, נקב העורף ממוקם במרכז, ופונה ישירות כלפי מטה.
                               נקב העורף אצל שימפנזים וקופי אדם אחרים ממוקם בחלק האחורי של הגולגולת כאשר חוט השדרה יוצא בזווית קלה.
@@ -517,7 +547,6 @@ class Home extends Component {
                                 את הטון או את מידת קולם, ולכן הם אינם יכולים לדבר.                    
                         </li> 
                         <li>
-                        <img src="images/chin.jpg" alt="" className="dialogImage"  />                        
                             בני אדם הם החיה היחידה עם סנטר בולט,
                              אפילו לקרובי משפחתנו הקרובים ביותר כמו הניאנדרטלים אין סנטר.
                               למעשה, אחת הדרכים בהן מדענים מבדילים בין אדם מודרני אנטומי לבין גולגולת ניאנדרטלית היא לחפש את הסנטר.                    
@@ -537,8 +566,7 @@ class Home extends Component {
                         <li>
                              ארובות העיניים של שימפנזים עגולות ואילו ארובות העיניים של בני אדם מלבניות.
                         </li>
-                        <li>                                                                                                                          
-                            <img src="images/eye.jpg" alt="" className="dialogImage"  />
+                        <li>                                                                                                                                                  
                             עיניים אנושיות שונות מעיני השימפנזה.
                              אצל בני אדם, הסקלרה היא לבנה, מנוגדת לצבע הקשתית,
                               אך ברוב השימפנזים החלק הגלוי של הסקלרה תואם את צבע הקשתית.
@@ -555,7 +583,10 @@ class Home extends Component {
                             לבני אדם יש אף בולט ואילו לשימפנזים יש אף שטוח.
                              לבני אדם גבות ברורות, שימפנזים חסרי גבות.
                              לבני אדם שפתיים גדולות, ואילו לשימפנזים שפתיים דקות.    
-                        </li>                        
+                        </li>  
+                        <p>
+                            <Gallery photos={photos} subcategory="PhysicalSkull" />
+                        </p>                      
                         <h5>גפיים</h5>
                         <li>
                              רגלי קופי אדם מותאמות לאחיזה והבוהן שלהם נגדית.
@@ -567,7 +598,6 @@ class Home extends Component {
                              ונתמכות על ידי רצועות וגידים, נעדרות לחלוטין בכפות רגלי שימפנזה.     
                         </li>
                         <li>
-                            <img src="images/walking.jpg" alt="" className="dialogImage"  />
                             כשבני אדם הולכים, המומנטום מכה לראשונה בעקב (1),
                              שנוטע אותנו ודוחף את המשקל שלנו קדימה,
                               מעביר אותו לאורך הקצה החיצוני של סוליית כף הרגל,
@@ -592,8 +622,7 @@ class Home extends Component {
                              היד האנושית לא רק מאפשרת מניפולציה עדינה של כלים,
                               אלא מאפשרת לבני אדם לעשות אגרוף קמוץ, קופי האדם לא מסוגלים לכך.
                         </li>
-                        <li>
-                            <img src="images/knee.png" alt="" className="dialogImage"  />
+                        <li>                            
                             בני אדם יכולים לעמוד ישר בגלל היכולת לנעול את שתי הברכיים,
                              ואילו ברכיהם של שימפנזים וקופי אדם אחרים תמיד נשארות כפופות מעט.                    
                         </li>                                                                                                                                                                                   
@@ -607,7 +636,10 @@ class Home extends Component {
                              קופי אדם יכולים לעמוד על שתי הרגליים,
                               אך בני האדם הם הפרימטים היחידים שעומדים תמידית,
                                בגלל עקומה נוספת בעמוד השדרה שמייצבת את העמידה הזקופה.                
-                        </li>                                                                  
+                        </li>
+                        <p>
+                            <Gallery photos={photos} subcategory="PhysicalLimbs" />
+                        </p>                                                                                                                
                         <h5>שיער</h5>
                         <li>                                                                                
                             לבני אדם ולשימפנזים יש כמות זהה של זקיקי שיער בגופם,
@@ -619,7 +651,6 @@ class Home extends Component {
                                כולל כוויות שמש וסיכון מוגבר לסרטן העור, כמו כן תפקוד מערכת חיסון מדוכאת והזדקנות עור מואצת.                            
                         </li>
                         <li>
-                            <img src="images/reversepattern.jpg" alt="" className="dialogImage"  />                                                                                                                 
                             בני אדם מציגים דפוס שיער הפוך לזה של השימפנזים.
                              לשימפנזים פרווה עבה על גבם ופרווה דקה מקדימה.
                               לזכרים אנושיים שיער סמיך בחזית ושיער דליל או העדר שיער בגבם.                                                 
@@ -628,6 +659,7 @@ class Home extends Component {
                             שיער ראש אדם ושיער הפנים ארוכים יותר מזה של שימפנזים.
                              שיער אנושי מפסיק לצמוח לאחר תקופה מסוימת אך הוא עדיין צומח פרק זמן ארוך יותר בהשוואה לשימפנזים.                    
                         </li>
+                        <Gallery photos={photos} subcategory="PhysicalHair" />
                         <h5>שונות</h5>
                         <li>
                             ייחום היא התקופה במחזור המיני של יונקות נקבות, במהלכן הן מיוחמות (מוכנות להזדווג).
@@ -652,14 +684,14 @@ class Home extends Component {
                         </li>
                         <li>
                                  לבני אדם יש אגן קצר ורחב, לשימפנזים יש אגן צר וארוך.
-                        </li>                        
+                        </li>  
+                        <Gallery photos={photos} subcategory="PhysicalMisc" />                      
                     </div>
                 </section>                                                              
                 <section id="nephilim">
                     <h2>נפילים</h2>
                     <h4>גולגלות מאורכות</h4>
-                    <p>
-                        <img src="images/thumbnails/paracas-skulls.jpg" alt="" className="dialogImage imgReduce" />                                                                                      
+                    <p>                        
                           גולגלות בני האדם נראות זהות עם הבדלים קטנים בגודל ובצורה בהתאם למין ולמורשת הגזעית.
                         גולגלות מאורכות אינן מתאימות לקריטריון של גולגולת אנושית.                    
                          גולגלות מאורכות נבדלות בצורה, בגודל ובמבנה שלהן.
@@ -675,6 +707,7 @@ class Home extends Component {
                          בנוסף לכך, יש להן נפח מוח גדול עד 25% יותר ממוח אנושי ממוצע.                          
                         בהנתן גולגלות פאראקס הגדולות ביותר, אפשר להסיק כי גובהן של ישויות אלה היה מעל לשני מטרים.
                     </p>
+                    <p><Gallery photos={photos} subcategory="ElongatedSkulls" /></p>
                     <h5>גנטיקה</h5>
                     <p>
                         בשנת 2013, החלו החוקרים אל.איי מרזולי והביולוג בריאן פורסטר לחפש הסבר מדעי לגולגלות הקדומות שנמצאו בפאראקס.
@@ -757,8 +790,7 @@ class Home extends Component {
                            בקרב בני האדם, שיער אדמוני הוא נדיר, ומאפיין פחות מ-2% מהאוכלוסייה.                        
                     </p>
                     <h4>מלכות מצרים</h4>
-                    <p>                    
-                        <img src="images/amarna.jpg" alt="" className="dialogImage"  />                        
+                    <p>                                            
                         תקופת אמארנה הייתה עידן בהיסטוריה של מצרים העתיקה, במחצית המאוחרת של השושלת השמונה עשרה.
                          בתקופה זו משכנו המלכותי של פרעה ומלכתו הועבר לאקטתן במה שמכונה כיום אמארנה.                           
                     </p>
@@ -768,6 +800,7 @@ class Home extends Component {
                          אחנאתן ומשפחתו מתוארים באופן אנדרוגיני, עם גולגלות מאורכות וצוואר ארוך.                          
                          <Reference id={26} />
                     </p>
+                    <p><Gallery photos={photos} subcategory="EgyptAmarna" /></p>
                     <h5>מנתון - דברי ימי מצרים</h5>
                     <p>
                         מנתון היה כוהן דת מצרי שחי במאה ה-3 לפנה"ס, בממלכה התלמיית.
@@ -778,7 +811,6 @@ class Home extends Component {
                          <Reference id={27} />
                     </p>
                     <p>
-                    <img src="images/amarna11.jpg" alt="" className="dialogImage"  />
                         להלן דברי מנתון לגבי המלכויות השונות במצרים:
                         <li>
                             בהתחלה, מצרים נשלטה על ידי שמונה אלים, החל מפטא וכלה בתות.
@@ -902,17 +934,17 @@ class Home extends Component {
                         אנקי ("אדון הארץ"), לימים נקרא אה (באכדית), נחשב למדען הראשי של האנונקי.
                         בספרות השומרית הוא נודע ביצירת המין האנושי, בהצלת האנושות מהמבול ובהענקת הציוויליזציה לשומר.                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="Anunnaki" /></p>
                     <h4>מושב האלים</h4>
                     <h5>רשימת המלכים השומרית</h5>
-                    <p>
-                        <img src="images/sumeriankinglist.jpg" alt="" className="dialogImage"  />                        
+                    <p>                        
                         רשימת המלכים השומרית היא לוח אבן עתיק בשפה השומרית,
                          ובו מתועדים מלכי שומר, אורך שלטונם, ומיקומי המלכות.
                           המלוכה נתפסה כמתנת האלים ויכולה היתה להיות מועברת מעיר לעיר.
                          שלטון המלכים לפני המבול נמדדו ביחידות מספר שומריות המכונות שר (יחידות של 3,600), נר (יחידות של 600), וסוסא (יחידות של 60).
                          <Reference id={30} />
                          <Reference id={31} />
-                    </p>
+                    </p>                    
                     <div>
                         רשימת המלכים השומרית מתחילה בעצם מקור המלכות:
                         <blockquote>
@@ -946,9 +978,9 @@ class Home extends Component {
                          במהלכן ניבירו משלימה סיבוב אחד ביחס לשמש.
                           שנה ניבירואנית נקראת שר (שליט, מלך).                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="KingList" /></p>
                     <h5>כוכב הלכת התשיעי</h5>
-                    <p>
-                        <img src="images/Caltech.jpg" alt="" className="dialogImage" />
+                    <p>                        
                         מייק בראון וקונסטנטין בטיגין
                         הם שני אסטרונומים מהמכון הטכנולוגי של קליפורניה.
                         בחודש ינואר 2016,
@@ -971,7 +1003,8 @@ class Home extends Component {
                         <li>ציר סיבוב של השמש - 7.25 מעלות.</li>
                         <li>ציר סיבוב צדדי או הפוך - נוגה (177 מעלות), אורנוס (97 מעלות) ופלוטו (119 מעלות).</li>
                         <li>מסלול הפוך של דראק (103 מעלות) וניקו (110 מעלות).</li>
-                    </p>                    
+                    </p> 
+                    <p><Gallery photos={photos} subcategory="SolarAnomalies" /></p>                   
                     <p>
                         בראון ובטיגין שיערו כי, באשר לאנומליות של מערכת השמש,
                         הדרך היחידה האפשרית שבה יכולים אובייקטים אלו להתנהג בדרך זו
@@ -993,8 +1026,7 @@ class Home extends Component {
                         כ-30 מעלות כלפי מטה לעומת המישור השטוח
                         שבתוכו כוכבי הלכת במסלול סביב השמש.                        
                     </p>
-                    <p>
-                        <img src="images/planet-nine.jpg" alt="" className="dialogImage imgEnlarge" />                        
+                    <p>                        
                         סימולציות מחשב של מערכת השמש
                         עם כוכב הלכת התשיעי
                         הראה שצריכים להיות יותר אובייקטים מוטים
@@ -1036,9 +1068,9 @@ class Home extends Component {
                         על ידי חישובים מתמטיים (משיכת הכבידה שלו על אורנוס),
                         לפני שהוא נראה למעשה בעזרת טלסקופ.
                     </p>
+                    <p><Gallery photos={photos} subcategory="PlanetNine" /></p>                   
                     <h5>ניבירו</h5>
-                    <p>
-                        <img src="images/wingeddisk.jpg" alt="" className="dialogImage"  />                                                                                            
+                    <p>                        
                         קיום כוכב לכת תשיעי, מחזיר אותנו לשומר העתיקה.                         
                           בסיפורים השומרים, משכן האלים נקרא ניבירו, כוכב לכת בתוך מערכת השמש שלנו.
                     </p>
@@ -1049,6 +1081,7 @@ class Home extends Component {
                          סמל הדיסק המכונף כלל גם את מלך האנונקי, אנו.
                         ניבירו נזכרת באנומה אליש ובמספר לוחות אסטרונומים.                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="Nibiru" /></p>
                 </section>   
                 <section id="advanced-knowledge">                    
                     <h2>ידע מתקדם</h2>
@@ -1068,7 +1101,6 @@ class Home extends Component {
                     </p>
                     <h5>המודל ההליוצנטרי</h5>
                     <p>
-                        <img src="images/va243.jpg" alt="" className="dialogImage"  />
                         חותם גליל VA-243,
                         שנוצר לפני 4,500 שנים,
                           מתאר אל אנונקי מעניק את המחרשה, או את הידע החקלאי, לאנושות.
@@ -1084,6 +1116,7 @@ class Home extends Component {
                         השומרים תיארו מערכת שמש המורכבת מגופים שמימיים המקיפים את השמש,
                         אלפי שנים לפני קופרניקוס והמודל הליוצנטרי.                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="Heliocentric" /></p>
                     <h5>טבעות שבתאי</h5>
                     <p>                        
                         לוח חמר זה, המוצג במוזיאון הבריטי, מתוארך לשנת 2,000 לפנה"ס.
@@ -1098,8 +1131,7 @@ class Home extends Component {
                         אינן נראות מכדור הארץ בעין בלתי מזוינת.
                         <Reference id={37} />
                     </p>
-                    <p>
-                        <img src="images/saturn.jpg" alt="" className="dialogImage imgEnlarge" />
+                    <p>                    
                         מבט מקרוב מגלה
                         כי הקש הוא בדיוק במיקום של חגורת האסטרואידים.
                         אם נשווה את כוכבי הלכת המתוארים בחותם
@@ -1123,10 +1155,10 @@ class Home extends Component {
                         וששניהם גדולים באופן משמעותי ממאדים.
                         הם גם ידעו כי מעבר לחגורת האסטרואידים,
                         שבתאי וצדק כמעט זהים בגודלם ביחס לכדור הארץ.                        
-                    </p>                                           
+                    </p>   
+                    <p><Gallery photos={photos} subcategory="Saturn" /></p>                                        
                     <h5>כוכב הלכת השביעי</h5>
-                    <p>                        
-                        <img src="images/seventhplanet.jpg" alt="" className="dialogImage"  />
+                    <p>                                                
                         במסופוטמיה, סמלו של מאדים היה כוכב בעל שישה קודקודים
                          וסמלו של נוגה היה כוכב בעל שמונה קודקודים.
                         כדור הארץ, המקיף את השמש בין נוגה למאדים, צריך להיות על פי הסמליות הזו כוכב הלכת השביעי.
@@ -1158,6 +1190,7 @@ class Home extends Component {
                         שהיה מפקד כדור הארץ, היה "מלך השבע".
                         <Reference id={38} />
                     </p>
+                    <p><Gallery photos={photos} subcategory="SeventhPlanet" /></p>
                     <h5>לוח שנה</h5>                    
                     <p>
                         יום הוא פרק הזמן בו כדור הארץ משלים סיבוב אחד
