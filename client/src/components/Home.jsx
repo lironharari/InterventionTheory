@@ -34,10 +34,10 @@ class Home extends Component {
         const { photos } = this.state;                              
 
         return (     
-        <div className="site-container">                                                  
-        <main className="home">        
-            <div className="section-content"> 
-                <section id="intro">
+        <div className="site-container">                                                          
+        <main className="home">                    
+            <div className="section-content">                  
+                <section id="intro">                         
                     <h2>מבוא</h2>
                     <p> 
                         <span>
@@ -831,14 +831,8 @@ class Home extends Component {
                     <p>                        
                          אל למחצה הוא צאצא של אל ואדם, בדרך כלל מתואר כאדם שביצע מעשי גבורה וזכה לכבוד רב.
                          <Reference id={28} />
-                         <span>
-                            להן דוגמאות קלאסיות לאלים למחצה:
-                         </span>
-                         
-                        <li>
-                            <img src="images/gilgamesh.jpg" alt="" className="dialogImage"  /> 
-                            גילגמש (שומר) – בן של האלה נינסון ואב אנושי.
-                        </li>                        
+                        <span> להן דוגמאות קלאסיות לאלים למחצה:</span>                         
+                        <li>גילגמש (שומר) – בן של האלה נינסון ואב אנושי.</li>                        
                         <li>סמירמיס (אשור) – בת של האלה אטרגטיס ואב אנושי.</li>
                         <li>שחר/שלם (כנען) – בניו של אל (ראש האלים בפנתאון הכנעני) ונשים אנושיות.</li>
                         <li>הרקולס (יוון) – בן של האל זאוס ואישה אנושית.</li>
@@ -846,6 +840,7 @@ class Home extends Component {
                         <li>דיוניסוס (יוון) – בן של האל זאוס ואישה אנושית</li>
                         <li>אמירני (גאורגי) – בן של האלה דאלי ואב אנושי.</li>                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="DemiGod" /></p>
                     <h4>נפילים</h4>     
                     <p>
                         ספר בראשית מאשר את קיום האלים למחצה, צאצאיהם של בני האלוהים ובנות האדם.
@@ -1225,8 +1220,7 @@ class Home extends Component {
                         בעברית, פירושו המילולי של המילה חג הוא להסתובב.                        
                         <Reference id={40} />
                     </p>
-                    <p>
-                        <img src="images/equinox.jpg" alt="" className="dialogImage"  />                                                
+                    <p>                        
                         האקוונקס הם שני הרגעים בשנה
                         בהם השמש נמצאת בדיוק מעל קו המשווה
                         ולכן אורך היום והלילה שווים.
@@ -1269,6 +1263,7 @@ class Home extends Component {
                         כדי להתאים את לוח שנה לעונות).                                                
                         <Reference id={42} />
                     </p>
+                    <p><Gallery photos={photos} subcategory="Calendar" /></p>
                     <h5>גלגל המזלות</h5>
                     <p>
                         קונסטלציה היא קבוצת כוכבים
@@ -1283,8 +1278,7 @@ class Home extends Component {
                         מעידים כי הם מבוססים על מסורת שומרית עתיקה יותר.                   
                         <Reference id={43} />
                     </p>
-                    <p>
-                        <img src="images/zodiac.jpg" alt="" className="dialogImage"  />                        
+                    <p>                        
                         גלגל המזלות הוא אזור בשמיים
                         שמקיף את הספירה בו כוכבי השמיים מקיפים את השמש.
                         השומרים קראו לו UL.HE ("העדר הנוצץ"),
@@ -1320,9 +1314,9 @@ class Home extends Component {
                         "חודש גדול" הוא 30 מעלות או מזל אחד (2,160 שנים)
                         ו-"שנה גדולה" היא מעגל שלם של 360 מעלות או 12 מזלות (25,920 שנים).                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="Zodiac" /></p>
                     <h4>גאומטריה קדושה</h4>
-                    <p>
-                        <img src="images/drawing-geometry-fruit-3.png" alt="" className="dialogImage"  />
+                    <p>                        
                         פרח החיים הוא רשת מעגלים חופפים הידועים כיום כמבנה היסודי של המרחב.
                         בפרח החיים ניתן למצוא את כל הצורות הגיאומטריות הקיימות דרך קוביית מטטרון.
                         אלמנטים רבים בתוך פרח החיים
@@ -1374,8 +1368,8 @@ class Home extends Component {
                          ולכל פאה מספר שווה של פאות שצמודות לה.
                           קיימים חמישה פאונים משוכללים: ארבעון, קובייה, תמניון, תריסרון ועשרימון. 
                           כל חמשת הצורות מוכלות בקוביית מטטרון. 
-                    </li>
-                    <img src="images/lion.jpg" alt="" className="dialogImage"  />
+                    </li>                    
+                    <p><Gallery photos={photos} subcategory="SacredGeometry" /></p>
                     <h5>האריות המגינים</h5>                    
                     <p>                                                
                         המושג האריות המגינים,
@@ -1395,6 +1389,7 @@ class Home extends Component {
                         ידע שנחשב לקדוש ואלוהי מכיוון שהוא ניתן לאנושות
                         על ידי האנונקי.
                     </p>
+                    <p><Gallery photos={photos} subcategory="GuardianLions" /></p>
                 </section>   
                 <section id="advanced-technology">
                     <h2>טכנולוגיה מתקדמת</h2>
@@ -1425,9 +1420,8 @@ class Home extends Component {
                         קנה המידה נע בין טלק (1 בסולם מוס), המינרל הרך ביותר,
                         ליהלום (10 בסולם מוס), החומר הטבעי הקשה ביותר.                        
                     </p>
-                    <h5>פירמידות</h5>
+                    <h5>מצרים</h5>
                     <p>
-                        <img src="images/giza.jpg" alt="" className="dialogImage"  />                        
                         מתחם גיזה במצרים
                         כולל את הפירמידה של חופו,
                         הפירמידה של חעפרע והפירמידה של מנכאורע,
@@ -1455,9 +1449,9 @@ class Home extends Component {
                         אבני הגרניט משתלבות זו בזו ללא שימוש במלט או בבטון,
                          וחלק מהאבנים מעידים על שיוף והחלקה.
                     </p>                    
-                    <h5>בעלבק</h5>
+                    <p><Gallery photos={photos} subcategory="MegalithEgypt" /></p>
+                    <h5>בעלבק, לבנון</h5>
                     <p>
-                        <img src="images/baalbek.jpg" alt="" className="dialogImage"  />
                         בעלבק היא עיר עתיקה השוכנת בלבנון.
                         העיר היתה מיושבת כבר בשנת 9,000 לפני הספירה.
                         במתחם מקדש יופיטר נמצא קיר התמך המכיל את הטריליתון המפורסם.
@@ -1480,7 +1474,8 @@ class Home extends Component {
                         מה שהופך אותו לגוש האבן הגדול ביותר מימי קדם.                        
                         <Reference id={53} />                        
                     </p>
-                    <h5>האובליסק הלא גמור</h5>
+                    <p><Gallery photos={photos} subcategory="MegalithBaalbek" /></p>
+                    <h5>האובליסק הלא גמור, מצרים</h5>
                     <p>
                         האובליסק הלא גמור
                         הוא האובליסק הקדום הגדול ביותר שידוע לנו.
@@ -1501,9 +1496,9 @@ class Home extends Component {
                         או טכנולוגיה שאפשרה להם לרכך אבנים קשות.                        
                         <Reference id={54} />
                     </p>
-                    <h5>סאקסאיוואמן</h5>
+                    <p><Gallery photos={photos} subcategory="MegalithObelisk" /></p>
+                    <h5>סאקסאיוואמן, פרו</h5>
                     <p>
-                        <img src="images/saska.jpg" alt="" className="dialogImage"  />
                         סאקסאיוואמן היא מצודה בפאתי קוסקו, פרו.
                         שלושת קירות המתחם הם פלא הנדסי
                         שעשויים מהבלוקים הגדולים ביותר שנמצאו ביבשת אמריקה.
@@ -1532,9 +1527,9 @@ class Home extends Component {
                         במילים אחרות, הטכנולוגיה היחידה שאנו מכירים
                         שמסוגלת לחתוך אנדזיט ביעילות היא טכנולוגיית יהלומים.                                                                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="MegalithSacsayhuaman" /></p>
                     <h4>חותמות גליל</h4>
                     <p>                        
-                        <img src="images/cylinder.jpg" alt="" className="dialogImage"  />                        
                         קיומן של חותמות גליל מהוה אתגר טכנולוגי.
                          תהליך יצירת חותמת בודדת מצריך שיוף אבן קשה,
                           קידוח וחריטה מיניטורית.                        
@@ -1547,6 +1542,7 @@ class Home extends Component {
                     <p>
                         אתגר נוסף הוא החריטה של יצירות אומנות מינייטוריות על גבי אבן בגודל 3 סנטימטרים.                        
                     </p>
+                    <p><Gallery photos={photos} subcategory="CylinderSeals" /></p>
                 </section>                                                
                 <section id="bibliography">
                     <h2>ביבליוגרפיה</h2>
