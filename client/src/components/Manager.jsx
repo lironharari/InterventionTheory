@@ -8,7 +8,7 @@ class Manager extends Component {
   constructor(props) {
     super(props);        
     this.state = {
-      photos: [],
+      // photos: [],
       id: '',
       src: '',
       category: '',
@@ -135,7 +135,7 @@ class Manager extends Component {
       .catch(() => alert('Failed adding photo'))
   };
   render() {
-    const { photos } = this.state;       
+    //const { photos } = this.state;       
 
     return (
       <div className="site-container manager"> 

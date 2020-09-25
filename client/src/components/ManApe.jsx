@@ -36,7 +36,7 @@ getImages = ( ) => {
         <main className="archive">
             <div className="section-content">                                                                                           
                 <header>
-                  <h1>השוואה בין אדם ושימפנזה</h1>
+                  <h1>אדם/קוף</h1>
                   <p>
                     ההבדלים בין האדם והקוף מעידים על טרנספורמציה ולא על אבולוציה הדרגתית.
                   </p>

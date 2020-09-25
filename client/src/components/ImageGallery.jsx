@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Gallery from "react-photo-gallery";
+import ReactPhotoGallery from "react-photo-gallery";
 import Lightbox from 'react-image-lightbox';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -31,7 +31,7 @@ export default function ImageGallery({ photos }) {
   
   return (
     <div className="galleryContainer">  
-      <Gallery renderImage={imageRenderer} photos={photos}  />                                                             
+      <ReactPhotoGallery renderImage={imageRenderer} photos={photos}  />                                                             
       {isOpen && (
           <Lightbox            
             imageCaption={photos[photoIndex].caption}            
