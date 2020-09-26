@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-//const { isNull,isEmpty } = require('lodash');
-const { isNull } = require('lodash');
+const { isNull,isEmpty } = require('lodash');
 
 class Manager extends Component {
   constructor(props) {
     super(props);        
     this.state = {
-      // photos: [],
+      photos: [],
       id: '',
       src: '',
       category: '',
@@ -27,22 +26,22 @@ class Manager extends Component {
     this.setState({ [name]: value });    
   };
   
-  // selectImage = (id) => {  
-  //   const {photos} = this.state
-  //   const photo = photos.find(photo => photo._id === id);
+  selectImage = (id) => {  
+    const {photos} = this.state
+    const photo = photos.find(photo => photo._id === id);
     
-  //   this.setState({
-  //     id: photo._id,
-  //     src: photo.src,
-  //     title: photo.title,
-  //     description: photo.description,
-  //     category: photo.category,
-  //     subcategory: photo.subcategory,
-  //     rank: photo.rank,
-  //     width: photo.width,
-  //     height: photo.height
-  //   });     
-  // } 
+    this.setState({
+      id: photo._id,
+      src: photo.src,
+      title: photo.title,
+      description: photo.description,
+      category: photo.category,
+      subcategory: photo.subcategory,
+      rank: photo.rank,
+      width: photo.width,
+      height: photo.height
+    });     
+  } 
   // getAllImages = ( ) => {
   //   axios({
   //     url: '/api/getAllImages',
@@ -96,10 +95,26 @@ class Manager extends Component {
       }
     })
     .then((response) => {            
-      const { image } = response.data;
-      
-      if(!isNull(image)){
+      const { images } = response.data;
+      if(!isNull(images)){
+        if(images.length > 1){
           this.setState({
+            photos:images,
+            id: 0,
+            title:'',
+            description:'',
+            category:'',
+            subcategory:'',
+            rank:0,
+            width:0,
+            height:0
+          });                 
+        }          
+        else
+        {
+          const image = images[0];
+          this.setState({
+            photos:[],
             id: image._id,
             src: image.src,
             title:image.title,
@@ -110,6 +125,7 @@ class Manager extends Component {
             width:image.width,
             height:image.height
           });       
+        }          
       }      
     })
     .catch((error) => console.log(error)) 
@@ -135,7 +151,7 @@ class Manager extends Component {
       .catch(() => alert('Failed adding photo'))
   };
   render() {
-    //const { photos } = this.state;       
+    const { photos } = this.state;       
 
     return (
       <div className="site-container manager"> 
@@ -178,19 +194,23 @@ class Manager extends Component {
                   <button onClick={this.addPhoto}>Add</button>
             </section>
         </main>         
-      {/* <section>
+      <section>
           <h2>Database</h2>  
+          <ol>
         {
             !isEmpty(photos) ? 
             photos.map( (photo,index) =>
-              <li key={index} className="databasePhoto"> 
-                  {photo.src}
+              <div key={index}> 
+                  <label> src : {photo.src} </label>               
+                  <label> category : {photo.category} </label>                                 
+                  <label> subcategory : {photo.subcategory} </label>                                                   
                   <button value={photo._id} onClick={e => this.selectImage(e.target.value)}>select</button>
-              </li>              
+              </div>              
             ) : 
-            null          
+            "no images"          
         }
-      </section>     */}
+        </ol>
+      </section>    
     </div>
     );
   }

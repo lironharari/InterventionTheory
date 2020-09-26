@@ -90,9 +90,9 @@ router.post('/api/searchImage', async (req, res) => {
     const { src } = req.body;  
     
     try {
-        const image = await Image.findOne({ src: src });
+        const images = await Image.find({ src: src });
         return res.json({
-            image
+            images
         });
     } catch (error) {
         return res.status(500).json({
