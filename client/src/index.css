@@ -428,9 +428,6 @@ cite a{
   height: 500px;
   float: left;  
 }
-/* .databasePhoto{
-  direction: ltr;
-} */
 #top a, .cite_ref,.cite_note, cite a{
   outline: 0;
 }
@@ -439,4 +436,7 @@ cite a{
 }
 .manager button{
   margin-top: 20px;
+}
+.galleryContainer{
+  margin: 20px 0;
 }
