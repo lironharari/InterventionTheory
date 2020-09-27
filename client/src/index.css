@@ -190,9 +190,9 @@ margin-bottom: 25px;
 }
 
 /* 1. Enable smooth scrolling */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* 2. Make nav sticky */
 main > nav {
@@ -228,8 +228,8 @@ main > nav {
   text-decoration: none;
   display: block;
   padding: .125rem 0;
-  color: rgba(0,0,0,.5);   
-  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+  color: rgba(0,0,0,.5); 
+  /* transition: all 100ms ease-in-out;   */
   outline: 0;
 }
 

@@ -12,7 +12,7 @@ class Home extends Component {
         };   
     }  
     componentDidMount() {    
-    this.getImages();
+        this.getImages();            
     }
 
     getImages = ( ) => {
@@ -78,7 +78,7 @@ class Home extends Component {
                         האלים הקדומים שמתוארים בספרות המסופוטמית, היו חוצנים, שביקרו בכדור הארץ ויצרו את האנושות.
                         בנוסף, האלים היו אחראים ליצירת הציוויליזציה הראשונה, הלוא היא שומר.
                     </p>
-                    <p><Gallery photos={photos} subcategory="Intro" /></p>
+                    <Gallery photos={photos} subcategory="Intro" />
                 </section>                        
                 <section id="sumer">
                     <h2>שומר</h2>
@@ -139,7 +139,7 @@ class Home extends Component {
                         חותמות גליל היו עשויות מאבנים יקרות למחצה, כגון אמטיסט, אובסידיאן, המטיט, ולפיס לזולי.
                         החותמות היו חרוטות באינטגליו, בדומה לנגטיב צילומי.                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="Sumer" /></p>
+                    <Gallery photos={photos} subcategory="Sumer" />
                 </section>               
                 <section id="human-creation">                    
                     <h2>יצירת האדם</h2>
@@ -399,7 +399,7 @@ class Home extends Component {
                             </span>
                         </li>
                     </p> 
-                    <p><Gallery photos={photos} subcategory="HumanCreation" /></p>                   
+                    <Gallery photos={photos} subcategory="HumanCreation" />
                 </section>                                              
                 <section id="man-ape">
                     <h2>אדם/קוף</h2>
@@ -435,9 +435,7 @@ class Home extends Component {
                           <Reference id={17} />
                           <Reference id={18} />
                     </p>
-                    <p>
-                            <Gallery photos={photos} subcategory="Genetics" />
-                    </p>
+                    <Gallery photos={photos} subcategory="Genetics" />                    
                     <p>
                           שלושה מדדים גנטיים מספקים עדות חזקה, אם לא חותכת, למיזוג כרומוזומים:
                           <li>
@@ -504,7 +502,7 @@ class Home extends Component {
                         במילים אחרות, הגנום מאפשר לתארך את חוה המיטוכונדרית (בת האדם הראשונה) ולכן גם את תאריך יצירת האדם.
                         <Reference id={23} />
                     </p>
-                    <p><Gallery photos={photos} subcategory="GeneticAnomaly" /></p>
+                    <Gallery photos={photos} subcategory="GeneticAnomaly" />
                     <h5>השוואה פיזית</h5>
                     <p>
                         בדיקה פיזית של בני אדם ושימפנזים מאששת את הטענה שבני האדם הונדסו גנטית מיצור הומיניד,
@@ -577,9 +575,7 @@ class Home extends Component {
                              לבני אדם גבות ברורות, שימפנזים חסרי גבות.
                              לבני אדם שפתיים גדולות, ואילו לשימפנזים שפתיים דקות.    
                         </li>  
-                        <p>
-                            <Gallery photos={photos} subcategory="PhysicalSkull" />
-                        </p>                      
+                        <Gallery photos={photos} subcategory="PhysicalSkull" />
                         <h5>גפיים</h5>
                         <li>
                              רגלי קופי אדם מותאמות לאחיזה והבוהן שלהם נגדית.
@@ -630,9 +626,7 @@ class Home extends Component {
                               אך בני האדם הם הפרימטים היחידים שעומדים תמידית,
                                בגלל עקומה נוספת בעמוד השדרה שמייצבת את העמידה הזקופה.                
                         </li>
-                        <p>
-                            <Gallery photos={photos} subcategory="PhysicalLimbs" />
-                        </p>                                                                                                                
+                        <Gallery photos={photos} subcategory="PhysicalLimbs" />
                         <h5>שיער</h5>
                         <li>                                                                                
                             לבני אדם ולשימפנזים יש כמות זהה של זקיקי שיער בגופם,
@@ -700,7 +694,7 @@ class Home extends Component {
                          בנוסף לכך, יש להן נפח מוח גדול עד 25% יותר ממוח אנושי ממוצע.                          
                         בהנתן גולגלות פאראקס הגדולות ביותר, אפשר להסיק כי גובהן של ישויות אלה היה מעל לשני מטרים.
                     </p>
-                    <p><Gallery photos={photos} subcategory="ElongatedSkulls" /></p>
+                    <Gallery photos={photos} subcategory="ElongatedSkulls" />
                     <h5>גנטיקה</h5>
                     <p>
                         בשנת 2013, החלו החוקרים אל.איי מרזולי והביולוג בריאן פורסטר לחפש הסבר מדעי לגולגלות הקדומות שנמצאו בפאראקס.
@@ -732,7 +726,7 @@ class Home extends Component {
                         לסיכום, דגימות דנ"א של ארבע גולגלות פרואניים הוכיחו כי מוצאם באירופה,                         
                          ותיארוך רדיומטרי של הגולגלות מצא כי הישויות שנבדקו חיו לפני 2,000 שנים.
                     </p>
-                    <p><Gallery photos={photos} subcategory="GeneticTest" /></p>
+                    <Gallery photos={photos} subcategory="GeneticTest" />
                     <h5>השוואה פיזית</h5>
                     <p>
                         השוואה פיזית בין גולגלות פאראקס לגולגלות בני אדם מוכיחה כי לא מדובר בהומו ספיאנס אלא ביצור שונה לחלוטין.
@@ -780,7 +774,7 @@ class Home extends Component {
                            השיער האדום הכהה שונה מן השיער השחור של ילידי יבשת אמריקה.
                            בקרב בני האדם, שיער אדמוני הוא נדיר, ומאפיין פחות מ-2% מהאוכלוסייה.                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="PhysicalTest" /></p>
+                    <Gallery photos={photos} subcategory="PhysicalTest" />
                     <h5>מלכות מצרים</h5>
                     <p>                                            
                         תקופת אמארנה הייתה עידן בהיסטוריה של מצרים העתיקה, במחצית המאוחרת של השושלת השמונה עשרה.
@@ -792,7 +786,7 @@ class Home extends Component {
                          אחנאתן ומשפחתו מתוארים באופן אנדרוגיני, עם גולגלות מאורכות וצוואר ארוך.                          
                          <Reference id={26} />
                     </p>
-                    <p><Gallery photos={photos} subcategory="EgyptAmarna" /></p>
+                    <Gallery photos={photos} subcategory="EgyptAmarna" />
                     <h5>מנתון - דברי ימי מצרים</h5>
                     <p>
                         מנתון היה כוהן דת מצרי שחי במאה ה-3 לפנה"ס, בממלכה התלמיית.
@@ -832,7 +826,7 @@ class Home extends Component {
                         <li>דיוניסוס (יוון) – בן של האל זאוס ואישה אנושית</li>
                         <li>אמירני (גאורגי) – בן של האלה דאלי ואב אנושי.</li>                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="DemiGod" /></p>
+                    <Gallery photos={photos} subcategory="DemiGod" />
                     <h5>נפילים</h5>     
                     <p>
                         ספר בראשית מאשר את קיום האלים למחצה, צאצאיהם של בני האלוהים ובנות האדם.
@@ -921,7 +915,7 @@ class Home extends Component {
                         אנקי ("אדון הארץ"), לימים נקרא אה (באכדית), נחשב למדען הראשי של האנונקי.
                         בספרות השומרית הוא נודע ביצירת המין האנושי, בהצלת האנושות מהמבול ובהענקת הציוויליזציה לשומר.                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="Anunnaki" /></p>
+                    <Gallery photos={photos} subcategory="Anunnaki" />
                     <h5>מושב האלים</h5>
                     <h5>רשימת המלכים השומרית</h5>
                     <p>                        
@@ -965,7 +959,7 @@ class Home extends Component {
                          במהלכן ניבירו משלימה סיבוב אחד ביחס לשמש.
                           שנה ניבירואנית נקראת שר (שליט, מלך).                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="KingList" /></p>
+                    <Gallery photos={photos} subcategory="KingList" />
                     <h5>כוכב הלכת התשיעי</h5>
                     <p>                        
                         מייק בראון וקונסטנטין בטיגין
@@ -991,7 +985,7 @@ class Home extends Component {
                         <li>ציר סיבוב צדדי או הפוך - נוגה (177 מעלות), אורנוס (97 מעלות) ופלוטו (119 מעלות).</li>
                         <li>מסלול הפוך של דראק (103 מעלות) וניקו (110 מעלות).</li>
                     </p> 
-                    <p><Gallery photos={photos} subcategory="SolarAnomalies" /></p>                   
+                    <Gallery photos={photos} subcategory="SolarAnomalies" />
                     <p>
                         בראון ובטיגין שיערו כי, באשר לאנומליות של מערכת השמש,
                         הדרך היחידה האפשרית שבה יכולים אובייקטים אלו להתנהג בדרך זו
@@ -1055,7 +1049,7 @@ class Home extends Component {
                         על ידי חישובים מתמטיים (משיכת הכבידה שלו על אורנוס),
                         לפני שהוא נראה למעשה בעזרת טלסקופ.
                     </p>
-                    <p><Gallery photos={photos} subcategory="PlanetNine" /></p>                   
+                    <Gallery photos={photos} subcategory="PlanetNine" />
                     <h5>ניבירו</h5>
                     <p>                        
                         קיום כוכב לכת תשיעי, מחזיר אותנו לשומר העתיקה.                         
@@ -1068,7 +1062,7 @@ class Home extends Component {
                          סמל הדיסק המכונף כלל גם את מלך האנונקי, אנו.
                         ניבירו נזכרת באנומה אליש ובמספר לוחות אסטרונומים.                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="Nibiru" /></p>
+                    <Gallery photos={photos} subcategory="Nibiru" />
                 </section>   
                 <section id="advanced-knowledge">                    
                     <h2>ידע מתקדם</h2>
@@ -1103,7 +1097,7 @@ class Home extends Component {
                         השומרים תיארו מערכת שמש המורכבת מגופים שמימיים המקיפים את השמש,
                         אלפי שנים לפני קופרניקוס והמודל הליוצנטרי.                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="Heliocentric" /></p>
+                    <Gallery photos={photos} subcategory="Heliocentric" />
                     <h5>טבעות שבתאי</h5>
                     <p>                        
                         לוח חמר זה, המוצג במוזיאון הבריטי, מתוארך לשנת 2,000 לפנה"ס.
@@ -1143,7 +1137,7 @@ class Home extends Component {
                         הם גם ידעו כי מעבר לחגורת האסטרואידים,
                         שבתאי וצדק כמעט זהים בגודלם ביחס לכדור הארץ.                        
                     </p>   
-                    <p><Gallery photos={photos} subcategory="Saturn" /></p>                                        
+                    <Gallery photos={photos} subcategory="Saturn" />
                     <h5>כוכב הלכת השביעי</h5>
                     <p>                                                
                         במסופוטמיה, סמלו של מאדים היה כוכב בעל שישה קודקודים
@@ -1177,7 +1171,7 @@ class Home extends Component {
                         שהיה מפקד כדור הארץ, היה "מלך השבע".
                         <Reference id={38} />
                     </p>
-                    <p><Gallery photos={photos} subcategory="SeventhPlanet" /></p>
+                    <Gallery photos={photos} subcategory="SeventhPlanet" />
                     <h5>לוח שנה</h5>                    
                     <p>
                         יום הוא פרק הזמן בו כדור הארץ משלים סיבוב אחד
@@ -1255,7 +1249,7 @@ class Home extends Component {
                         כדי להתאים את לוח שנה לעונות).                                                
                         <Reference id={42} />
                     </p>
-                    <p><Gallery photos={photos} subcategory="Calendar" /></p>
+                    <Gallery photos={photos} subcategory="Calendar" />
                     <h5>גלגל המזלות</h5>
                     <p>
                         קונסטלציה היא קבוצת כוכבים
@@ -1306,7 +1300,7 @@ class Home extends Component {
                         "חודש גדול" הוא 30 מעלות או מזל אחד (2,160 שנים)
                         ו-"שנה גדולה" היא מעגל שלם של 360 מעלות או 12 מזלות (25,920 שנים).                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="Zodiac" /></p>
+                    <Gallery photos={photos} subcategory="Zodiac" />
                     <h5>גאומטריה קדושה</h5>
                     <p>                        
                         פרח החיים הוא רשת מעגלים חופפים הידועים כיום כמבנה היסודי של המרחב.
@@ -1361,7 +1355,7 @@ class Home extends Component {
                           קיימים חמישה פאונים משוכללים: ארבעון, קובייה, תמניון, תריסרון ועשרימון. 
                           כל חמשת הצורות מוכלות בקוביית מטטרון. 
                     </li>                    
-                    <p><Gallery photos={photos} subcategory="SacredGeometry" /></p>
+                    <Gallery photos={photos} subcategory="SacredGeometry" />
                     <h5>האריות המגינים</h5>                    
                     <p>                                                
                         המושג האריות המגינים,
@@ -1381,7 +1375,7 @@ class Home extends Component {
                         ידע שנחשב לקדוש ואלוהי מכיוון שהוא ניתן לאנושות
                         על ידי האנונקי.
                     </p>
-                    <p><Gallery photos={photos} subcategory="GuardianLions" /></p>
+                    <Gallery photos={photos} subcategory="GuardianLions" />
                 </section>   
                 <section id="advanced-technology">
                     <h2>טכנולוגיה מתקדמת</h2>
@@ -1441,7 +1435,7 @@ class Home extends Component {
                         אבני הגרניט משתלבות זו בזו ללא שימוש במלט או בבטון,
                          וחלק מהאבנים מעידים על שיוף והחלקה.
                     </p>                    
-                    <p><Gallery photos={photos} subcategory="MegalithEgypt" /></p>
+                    <Gallery photos={photos} subcategory="MegalithEgypt" />
                     <h5>בעלבק, לבנון</h5>
                     <p>
                         בעלבק היא עיר עתיקה השוכנת בלבנון.
@@ -1466,7 +1460,7 @@ class Home extends Component {
                         מה שהופך אותו לגוש האבן הגדול ביותר מימי קדם.                        
                         <Reference id={53} />                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="MegalithBaalbek" /></p>
+                    <Gallery photos={photos} subcategory="MegalithBaalbek" />
                     <h5>האובליסק הלא גמור, מצרים</h5>
                     <p>
                         האובליסק הלא גמור
@@ -1488,7 +1482,7 @@ class Home extends Component {
                         או טכנולוגיה שאפשרה להם לרכך אבנים קשות.                        
                         <Reference id={54} />
                     </p>
-                    <p><Gallery photos={photos} subcategory="MegalithObelisk" /></p>
+                    <Gallery photos={photos} subcategory="MegalithObelisk" />
                     <h5>סאקסאיוואמן, פרו</h5>
                     <p>
                         סאקסאיוואמן היא מצודה בפאתי קוסקו, פרו.
@@ -1519,7 +1513,7 @@ class Home extends Component {
                         במילים אחרות, הטכנולוגיה היחידה שאנו מכירים
                         שמסוגלת לחתוך אנדזיט ביעילות היא טכנולוגיית יהלומים.                                                                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="MegalithSacsayhuaman" /></p>
+                    <Gallery photos={photos} subcategory="MegalithSacsayhuaman" />
                     <h5>חותמות גליל</h5>
                     <p>                        
                         קיומן של חותמות גליל מהוה אתגר טכנולוגי.
@@ -1534,7 +1528,7 @@ class Home extends Component {
                     <p>
                         אתגר נוסף הוא החריטה של יצירות אומנות מינייטוריות על גבי אבן בגודל 3 סנטימטרים.                        
                     </p>
-                    <p><Gallery photos={photos} subcategory="CylinderSeals" /></p>
+                    <Gallery photos={photos} subcategory="CylinderSeals" />
                 </section>                                                
                 <section id="bibliography">
                     <h2>ביבליוגרפיה</h2>
