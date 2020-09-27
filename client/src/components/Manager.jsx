@@ -82,7 +82,7 @@ class Manager extends Component {
       })
       .catch((error) => console.log(error))                       
   };
-
+  
   searchImage = e => {
     e.preventDefault(); 
     const { src } = this.state;                 
@@ -91,7 +91,7 @@ class Manager extends Component {
       url: '/api/searchImage',
       method: 'POST', 
       data: {
-        src : src 
+        src : src
       }
     })
     .then((response) => {            
@@ -189,28 +189,28 @@ class Manager extends Component {
                     Height:
                     <input type="text" name="height" value={this.state.height} onChange={this.handleChange} />        
                   </label>            
-                  <button onClick={this.searchImage}>search</button>
+                  <button onClick={this.searchImage}>search</button>                  
                   <button onClick={this.updateImage}>update</button>
                   <button onClick={this.addPhoto}>Add</button>
             </section>
-        </main>         
-      <section>
-          <h2>Database</h2>  
-          <ol>
-        {
-            !isEmpty(photos) ? 
-            photos.map( (photo,index) =>
-              <div key={index}> 
-                  <label> src : {photo.src} </label>               
-                  <label> category : {photo.category} </label>                                 
-                  <label> subcategory : {photo.subcategory} </label>                                                   
-                  <button value={photo._id} onClick={e => this.selectImage(e.target.value)}>select</button>
-              </div>              
-            ) : 
-            "no images"          
-        }
-        </ol>
-      </section>    
+            <section>
+              <h2>Database</h2>  
+              <ol>
+            {
+                !isEmpty(photos) ? 
+                photos.map( (photo,index) =>
+                  <div key={index}> 
+                      <label> src : {photo.src} </label>               
+                      <label> category : {photo.category} </label>                                 
+                      <label> subcategory : {photo.subcategory} </label>                                                   
+                      <button value={photo._id} onClick={e => this.selectImage(e.target.value)}>select</button>
+                  </div>              
+                ) : 
+                "no images"          
+            }
+            </ol>
+          </section> 
+        </main>            
     </div>
     );
   }

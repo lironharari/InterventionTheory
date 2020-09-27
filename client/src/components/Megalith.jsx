@@ -54,7 +54,7 @@ getImages = ( ) => {
                     <Gallery photos={photos} subcategory="Cusco" header="קוסקו, פרו" />
                 </section>                          
                 <section id="egypt">
-                    <Gallery photos={photos} subcategory="Egypt" header="מצרים" />
+                    <Gallery photos={photos} subcategory="Egypt" header="מתחם גיזה" />
                 </section>
                 <section id="sphinx">
                     <Gallery photos={photos} subcategory="Sphinx" header="ספינקס, מצרים"/>
@@ -69,7 +69,7 @@ getImages = ( ) => {
                     <li><a href="#baalbek">בעלבק</a></li>                                   
                     <li><a href="#sacsayhuaman">סאסקיואמן</a></li>               
                     <li><a href="#cusco">קוסקו</a></li>
-                    <li><a href="#egypt">מצרים</a></li>                                   
+                    <li><a href="#egypt">מתחם גיזה</a></li>                                   
                     <li><a href="#sphinx">ספינקס</a></li>
                     <li><a href="#obelisk">אובליסק</a></li>                                      
                 </ol>
