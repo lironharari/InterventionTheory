@@ -1,13 +1,15 @@
 import React from 'react';
+import notes from './data/notes.json';
 
 class Reference extends React.Component {  
-    render() {        
+    render() {  
+      const note = notes.find(note => note.id === this.props.id);      
+      
       return (
             <sup 
-                key={this.props.id}                 
-                id={`cite_ref-${this.props.id}`} 
+                id={`ref-${note.name}`} 
                 className="reference">                    
-                    <a className="cite_ref" key={this.props.id} href={`#cite_note-${this.props.id}`}>[{this.props.id}]</a>                    
+                    <a className="cite_ref" key={this.props.id} href={`#note-${note.name}`}>[{this.props.id}]</a>                    
             </sup>         
         );
     }

@@ -1,0 +1,40 @@
+{
+    "sections": [
+        {
+            "id": "intro",
+            "text":"מבוא"
+        },
+        {
+            "id": "sumer",
+            "text": "שומר"
+        },
+        {
+            "id": "human-creation",
+            "text": "יצירת האדם"
+        },
+        {
+            "id": "man-ape",
+            "text": "אדם/קוף"
+        },
+        {
+            "id": "nephilim",
+            "text": "נפילים"
+        },
+        {
+            "id": "anunnaki",
+            "text": "אנונקי"
+        },
+        {
+            "id": "advanced-knowledge",
+            "text": "ידע מתקדם"
+        },
+        {
+            "id": "advanced-technology",
+            "text": "טכנולוגיה"
+        },
+        {
+            "id": "bibliography",
+            "text": "ביבליוגרפיה"
+        } 
+    ]       
+}

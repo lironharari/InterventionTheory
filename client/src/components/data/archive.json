@@ -29,7 +29,7 @@
                         {
                             "id": "gobekliTepe",
                             "subcategory":"GobekliTepe",
-                            "header": "גובקלי טפה, טורקיה"
+                            "header": "גובקלי טפה"
                         },
                         {
                             "id": "baalbek",
@@ -59,7 +59,7 @@
                         {
                             "id": "obelisk",
                             "subcategory":"Obelisk",
-                            "header": "האובליסק הלא מוגמר, מצרים"
+                            "header": "אובליסק, מצרים"
                         }                                                                                                  
                     ]
     },

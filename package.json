@@ -26,6 +26,7 @@
     "react-loading-skeleton": "^2.1.1",
     "react-photo-gallery": "^8.0.0",
     "react-scroll-up-button": "^1.6.4",
+    "react-scrollspy": "^3.4.3",
     "react-test-renderer": "^16.13.1",
     "serve": "^11.3.2",
     "social-media-icons-react": "^1.0.10"

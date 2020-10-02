@@ -2,6 +2,7 @@ import React from 'react';
 import Gallery from './Gallery';
 import archive from './data/archive.json';
 import axios from 'axios';
+import Scrollspy from 'react-scrollspy'
 
 class Archive extends React.Component {  
     constructor(props) {
@@ -31,32 +32,28 @@ class Archive extends React.Component {
         
         const { photos } = this.state;                 
         const page = archive.find(page => page.name === this.props.name);     
+        const sections = page.sections.map( ( section,index ) => {
+            return <section key={index} id={section.id}><Gallery photos={photos} subcategory={section.subcategory} header={section.header} /></section>
+        }); 
+        const nav = page.sections.map( ( section, index ) => {
+          return <li key={index}><a href={`#${ section.id }`}>{section.header}</a></li>
+        }); 
+        const items = page.sections.map(( section ) => ( section.id ));
 
       return (    
         <div className="site-container">
-        <main className="archive">                                                                                                        
-        <div className="section-content"> 
-            <header>
-                <h1>{page.caption}</h1>
-                <p>{page.description}</p>
-              </header>              
-
-            {
-                page.sections.map( ( section,index ) => {
-                    return <section key={index} id={section.id}><Gallery photos={photos} subcategory={section.subcategory} header={section.header} /></section>
-                }) 
-            }              
-        </div>
-          <nav className="section-nav">
-              <ol>                                                              
-                  {
-                    page.sections.map( ( section, index ) => {
-                        return <li key={index}><a href={`#${section.id}`}>{section.header}</a></li>
-                    }) 
-                }                  
-              </ol>
-          </nav>
-      </main>              
+          <main className="archive">                                                                                                        
+            <div className="section-content"> 
+                <header>
+                    <h1>{page.caption}</h1>
+                    <p>{page.description}</p>
+                </header>              
+                {sections}              
+            </div>
+            <nav className="section-nav">                 
+                <Scrollspy items={ items } currentClassName="active">{nav}</Scrollspy>                  
+            </nav>
+          </main>              
       </div>          
         );
     }
