@@ -8,7 +8,7 @@ import 'react-image-lightbox/style.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Content from './components/Content';
-import ScrollUpButton from "react-scroll-up-button";
+//import ScrollUpButton from "react-scroll-up-button";
 
 class App extends Component {  
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
         <NavBar />   
         <Content />
          <Footer />
-         <ScrollUpButton />         
+         {/* <ScrollUpButton />  */}
       </div>
     );
   }
