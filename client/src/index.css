@@ -188,9 +188,9 @@ margin-bottom: 25px;
 }
 
 /* 1. Enable smooth scrolling */
-  /* html {
+  html {
     scroll-behavior: smooth;
-  } */
+  }
 
 /* 2. Make nav sticky */
 main > nav {
