@@ -112,7 +112,7 @@ body {
   padding: 2px; display: block;
 }
 .galleryImage:hover{
-  cursor: pointer;
+  cursor: zoom-in;
 }
 .nav-link{
   padding-left: 10px !important;
