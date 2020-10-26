@@ -436,11 +436,7 @@ cite a{
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */   
-  cursor: pointer; /* Add a mouse pointer on hover */
-  background-color:#ffffff;
+  cursor: pointer; /* Add a mouse pointer on hover */  
+  background-color:transparent;
   transition: visibility 0s, opacity 0.5s linear;    
-}
-#scrollUp img{
-  width: 45px;
-  height: 45px;
 }
