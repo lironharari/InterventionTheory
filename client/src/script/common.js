@@ -6,6 +6,27 @@ export function filter(photos,subcategory) {
   return adjustGalleryPhotos(sortByRank(photos.filter(function (photo) { return photo.subcategory === subcategory;})))
 }
 
+
+export function scrollUp() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera  
+}
+
+export function scrollUpInit() {
+  const scrollUpbutton = document.getElementById("scrollUp");  
+
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollUpbutton.style.display = "block";
+    } else {
+      scrollUpbutton.style.display = "none";
+    }
+  }
+}
+
+
 export function adjustGalleryPhotos(photos) {
     const galleryPhotos = [];
     const defaultWidth = 3;

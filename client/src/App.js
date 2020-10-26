@@ -8,16 +8,16 @@ import 'react-image-lightbox/style.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Content from './components/Content';
-//import ScrollUpButton from "react-scroll-up-button";
+import ScrollUp from './components/ScrollUp';
 
 class App extends Component {  
   render() {
     return (
-      <div className="App"> 
-        <NavBar />   
+      <div className="App">       
+        <NavBar />           
         <Content />
          <Footer />
-         {/* <ScrollUpButton />  */}
+         <ScrollUp />
       </div>
     );
   }
