@@ -52,7 +52,7 @@ class Home extends Component {
         return (     
         <div className="site-container">        
         <div className="drawer-container">        
-            <button onClick={toggleDrawer(true)} title="תוכן עניינים">
+            <button onClick={toggleDrawer(true)}>
                 <ArrowBackIosOutlinedIcon style={{ fontSize: 30, color:"rgba(0,0,0,.7)" }}/>
             </button>
 
