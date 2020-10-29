@@ -227,6 +227,7 @@ main > nav {
   outline: 0;
 }
 
+.section-nav-drawer a:hover,
 .section-nav a:hover,
 .section-nav a:focus {
   color: #666;
@@ -439,4 +440,47 @@ cite a{
   cursor: pointer; /* Add a mouse pointer on hover */  
   background-color:transparent;
   transition: visibility 0s, opacity 0.5s linear;    
+}
+.drawer-container{
+  text-align: right;
+}
+.drawer-container button{
+  position: fixed;
+  top: 100px;
+  right: 0px;  
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background-color:transparent;
+  border:none;
+  box-shadow: none;
+  outline: none;
+}
+.drawer-container button:active, .drawer-container button:focus{
+  outline: none;
+}
+
+.section-nav-drawer{
+  padding: 0 10px;
+  margin-top:90px;
+}
+.section-nav-drawer h5{
+  text-align: right;
+  direction: rtl;
+  color: rgba(0,0,0,.7);
+  padding: 10px 0.5rem;
+  text-decoration: underline;
+}
+
+.section-nav-drawer li{
+  margin: 0 0.5rem;
+}
+.section-nav-drawer a{
+  text-decoration: none;
+  display: block;
+  padding: 0 0;  
+  color: rgba(0,0,0,.5);
+  transition: all 100ms ease-in-out;
+  outline: 0;
+  text-align: right;
+  direction: rtl;
 }

@@ -7,6 +7,12 @@
   
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {  
+    #bibliography{
+      margin-right: 10px; 
+    }
+    .drawer-container{
+      display:  block;
+    }
     #scrollUp{
       visibility: hidden;
     }
@@ -59,7 +65,13 @@
   }
 
   /* Tablet Styles */
-  @media only screen and (min-width: 415px) and (max-width: 1024px) {    
+  @media only screen and (min-width: 415px) and (max-width: 1024px) { 
+    #bibliography{
+      margin-right: 5px; 
+    }   
+    .drawer-container{
+      display: none;
+    }
     img.dialogImage{
       width:50%;
       margin-right:15px;
@@ -133,6 +145,9 @@
 
   /* Desktop Styles */
   @media only screen and (min-width: 1024px) {    
+    .drawer-container{
+      display: none;
+    }
     img.dialogImage{
       width:35%;
       margin-right:20px;

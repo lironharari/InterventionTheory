@@ -5,12 +5,15 @@ import Notes from './Notes';
 import Gallery from './Gallery';
 import Scrollspy from 'react-scrollspy'
 import home from './data/home.json';
+import Drawer from '@material-ui/core/Drawer';
+import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 
 class Home extends Component {    
       constructor(props) {
         super(props);        
         this.state = {
-        photos: []
+        photos: [],
+        open: false
         };   
     }  
     componentDidMount() { 
@@ -33,15 +36,35 @@ class Home extends Component {
     }
 
     render() { 
+        const { photos,open } = this.state; 
+        const toggleDrawer = (open) => (event) => {
+            if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+              return;
+            }
         
-        const { photos } = this.state;  
+            this.setState({ open });
+          }; 
         const nav = home.sections.map( ( section, index ) => {
-            return <li key={index}><a href={`#${ section.id }`}>{section.text}</a></li>
+            return <li key={index}><a onClick={toggleDrawer(false)} href={`#${ section.id }`}>{section.text}</a></li>
           }); 
         const items = home.sections.map(( section ) => ( section.id ));
 
         return (     
-        <div className="site-container">                                                          
+        <div className="site-container">        
+        <div className="drawer-container">        
+            <button onClick={toggleDrawer(true)} title="תוכן עניינים">
+                <ArrowBackIosOutlinedIcon style={{ fontSize: 30, color:"rgba(0,0,0,.7)" }}/>
+            </button>
+
+            <Drawer anchor={'right'} open={open} onClose={toggleDrawer(false)}>
+                <nav className="section-nav-drawer">  
+                    <h5>תוכן עניינים</h5>
+                    <ul>
+                    {nav}
+                    </ul>
+                </nav>                
+            </Drawer>
+        </div>                                                  
         <main className="home">                    
             <div className="section-content">                  
                 <section id="intro">                         
@@ -1589,7 +1612,7 @@ class Home extends Component {
             </div>
             <nav className="section-nav">
                 <Scrollspy items={ items } currentClassName="active">{nav}</Scrollspy>
-            </nav>            
+            </nav> 
         </main>
       </div>               
       );
