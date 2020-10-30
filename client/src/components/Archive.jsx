@@ -46,7 +46,7 @@ class Archive extends React.Component {
           <main className="archive">                                                                                                        
             <div className="section-content"> 
                 <header>
-                    <h1>{page.caption}</h1>
+                    <h2>{page.caption}</h2>
                     <p>{page.description}</p>
                 </header>              
                 {sections}              
