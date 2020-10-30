@@ -137,7 +137,9 @@ body {
   padding-top: 5px !important;
   text-transform: uppercase;
 }
-
+.navbar{
+  z-index: 1;
+}
 .navbar-toggler,
 .navbar-toggler:active,
 .navbar-toggler:focus {
@@ -206,8 +208,7 @@ main > nav {
 
 .section-content{
   text-align: right;
-  direction: rtl;
-  margin: 0 3%;
+  direction: rtl;  
   padding-bottom: 50px;
 }
 
@@ -229,8 +230,8 @@ main > nav {
 
 .section-nav-drawer a:hover,
 .section-nav a:hover,
-.section-nav a:focus {
-  color: #666;
+.section-nav a:focus {  
+  color: rgba(0,0,0,.7); 
   text-decoration: none;
 }
 
@@ -250,10 +251,11 @@ li {
 h1 {
   font-weight: 300;
 }
-
-.section-content h1{
-  padding: 30px 0 0 0;  
+.section-content h1{  
   font-size: 2.2em;
+  padding: 20px 0 0 0;  
+  text-align: center;
+  text-decoration: underline;
 }
 .section-content h4{
   padding: 30px 0 0 0;  
@@ -430,10 +432,10 @@ cite a{
   margin: 20px 0;
 }
 #scrollUp{
+  right: 13px;
+  bottom: 60px;
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 60px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */   
@@ -447,7 +449,7 @@ cite a{
 .drawer-container button{
   position: fixed;
   top: 100px;
-  right: 0px;  
+  right: 10px;  
   writing-mode: vertical-rl;
   text-orientation: mixed;
   background-color:transparent;
@@ -483,4 +485,7 @@ cite a{
   outline: 0;
   text-align: right;
   direction: rtl;
+}
+#scrollUp .MuiSvgIcon-root{  
+  color: rgba(0, 0, 0, 0.4);
 }

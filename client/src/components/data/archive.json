@@ -7,17 +7,17 @@
                         {
                             "id": "abgal",
                             "subcategory":"Abgal",
-                            "header": "אבגל"
+                            "text": "אבגל"
                         },
                         {
                             "id": "tree-of-life",
                             "subcategory":"TreeOfLife",
-                            "header": "עץ החיים"
+                            "text": "עץ החיים"
                         },
                         {
                             "id": "misc",
                             "subcategory":"Misc",
-                            "header": "שונות"
+                            "text": "שונות"
                         }                        
                     ]       
     },
@@ -29,37 +29,37 @@
                         {
                             "id": "gobekliTepe",
                             "subcategory":"GobekliTepe",
-                            "header": "גובקלי טפה"
+                            "text": "גובקלי טפה"
                         },
                         {
                             "id": "baalbek",
                             "subcategory":"Baalbek",
-                            "header": "בעלבק, לבנון"
+                            "text": "בעלבק, לבנון"
                         },
                         {
                             "id": "sacsayhuaman",
                             "subcategory":"Sacsayhuaman",
-                            "header": "סאסקיואמן, פרו"
+                            "text": "סאסקיואמן, פרו"
                         },
                         {
                             "id": "cusco",
                             "subcategory":"Cusco",
-                            "header": "קוסקו, פרו"
+                            "text": "קוסקו, פרו"
                         },
                         {
                             "id": "egypt",
                             "subcategory":"Egypt",
-                            "header": "מתחם גיזה"
+                            "text": "מתחם גיזה"
                         },
                         {
                             "id": "sphinx",
                             "subcategory":"Sphinx",
-                            "header": "ספינקס, מצרים"
+                            "text": "ספינקס, מצרים"
                         },
                         {
                             "id": "obelisk",
                             "subcategory":"Obelisk",
-                            "header": "אובליסק, מצרים"
+                            "text": "אובליסק, מצרים"
                         }                                                                                                  
                     ]
     },
@@ -71,27 +71,27 @@
                         {
                             "id": "tree-of-life",
                             "subcategory":"TreeOfLife",
-                            "header": "עץ החיים"
+                            "text": "עץ החיים"
                         },
                         {
                             "id": "winged-chamber",
                             "subcategory":"WingedChamber",
-                            "header": "תא מכונף"
+                            "text": "תא מכונף"
                         },
                         {
                             "id": "flying-ring",
                             "subcategory":"FlyingRing",
-                            "header": "טבעת מעופפת"
+                            "text": "טבעת מעופפת"
                         },
                         {
                             "id": "violence",
                             "subcategory":"Violence",
-                            "header": "תרבות אלימה"
+                            "text": "תרבות אלימה"
                         },
                         {
                             "id": "misc",
                             "subcategory":"Misc",
-                            "header": "שונות"
+                            "text": "שונות"
                         }                                                
                     ]
     },
@@ -103,12 +103,12 @@
                         {
                             "id": "physical",
                             "subcategory":"Physical",
-                            "header": "הבדלים פיזיים"
+                            "text": "הבדלים פיזיים"
                         },
                         {
                             "id": "genetics",
                             "subcategory":"Genetics",
-                            "header": "הבדלים גנטיים"
+                            "text": "הבדלים גנטיים"
                         }                                                
                     ]
     },
@@ -120,17 +120,17 @@
                         {
                             "id": "elongated-skulls",
                             "subcategory":"ElongatedSkulls",
-                            "header": "גולגולות מאורכות"
+                            "text": "גולגולות מאורכות"
                         },
                         {
                             "id": "egypt",
                             "subcategory":"Egypt",
-                            "header": "מלכות מצרים"
+                            "text": "מלכות מצרים"
                         },
                         {
                             "id": "cylinder-seals",
                             "subcategory":"CylinderSeals",
-                            "header": "חותמות גליל"
+                            "text": "חותמות גליל"
                         }                                                                         
                     ]
     },
@@ -142,37 +142,37 @@
                         {
                             "id": "metatrons-cube",
                             "subcategory":"MetatronsCube",
-                            "header": "קוביית מטטרון"
+                            "text": "קוביית מטטרון"
                         },
                         {
                             "id": "vesica-piscis",
                             "subcategory":"VesicaPiscis",
-                            "header": "ווסאיקה פייסיס"
+                            "text": "ווסאיקה פייסיס"
                         },
                         {
                             "id": "triquetra",
                             "subcategory":"Triquetra",
-                            "header": "טריקטרה"
+                            "text": "טריקטרה"
                         },
                         {
                             "id": "seed-of-life",
                             "subcategory":"SeedOfLife",
-                            "header": "זרע החיים"
+                            "text": "זרע החיים"
                         },
                         {
                             "id": "six-petal-rosette",
                             "subcategory":"SixPetalRosette",
-                            "header": "ששת עלי הכותרת"
+                            "text": "ששת עלי הכותרת"
                         },
                         {
                             "id": "flower-of-life",
                             "subcategory":"FlowerOfLife",
-                            "header": "פרח החיים"
+                            "text": "פרח החיים"
                         },
                         {
                             "id": "guardian-lions",
                             "subcategory":"GuardianLions",
-                            "header": "האריות המגינים"
+                            "text": "האריות המגינים"
                         }                                                                         
                     ]
     }

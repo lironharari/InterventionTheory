@@ -3,6 +3,7 @@ import Gallery from './Gallery';
 import archive from './data/archive.json';
 import axios from 'axios';
 import Scrollspy from 'react-scrollspy'
+import MobileDrawer from './MobileDrawer';
 
 class Archive extends React.Component {  
     constructor(props) {
@@ -33,10 +34,10 @@ class Archive extends React.Component {
         const { photos } = this.state;                 
         const page = archive.find(page => page.name === this.props.name);     
         const sections = page.sections.map( ( section,index ) => {
-            return <section key={index} id={section.id}><Gallery photos={photos} subcategory={section.subcategory} header={section.header} /></section>
+            return <section key={index} id={section.id}><Gallery photos={photos} subcategory={section.subcategory} header={section.text} /></section>
         }); 
         const nav = page.sections.map( ( section, index ) => {
-          return <li key={index}><a href={`#${ section.id }`}>{section.header}</a></li>
+          return <li key={index}><a href={`#${ section.id }`}>{section.text}</a></li>
         }); 
         const items = page.sections.map(( section ) => ( section.id ));
 
@@ -53,6 +54,7 @@ class Archive extends React.Component {
             <nav className="section-nav">                 
                 <Scrollspy items={ items } currentClassName="active">{nav}</Scrollspy>                  
             </nav>
+            <MobileDrawer nav={page.sections} />
           </main>              
       </div>          
         );

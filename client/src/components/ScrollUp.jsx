@@ -12,7 +12,7 @@ class ScrollUp extends React.Component {
     render() {  
       return (
             <button id="scrollUp" onClick={this.scrollUp} title="חזרה לראש העמוד">
-                <ArrowUpwardRoundedIcon style={{ fontSize: 45, color:"rgba(0,0,0,.7)" }}/>
+                <ArrowUpwardRoundedIcon />
             </button>
         );
     }

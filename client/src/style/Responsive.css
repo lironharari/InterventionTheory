@@ -7,15 +7,18 @@
   
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {  
+    .section-content{
+      margin: 0 4%;
+    }  
+    #scrollUp .MuiSvgIcon-root{
+      font-size: 35px;      
+    }
     #bibliography{
       margin-right: 10px; 
     }
     .drawer-container{
       display:  block;
-    }
-    #scrollUp{
-      visibility: hidden;
-    }
+    }    
     img.dialogImage{
       width:70%;
       margin-right:2%;
@@ -66,6 +69,12 @@
 
   /* Tablet Styles */
   @media only screen and (min-width: 415px) and (max-width: 1024px) { 
+    .section-content{
+      margin: 0 3%;
+    }    
+    #scrollUp .MuiSvgIcon-root{
+      font-size: 45px;      
+    }
     #bibliography{
       margin-right: 5px; 
     }   
@@ -145,6 +154,12 @@
 
   /* Desktop Styles */
   @media only screen and (min-width: 1024px) {    
+    .section-content{
+      margin: 0 3%;
+    }
+    #scrollUp .MuiSvgIcon-root{
+      font-size: 45px;
+    }
     .drawer-container{
       display: none;
     }
